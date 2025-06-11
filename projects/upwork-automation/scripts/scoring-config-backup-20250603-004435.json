@@ -1,0 +1,192 @@
+{
+  "scoring_rules": {
+    "budget": {
+      "ranges": [
+        {"min": 10000, "max": null, "points": 40, "label": "Enterprise budget"},
+        {"min": 5000, "max": 9999, "points": 35, "label": "High budget"},
+        {"min": 3000, "max": 4999, "points": 30, "label": "Good budget"},
+        {"min": 2000, "max": 2999, "points": 25, "label": "Medium budget"},
+        {"min": 1000, "max": 1999, "points": 20, "label": "Low-medium budget"},
+        {"min": 500, "max": 999, "points": 10, "label": "Low budget"},
+        {"min": 0, "max": 499, "points": 5, "label": "Minimal budget"}
+      ],
+      "hourly_rate": {
+        "min_rate": 50,
+        "points_per_10_above_min": 5,
+        "max_points": 30
+      }
+    },
+    
+    "keywords": {
+      "ai_automation": {
+        "points": 30,
+        "terms": ["ai agent", "ai automation", "chatbot", "chat bot", "ai assistant", "ai workflow", "ai integration", "artificial intelligence", "machine learning automation", "ai-powered", "intelligent automation"]
+      },
+      "primary_tools": {
+        "points": 25,
+        "terms": ["make.com", "integromat", "make", "n8n", "zapier", "make platform", "make scenario", "zap", "workflow automation", "manychat", "chatfuel", "botpress"]
+      },
+      "automation_type": {
+        "points": 20,
+        "terms": ["automation", "automate", "automated", "workflow", "integration", "api", "webhook", "process automation", "business automation", "task automation", "robotic process automation", "rpa"]
+      },
+      "no_code_platforms": {
+        "points": 18,
+        "terms": ["no-code", "low-code", "nocode", "lowcode", "visual programming", "drag and drop", "citizen developer", "bubble", "webflow automation", "airtable automation"]
+      },
+      "integration_focus": {
+        "points": 15,
+        "terms": ["integrate", "integration", "connect", "sync", "synchronize", "data flow", "api integration", "system integration", "third-party", "middleware"]
+      },
+      "business_processes": {
+        "points": 12,
+        "terms": ["crm automation", "email automation", "marketing automation", "sales automation", "lead generation", "customer journey", "funnel automation", "pipeline automation", "workflow optimization"]
+      },
+      "data_operations": {
+        "points": 10,
+        "terms": ["data automation", "database automation", "spreadsheet automation", "google sheets automation", "airtable automation", "excel automation", "csv automation", "json", "xml", "etl", "data transformation"]
+      },
+      "communication_automation": {
+        "points": 10,
+        "terms": ["email automation", "sms automation", "slack automation", "discord bot", "whatsapp automation", "notification automation", "alert automation", "messaging automation", "communication workflow"]
+      },
+      "hospitality_bonus": {
+        "points": 8,
+        "terms": ["hospitality automation", "restaurant automation", "venue management", "nightlife", "club automation", "bar automation", "hotel automation", "event automation", "music automation", "entertainment automation"]
+      }
+    },
+    
+    "negative_keywords": {
+      "avoid_tech_stack": {
+        "points": -30,
+        "terms": ["wordpress", "shopify", "woocommerce", "php", "java", "mobile app", "ios", "android", "react", "angular", "vue", "flutter", "swift", "kotlin", "ruby", "rails", "django", "laravel", "manual data entry", "copy paste", "virtual assistant"]
+      },
+      "avoid_work_type": {
+        "points": -25,
+        "terms": ["design", "logo", "graphic", "ui/ux", "figma", "photoshop", "video editing", "animation", "3d", "cad", "content writing", "blog writing", "social media management"]
+      },
+      "avoid_industries": {
+        "points": -20,
+        "terms": ["blockchain", "crypto", "nft", "web3", "defi", "trading bot", "forex", "gambling", "adult", "manual work", "data entry only"]
+      },
+      "reduce_score": {
+        "points": -15,
+        "terms": ["simple", "basic", "quick", "easy", "one-off", "single task", "data entry", "copy paste", "manual", "no automation", "no integration"]
+      }
+    },
+    
+    "client_quality": {
+      "payment_verified": {
+        "required": false,
+        "points": 10
+      },
+      "spending_tiers": [
+        {"min": 100000, "points": 25, "label": "Enterprise client"},
+        {"min": 50000, "points": 20, "label": "High-value client"},
+        {"min": 10000, "points": 15, "label": "Established client"},
+        {"min": 5000, "points": 10, "label": "Active client"},
+        {"min": 1000, "points": 5, "label": "New client"}
+      ],
+      "hire_rate": {
+        "min_percentage": 80,
+        "points": 10
+      },
+      "average_rating": {
+        "min_rating": 4.8,
+        "points": 10
+      },
+      "location_preference": {
+        "preferred": ["United States", "Canada", "United Kingdom", "Australia", "New Zealand", "Germany", "Netherlands"],
+        "points": 10
+      }
+    },
+    
+    "competition": {
+      "proposals_ranges": [
+        {"min": 0, "max": 5, "points": 20, "label": "Very low competition"},
+        {"min": 6, "max": 10, "points": 15, "label": "Low competition"},
+        {"min": 11, "max": 15, "points": 10, "label": "Medium competition"},
+        {"min": 16, "max": 20, "points": 5, "label": "High competition"},
+        {"min": 21, "max": null, "points": 0, "label": "Very high competition"}
+      ],
+      "time_posted": {
+        "within_hours": [
+          {"max": 1, "points": 15, "label": "Just posted"},
+          {"max": 6, "points": 10, "label": "Fresh"},
+          {"max": 24, "points": 5, "label": "Recent"},
+          {"max": 48, "points": 0, "label": "Older"}
+        ]
+      }
+    },
+    
+    "project_length": {
+      "preferences": [
+        {"duration": "ongoing", "points": 20},
+        {"duration": "long-term", "points": 20},
+        {"duration": "3 to 6 months", "points": 15},
+        {"duration": "1 to 3 months", "points": 10},
+        {"duration": "less than 1 month", "points": 5}
+      ]
+    },
+    
+    "project_complexity": {
+      "indicators": [
+        {"term": "multiple systems", "points": 15},
+        {"term": "complex workflow", "points": 15},
+        {"term": "enterprise", "points": 12},
+        {"term": "scalable", "points": 10},
+        {"term": "custom solution", "points": 10},
+        {"term": "integration", "points": 8}
+      ]
+    }
+  },
+  
+  "thresholds": {
+    "must_apply": 80,
+    "should_apply": 60,
+    "consider": 40,
+    "skip": 0
+  },
+  
+  "proposal_customization": {
+    "high_score": {
+      "min_score": 80,
+      "approach": "premium",
+      "ai_depth": "comprehensive",
+      "emphasis": "proven automation expertise with Make.com, n8n, Zapier, and AI agents"
+    },
+    "medium_score": {
+      "min_score": 60,
+      "approach": "professional",
+      "ai_depth": "standard",
+      "emphasis": "efficient workflow automation and integration solutions"
+    },
+    "low_score": {
+      "min_score": 40,
+      "approach": "efficient",
+      "ai_depth": "basic",
+      "emphasis": "quick automation wins and immediate value"
+    }
+  },
+  
+  "filtering": {
+    "min_budget": 800,
+    "max_proposals": 25,
+    "required_in_title_or_description": [
+      "automation", "automate", "workflow", "integration", "api", "webhook", 
+      "make.com", "make", "zapier", "n8n", "chatbot", "ai agent", "ai automation",
+      "process automation", "business automation", "manychat", "no-code", "low-code"
+    ],
+    "required_in_title": [
+      "automation", "automate", "workflow", "integration", "chatbot", "ai agent", 
+      "make", "zapier", "n8n", "api", "webhook", "manychat"
+    ],
+    "blocked_clients": [],
+    "max_jobs_per_hour": 8,
+    "preferred_job_types": ["automation", "workflow", "integration", "make.com", "zapier", "n8n", "ai agent", "chatbot"],
+    "auto_reject_if_contains": [
+      "wordpress only", "shopify only", "manual data entry", "no automation", 
+      "copy paste", "virtual assistant only", "content writing", "graphic design"
+    ]
+  }
+} 

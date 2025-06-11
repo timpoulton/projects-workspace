@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: club77-guestlist:latest
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app
+    entrypoint: ["upwork-automation"]

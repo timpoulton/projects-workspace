@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Club 77 - Staff Dashboard</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Club77 Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'club77-black': '#000000',
+                        'club77-dark': '#0a0a0a',
+                        'club77-gray': '#1a1a1a',
+                        'club77-border': '#333333',
+                        'club77-text': '#ffffff',
+                        'club77-muted': '#999999',
+                        'club77-accent': '#ffffff'
+                    },
+                    fontFamily: {
+                        'club77': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Club77 Custom Styles -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            max-height: 60px;
+            margin-bottom: 1rem;
+        }
+        
+        .status {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .events-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .event-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #333;
+        }
+        
+        .event-content {
+            padding: 1rem;
+        }
+        
+        .event-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+        
+        .event-meta {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .manage-btn {
+            background: #333;
+            color: #fff;
+            border: 1px solid #666;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            width: 100%;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .manage-btn:hover {
+            background: #666;
+            color: #fff;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #666;
+        }
+        
+        .sync-btn {
+            background: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            width: 100%;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .sync-btn:hover {
+            background: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/images/club77-logo.png" alt="Club 77" class="logo">
+        
+        <% if (typeof events !== 'undefined' && events.length > 0) { %>
+            <div class="status">
+                <%= events.length %> Active Event<%= events.length !== 1 ? 's' : '' %>
+            </div>
+        <% } %>
+    </div>
+
+    <div class="events-grid">
+        <% if (typeof events !== 'undefined' && events.length > 0) { %>
+            <% events.forEach((event) => { %>
+                <div class="event-card">
+                    <% if (event.artwork_url) { %>
+                        <img src="<%= event.artwork_url %>" alt="<%= event.name %>" class="event-image">
+                    <% } else { %>
+                        <div class="event-image" style="display: flex; align-items: center; justify-content: center; color: #666;">
+                            No Image
+                        </div>
+                    <% } %>
+                    
+                    <div class="event-content">
+                        <h3 class="event-title"><%= event.name %></h3>
+                        
+                        <div class="event-meta">
+                            📅 <%= new Date(event.event_date).toLocaleDateString('en-AU', { 
+                                weekday: 'short', 
+                                month: 'short', 
+                                day: 'numeric' 
+                            }) %>
+                        </div>
+                        
+                        <div class="event-meta">
+                            🕙 <%= event.start_time || '10:00 PM' %> - <%= event.end_time || '5:00 AM' %>
+                        </div>
+                        
+                        <a href="/events/<%= event.id %>" class="manage-btn">
+                            Manage Guests
+                        </a>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <div class="empty-state">
+                <h3>No Events Found</h3>
+                <p>No events are currently loaded in the system.</p>
+                <button id="sync-muzeek" class="sync-btn">
+                    Sync Events from Muzeek
+                </button>
+            </div>
+        <% } %>
+    </div>
+
+    <script>
+        // Sync Events functionality
+        document.getElementById('sync-muzeek')?.addEventListener('click', async function() {
+            const button = this;
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = 'Syncing...';
+            button.disabled = true;
+            
+            try {
+                const response = await fetch('/api/sync/muzeek/events', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    button.innerHTML = 'Synced!';
+                    setTimeout(() => location.reload(), 1000);
+                } else {
+                    throw new Error(result.error || 'Sync failed');
+                }
+            } catch (error) {
+                console.error('Sync error:', error);
+                button.innerHTML = 'Error - Try Again';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html> 

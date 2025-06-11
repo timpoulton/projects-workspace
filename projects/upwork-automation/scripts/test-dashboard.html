@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upwork Generator Test</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        .test-link { display: block; margin: 10px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .test-link a { color: #0066cc; text-decoration: none; font-weight: bold; }
+        .test-link a:hover { text-decoration: underline; }
+        .response { margin-top: 20px; padding: 10px; background: #f8f8f8; border-radius: 5px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Upwork Generator Test Dashboard</h1>
+    
+    <div class="test-link">
+        <a href="http://192.168.1.107:5055" target="_blank">Direct Access: http://192.168.1.107:5055</a>
+    </div>
+    
+    <div class="test-link">
+        <a href="http://tpserver:5055" target="_blank">Hostname Access: http://tpserver:5055</a>
+    </div>
+    
+    <div class="test-link">
+        <a href="http://localhost:5055" target="_blank">Localhost Access (only works on server): http://localhost:5055</a>
+    </div>
+    
+    <div>
+        <h3>Status Check</h3>
+        <button id="checkStatus">Check Server Status</button>
+        <div id="statusResult" class="response">Status check result will appear here...</div>
+    </div>
+
+    <script>
+        document.getElementById('checkStatus').addEventListener('click', function() {
+            const statusResult = document.getElementById('statusResult');
+            statusResult.textContent = 'Checking server status...';
+            
+            // Try to fetch the server status (using no-cors to avoid CORS issues)
+            fetch('http://192.168.1.107:5055', { 
+                method: 'HEAD', 
+                mode: 'no-cors',
+                cache: 'no-cache'
+            })
+            .then(() => {
+                statusResult.textContent = 'Server appears to be responding (HEAD request succeeded)';
+            })
+            .catch(error => {
+                statusResult.textContent = 'Error checking server: ' + error.message;
+            });
+            
+            // Also try a direct test with a timeout
+            const timeoutPromise = new Promise((_, reject) => {
+                setTimeout(() => reject(new Error('Request timed out')), 5000);
+            });
+            
+            Promise.race([
+                fetch('http://192.168.1.107:5055', { mode: 'no-cors' }),
+                timeoutPromise
+            ])
+            .then(() => {
+                statusResult.textContent += '\n\nServer responded to GET request';
+            })
+            .catch(error => {
+                statusResult.textContent += '\n\nGET request error: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html> 

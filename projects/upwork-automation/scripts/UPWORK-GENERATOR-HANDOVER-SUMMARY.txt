@@ -1,0 +1,72 @@
+Upwork Proposal Generator – System Overview & Handover
+
+1. Project Purpose
+Automates Upwork proposal generation using a multi-model AI backend (GPT-4, Gemini, Cohere) and a Flask dashboard. Jobs are received via webhook from a Chrome extension, queued, and proposals are generated and managed through a web UI.
+
+2. Key Components & Files
+Main Application Directory: /root/homelab-docs/scripts/upwork-automation/
+- simple-upwork-generator.py: Flask dashboard server (port 5056). Receives jobs, manages queue, interfaces with AI server, serves UI.
+- upwork-proposal-server-multimodel.py: Multi-model AI backend (port 5001). Receives job data, generates proposals using LLMs, returns JSON.
+- proposal-queue.json: Stores the job queue.
+- simple-generator.log: Main application log for dashboard server.
+- api-server.log: Log for API server (if used).
+- dashboard.html: Main HTML template for the dashboard UI.
+- upwork-credentials.env: Stores Upwork credentials (if needed).
+- test-webhook.py: Script to test webhook/job intake.
+- README.md: Quick start, architecture, and troubleshooting.
+- PROJECT-DOCUMENTATION-COMPLETE.md: Full project documentation, architecture, and technical details.
+- SCORING-SYSTEM-AND-STYLING-GUIDE.md: Details on proposal scoring and style.
+- SIMPLE-GENERATOR-USER-GUIDE.md: User guide for the dashboard.
+- start-all-services.sh: Script to start all relevant services.
+- Other scripts and logs (e.g., for testing, health checks, and deployment).
+AI/Job Scraper:
+- upwork-scraper/: Contains job scraping logic, requirements, and supporting scripts.
+
+3. How the System Works
+1. Job Intake: Chrome extension scrapes Upwork jobs and POSTs them to /webhook/rss-jobs on the Flask server.
+2. Dashboard: Flask server (simple-upwork-generator.py) displays jobs, allows proposal generation, and job management.
+3. Proposal Generation: When a user clicks "Generate Proposal," the dashboard sends the job to the AI server (upwork-proposal-server-multimodel.py). The AI server uses multiple LLMs to generate a proposal, returning a JSON response.
+4. Proposal Display: The dashboard displays the formatted proposal, ready for copy/paste or further action.
+
+4. Ports & Access
+- Dashboard: http://192.168.1.107:5056
+- AI Server: http://localhost:5001
+
+5. Startup & Maintenance
+- Start Dashboard:
+  cd /root/homelab-docs/scripts/upwork-automation
+  python3 simple-upwork-generator.py
+- Start AI Server:
+  nohup python3 homelab-docs/scripts/upwork-automation/upwork-proposal-server-multimodel.py &
+- Check Logs:
+  tail -f simple-generator.log
+  tail -f /root/nohup.out
+- Kill Stuck Processes:
+  pkill -f upwork-proposal-server-multimodel.py
+
+6. Troubleshooting
+- Port in use: Only one instance of each server should run. Kill all with pkill before restarting.
+- Proposal not generating: Ensure AI server is running and accessible on port 5001.
+- Webhook not working: Test with python3 test-webhook.py and check logs.
+
+7. Documentation & Guides
+- README.md – Quick start, architecture, troubleshooting.
+- PROJECT-DOCUMENTATION-COMPLETE.md – Full technical and user documentation.
+- SCORING-SYSTEM-AND-STYLING-GUIDE.md – Proposal scoring and style.
+- SIMPLE-GENERATOR-USER-GUIDE.md – Dashboard usage.
+- UPWORK-GENERATOR-ACCESS-GUIDE.md – Access and troubleshooting.
+
+8. Standardization & Best Practices
+- Only one instance of each server should run at a time.
+- Always check logs for errors before restarting.
+- Use provided scripts for starting/stopping services.
+- Follow the documentation for environment variables and configuration.
+
+9. Future Enhancements (from docs)
+- Job filtering, analytics, PDF export, batch generation, Upwork API integration, database migration, user authentication, and more.
+
+10. Support
+- For issues, check logs and documentation.
+- All configuration and troubleshooting steps are in the markdown files in the main directory.
+
+This document summarizes the architecture, files, and operational procedures for the Upwork Proposal Generator system. Pass this to any new AI/chat agent or developer for a complete handover. 

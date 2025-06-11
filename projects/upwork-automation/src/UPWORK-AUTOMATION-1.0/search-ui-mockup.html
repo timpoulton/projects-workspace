@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork Proposal Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --accent-primary: #3b82f6;
+            --accent-hover: #2563eb;
+            --border-color: #334155;
+            --success: #10b981;
+            --error: #ef4444;
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, sans-serif;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 2rem;
+            
+            /* Spacing */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            
+            /* Borders */
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        header {
+            margin-bottom: var(--spacing-2xl);
+            text-align: center;
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            background: linear-gradient(90deg, var(--accent-primary), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header .subtitle {
+            color: var(--text-secondary);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Search Interface Styles */
+        .search-container {
+            background-color: var(--bg-secondary);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .search-form input[type="text"] {
+            width: 100%;
+            padding: var(--spacing-md);
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            color: var(--text-primary);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .search-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: var(--spacing-sm);
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            color: var(--text-primary);
+        }
+
+        .range-inputs {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .range-inputs input {
+            flex: 1;
+        }
+
+        .range-inputs span {
+            color: var(--text-secondary);
+        }
+
+        .primary-button {
+            background-color: var(--accent-primary);
+            color: white;
+            border: none;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .primary-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Results Styles */
+        .results-container {
+            background-color: var(--bg-secondary);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--spacing-md);
+        }
+
+        .results-header h3 {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+        }
+
+        .results-controls select {
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            color: var(--text-primary);
+        }
+
+        .results-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .job-card {
+            background-color: var(--bg-primary);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: var(--font-size-lg);
+            margin: 0;
+        }
+
+        .job-budget {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        .job-client {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .job-score {
+            background-color: var(--accent-primary);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .job-description {
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--font-size-base);
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .job-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--spacing-md);
+        }
+
+        .job-posted {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+        }
+
+        .job-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .job-actions button {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            font-size: var(--font-size-sm);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .view-job-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .view-job-btn:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .generate-proposal-btn {
+            background-color: var(--accent-primary);
+            border: none;
+            color: white;
+        }
+
+        .generate-proposal-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .reject-btn {
+            background-color: transparent;
+            border: 1px solid var(--error);
+            color: var(--error);
+        }
+
+        .reject-btn:hover {
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+
+        .extension-jobs-container {
+            background-color: var(--bg-secondary);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .extension-jobs-container h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--spacing-md);
+        }
+
+        .empty-list {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--text-secondary);
+            border: 1px dashed var(--border-color);
+            border-radius: var(--border-radius-md);
+        }
+
+        .loading {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--text-secondary);
+        }
+
+        .error-message {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--error);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: var(--spacing-2xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Upwork Proposal Generator</h1>
+            <p class="subtitle">Find jobs and generate winning proposals</p>
+        </header>
+        
+        <!-- Search Interface -->
+        <div class="search-container">
+            <h2 class="search-title">Find Upwork Jobs</h2>
+            <div class="search-form">
+                <input type="text" id="search-query" placeholder="Enter keywords (e.g., Python developer, Shopify expert)">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label>Budget Range</label>
+                        <div class="range-inputs">
+                            <input type="number" id="budget-min" placeholder="Min">
+                            <span>-</span>
+                            <input type="number" id="budget-max" placeholder="Max">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Job Type</label>
+                        <select id="job-type">
+                            <option value="">All Types</option>
+                            <option value="hourly">Hourly</option>
+                            <option value="fixed">Fixed Price</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Experience Level</label>
+                        <select id="experience-level">
+                            <option value="">Any Experience</option>
+                            <option value="entry">Entry Level</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="search-button" class="primary-button">Search Jobs</button>
+            </div>
+        </div>
+        
+        <!-- Search Results -->
+        <div id="search-results" class="results-container">
+            <div class="results-header">
+                <h3>Search Results <span id="results-count">(3)</span></h3>
+                <div class="results-controls">
+                    <select id="sort-options">
+                        <option value="relevance">Relevance</option>
+                        <option value="date">Newest</option>
+                        <option value="budget">Budget (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="results-list" class="results-list">
+                <!-- Example Job Cards -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4 class="job-title">Python Developer for Data Automation</h4>
+                        <span class="job-budget">$2,000 - $4,000</span>
+                    </div>
+                    <div class="job-client">
+                        <span class="client-name">ClientCorp Inc.</span>
+                        <span class="client-rating">★★★★★ (4.9)</span>
+                    </div>
+                    <div class="job-description">
+                        Looking for an experienced Python developer to build a data automation system. The project involves extracting data from multiple sources, transforming it, and loading it into our database. Experience with pandas, requests, and SQL is required.
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-posted">Posted 2 hours ago</span>
+                        <div class="job-actions">
+                            <button class="view-job-btn">View Details</button>
+                            <button class="generate-proposal-btn">Generate Proposal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4 class="job-title">Full Stack Developer for SaaS Application</h4>
+                        <span class="job-budget">$5,000 - $10,000</span>
+                    </div>
+                    <div class="job-client">
+                        <span class="client-name">TechStartup Ltd.</span>
+                        <span class="client-rating">★★★★☆ (4.3)</span>
+                    </div>
+                    <div class="job-description">
+                        We're looking for a full-stack developer to help build our SaaS application. The project involves working with React, Node.js, and MongoDB. You'll be responsible for implementing new features and improving existing ones.
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-posted">Posted 1 day ago</span>
+                        <div class="job-actions">
+                            <button class="view-job-btn">View Details</button>
+                            <button class="generate-proposal-btn">Generate Proposal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4 class="job-title">WordPress Developer for E-commerce Site</h4>
+                        <span class="job-budget">$1,500 - $3,000</span>
+                    </div>
+                    <div class="job-client">
+                        <span class="client-name">Retail Solutions Co.</span>
+                        <span class="client-rating">★★★★☆ (4.1)</span>
+                    </div>
+                    <div class="job-description">
+                        Need a WordPress developer to build an e-commerce site using WooCommerce. The site should have product pages, cart functionality, and payment integration. Experience with WooCommerce and custom WordPress themes is required.
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-posted">Posted 3 days ago</span>
+                        <div class="job-actions">
+                            <button class="view-job-btn">View Details</button>
+                            <button class="generate-proposal-btn">Generate Proposal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Jobs from Chrome Extension -->
+        <div class="extension-jobs-container">
+            <h2>Jobs from Chrome Extension</h2>
+            
+            <div class="job-list">
+                <!-- Example Job Card from Extension -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <h4 class="job-title">AI Integration Specialist</h4>
+                        <span class="job-budget">$3,000 - $5,000</span>
+                    </div>
+                    <div class="job-client">
+                        <span class="client-name">InnovateAI</span>
+                        <span class="job-score">Score: 85</span>
+                    </div>
+                    <div class="job-description">
+                        We need an expert to integrate various AI services into our existing platform. Experience with OpenAI API, machine learning frameworks, and cloud deployment required.
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-posted">2025-06-03T10:15:30</span>
+                        <div class="job-actions">
+                            <button class="generate-proposal-btn">Generate Proposal</button>
+                            <button class="reject-btn">Reject</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Upwork Proposal Generator</p>
+            <p>Powered by Multi-Model AI</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple demonstration script
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchButton = document.getElementById('search-button');
+            const searchInput = document.getElementById('search-query');
+            const searchResults = document.getElementById('search-results');
+            
+            searchButton.addEventListener('click', function() {
+                const query = searchInput.value.trim();
+                if (query.length > 0) {
+                    // In a real implementation, this would make an API call
+                    // Here we just show the pre-populated results
+                    searchResults.style.display = 'block';
+                    
+                    // Scroll to results
+                    searchResults.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            
+            // Add functionality to view details buttons
+            document.querySelectorAll('.view-job-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('This would show a detailed view of the job in a real implementation.');
+                });
+            });
+            
+            // Add functionality to generate proposal buttons
+            document.querySelectorAll('.generate-proposal-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('This would generate a proposal for this job in a real implementation.');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

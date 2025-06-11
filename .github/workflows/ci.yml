@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - name: upwork-automation
+            path: projects/upwork-automation
+          - name: club77-guestlist
+            path: projects/club77-guestlist
+          - name: projekt-ai-website
+            path: projects/projekt-ai-website
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python for Python projects
+        if: matrix.name == 'upwork-automation'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      - name: Install Python dependencies
+        if: matrix.name == 'upwork-automation'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ${{ matrix.path }}/src/requirements.txt
+      - name: (Optional) Run Python tests
+        if: matrix.name == 'upwork-automation'
+        run: |
+          echo "No Python tests configured yet"
+
+      - name: Set up Node.js for Node projects
+        if: matrix.name != 'upwork-automation'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install and build Node projects
+        if: matrix.name == 'projekt-ai-website'
+        run: |
+          cd ${{ matrix.path }}/src/projekt-ai-website
+          npm install
+          npm run build
+      - name: (Optional) Run Node tests
+        if: matrix.name != 'upwork-automation'
+        run: |
+          echo "No Node tests configured yet"
+
+      - name: Build Docker image
+        run: |
+          docker build ${{ matrix.path }}/deploy -f ${{ matrix.path }}/deploy/Dockerfile -t ${{ matrix.name }}:latest
+
+      - name: Health check Docker container
+        run: |
+          CONTAINER_ID=$(docker run -d -p 8080:80 ${{ matrix.name }}:latest)
+          sleep 5
+          curl -f http://localhost:8080 || (docker logs $CONTAINER_ID && exit 1)
+          docker kill $CONTAINER_ID 

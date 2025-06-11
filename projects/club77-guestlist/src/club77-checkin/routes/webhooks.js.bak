@@ -1,0 +1,162 @@
+const express = require('express');
+const router = express.Router();
+const { Event, Guest } = require('../models');
+const axios = require('axios');
+
+// Get configuration from environment variables
+const WEBFLOW_WEBHOOK_SECRET = process.env.WEBFLOW_WEBHOOK_SECRET || '9beb0bcdcc51ef40cffc539947b47055898885e96931d0bb0a5009ab4696e6a6';
+// Add the new Webflow-generated secret
+const WEBFLOW_NEW_SECRET = '7ba02129304569b5b6edbc622b1600371e9cb9e46bd5f760f701450d4aa09899';
+const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY || 'your-mailchimp-api-key';
+const MAILCHIMP_SERVER = process.env.MAILCHIMP_SERVER || 'us10';
+const MAILCHIMP_LIST_ID = process.env.MAILCHIMP_LIST_ID || '53f56e2c77';
+
+console.log('Webhook module loaded with secrets:');
+console.log(`- Original secret: ${WEBFLOW_WEBHOOK_SECRET.substring(0, 10)}...`);
+console.log(`- New secret: ${WEBFLOW_NEW_SECRET.substring(0, 10)}...`);
+
+// Simple endpoint to receive test form submissions
+router.post('/test', (req, res) => {
+  console.log('Received test webhook:', req.body);
+  res.status(200).json({
+    success: true,
+    message: 'Test webhook received successfully',
+    data: req.body
+  });
+});
+
+// Route for checking if the webhook endpoint is accessible
+router.get('/test', (req, res) => {
+  res.status(200).json({
+    status: 'online',
+    message: 'Webhook test endpoint is active and ready to receive data'
+  });
+});
+
+/**
+ * Authenticate Webflow webhook request
+ */
+function authenticateWebflow(req, res, next) {
+  console.log('Authenticating webhook with headers:', JSON.stringify(req.headers));
+  
+  const webhookSecret = req.headers['x-webflow-webhook-secret'];
+  
+  // Check against both old and new secrets
+  if (webhookSecret !== WEBFLOW_WEBHOOK_SECRET && webhookSecret !== WEBFLOW_NEW_SECRET) {
+    console.error('Invalid webhook secret:', webhookSecret);
+    console.error('Expected one of:', WEBFLOW_WEBHOOK_SECRET.substring(0, 10) + '...', 'or', WEBFLOW_NEW_SECRET.substring(0, 10) + '...');
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  
+  console.log('Webhook authentication successful');
+  next();
+}
+
+/**
+ * Add contact to Mailchimp
+ */
+async function addToMailchimp(guestData, eventName) {
+  try {
+    const url = `https://${MAILCHIMP_SERVER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
+    
+    const data = {
+      email_address: guestData.email,
+      status: 'subscribed',
+      merge_fields: {
+        FNAME: guestData.first_name,
+        LNAME: guestData.last_name,
+        EVENTNAME: eventName
+      },
+      tags: ['GUESTLISTSUCCESS', eventName.replace(/[^a-zA-Z0-9]/g, '_')]
+    };
+    
+    const response = await axios.post(url, data, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Basic ${Buffer.from(`apikey:${MAILCHIMP_API_KEY}`).toString('base64')}`
+      }
+    });
+    
+    console.log('Mailchimp subscription successful', response.data);
+    return true;
+  } catch (error) {
+    console.error('Error adding to Mailchimp:', error.response?.data || error.message);
+    return false;
+  }
+}
+
+/**
+ * Main webhook endpoint for Webflow form submissions
+ */
+router.post('/guest-list-registration', authenticateWebflow, async (req, res) => {
+  try {
+    console.log('Received webhook from Webflow:', req.body);
+    
+    // Extract data from Webflow submission
+    const formData = req.body.data || req.body;
+    
+    // Find or create the event
+    const eventName = formData.event_name || 'Upcoming Event';
+    const eventDate = formData.event_date || new Date().toISOString().split('T')[0];
+    
+    let event = await Event.findOne({
+      where: { name: eventName }
+    });
+    
+    if (!event) {
+      event = await Event.create({
+        name: eventName,
+        event_date: eventDate
+      });
+      console.log('Created new event:', event.name);
+    }
+    
+    // Create guest record
+    const guest = await Guest.create({
+      event_id: event.id,
+      first_name: formData.first_name,
+      last_name: formData.last_name,
+      email: formData.email,
+      dob: formData.dob || null,
+      checked_in: false
+    });
+    
+    console.log('Guest added successfully:', guest.id);
+    
+    // Add to Mailchimp in background
+    addToMailchimp(guest, event.name)
+      .then(success => {
+        console.log('Mailchimp integration completed:', success ? 'Success' : 'Failed');
+      })
+      .catch(err => {
+        console.error('Mailchimp integration error:', err);
+      });
+    
+    // Respond to Webflow
+    res.status(200).json({
+      success: true,
+      message: 'Guest registration successful',
+      data: {
+        guest_id: guest.id,
+        event_id: event.id
+      }
+    });
+  } catch (error) {
+    console.error('Error processing webhook:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error processing guest registration',
+      error: error.message
+    });
+  }
+});
+
+// Route for checking if the webhook endpoint is accessible
+router.get('/guest-list-registration', (req, res) => {
+  res.status(200).json({
+    status: 'online',
+    message: 'Webhook endpoint is active and ready to receive data'
+  });
+});
+
+module.exports = router; 

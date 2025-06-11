@@ -1,0 +1,36 @@
+{
+  "rss_feeds": [
+    "https://www.upwork.com/ab/feed/jobs/rss?q=automation&sort=recency",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=workflow%20automation&sort=recency",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=no%20code&sort=recency",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=CRM%20integration&sort=recency",
+    "https://www.upwork.com/ab/feed/jobs/rss?q=project%20management%20automation&sort=recency"
+  ],
+  "target_keywords": [
+    "automation",
+    "workflow",
+    "integration",
+    "API",
+    "webhook",
+    "zapier",
+    "make.com",
+    "n8n",
+    "no-code",
+    "low-code",
+    "CRM",
+    "project management",
+    "business process"
+  ],
+  "min_budget": 1000,
+  "excluded_keywords": [
+    "marketing",
+    "social media",
+    "content writing",
+    "SEO",
+    "graphic design",
+    "video editing",
+    "translation"
+  ],
+  "monitoring_interval": 1800,
+  "max_jobs_per_run": 10
+}

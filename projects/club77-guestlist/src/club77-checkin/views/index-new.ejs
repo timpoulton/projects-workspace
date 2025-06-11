@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Club 77 - Staff Dashboard</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Club77 Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'club77-black': '#000000',
+                        'club77-dark': '#0a0a0a',
+                        'club77-gray': '#1a1a1a',
+                        'club77-border': '#333333',
+                        'club77-text': '#ffffff',
+                        'club77-muted': '#999999',
+                        'club77-accent': '#ffffff'
+                    },
+                    fontFamily: {
+                        'club77': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Club77 Custom Styles -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        
+        .club77-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .club77-card:hover {
+            border-color: #555;
+            transform: translateY(-2px);
+        }
+        
+        .club77-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .club77-btn:hover {
+            transform: translateY(-1px);
+        }
+        
+        .club77-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+
+<body class="bg-club77-black text-club77-text min-h-screen font-club77">
+    <!-- Header Section -->
+    <div class="px-4 py-6 text-center">
+        <!-- Club77 Logo -->
+        <div class="mb-6">
+            <img src="/images/club77-logo.png" alt="Club 77" class="h-12 md:h-16 mx-auto mb-4">
+        </div>
+        
+        <!-- Status Badge -->
+        <% if (typeof events !== 'undefined' && events.length > 0) { %>
+            <div class="inline-flex items-center px-4 py-2 bg-club77-gray border border-club77-border rounded-lg text-sm">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-2 club77-pulse"></div>
+                <%= events.length %> Active Event<%= events.length !== 1 ? 's' : '' %>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Main Content -->
+    <div class="px-4 pb-8">
+        <% if (typeof events !== 'undefined' && events.length > 0) { %>
+            <!-- Events Grid -->
+            <div class="space-y-6">
+                <% events.forEach((event) => { %>
+                    <div class="club77-card rounded-xl overflow-hidden">
+                        <!-- Event Artwork -->
+                        <div class="relative">
+                            <% if (event.artwork_url) { %>
+                                <img src="<%= event.artwork_url %>" 
+                                     alt="<%= event.name %>" 
+                                     class="w-full h-48 md:h-56 object-cover">
+                            <% } else { %>
+                                <div class="w-full h-48 md:h-56 bg-club77-border flex items-center justify-center">
+                                    <div class="text-center text-club77-muted">
+                                        <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <p class="text-sm">No Image</p>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                        
+                        <!-- Event Content -->
+                        <div class="p-6">
+                            <!-- Event Title -->
+                            <h3 class="text-xl font-semibold mb-4 text-club77-text leading-tight">
+                                <%= event.name %>
+                            </h3>
+                            
+                            <!-- Event Meta -->
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center text-club77-muted text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <%= new Date(event.event_date).toLocaleDateString('en-AU', { 
+                                        weekday: 'long', 
+                                        month: 'long', 
+                                        day: 'numeric' 
+                                    }) %>
+                                </div>
+                                
+                                <div class="flex items-center text-club77-muted text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <%= event.start_time || '10:00 PM' %> - <%= event.end_time || '5:00 AM' %>
+                                </div>
+                                
+                                <div class="flex items-center text-club77-muted text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    77 William St, Darlinghurst
+                                </div>
+                            </div>
+                            
+                            <!-- Manage Button -->
+                            <a href="/events/<%= event.id %>" 
+                               class="club77-btn block w-full bg-club77-text text-club77-black text-center py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-all">
+                                Manage Guests
+                            </a>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <!-- Empty State -->
+            <div class="text-center py-16">
+                <div class="mb-8">
+                    <svg class="w-16 h-16 mx-auto text-club77-muted mb-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-club77-text">No Events Found</h3>
+                    <p class="text-club77-muted mb-8">No events are currently loaded in the system.</p>
+                </div>
+                
+                <!-- Sync Button -->
+                <button id="sync-muzeek" 
+                        class="club77-btn bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all">
+                    <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                    </svg>
+                    Sync Events from Muzeek
+                </button>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Sync Events functionality
+        document.getElementById('sync-muzeek')?.addEventListener('click', async function() {
+            const button = this;
+            const originalHTML = button.innerHTML;
+            
+            // Loading state
+            button.innerHTML = `
+                <svg class="w-5 h-5 inline mr-2 animate-spin" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                </svg>
+                Syncing...
+            `;
+            button.disabled = true;
+            button.classList.add('opacity-75');
+            
+            try {
+                const response = await fetch('/api/sync/muzeek/events', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    button.innerHTML = `
+                        <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Synced Successfully!
+                    `;
+                    button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                    button.classList.add('bg-green-600');
+                    
+                    setTimeout(() => location.reload(), 1500);
+                } else {
+                    throw new Error(result.error || 'Sync failed');
+                }
+            } catch (error) {
+                console.error('Sync error:', error);
+                button.innerHTML = `
+                    <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    Error - Try Again
+                `;
+                button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                button.classList.add('bg-red-600', 'hover:bg-red-700');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.disabled = false;
+                    button.classList.remove('opacity-75', 'bg-red-600', 'hover:bg-red-700');
+                    button.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                }, 3000);
+            }
+        });
+        
+        // Add touch feedback for mobile
+        document.querySelectorAll('.club77-btn').forEach(btn => {
+            btn.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            btn.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html> 

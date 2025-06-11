@@ -1,0 +1,44 @@
+Unable to connect to the database: ConnectionError [SequelizeConnectionError]: getaddrinfo EAI_AGAIN club77_db
+    at ConnectionManager.connect (/root/homelab-docs/club77-checkin/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:102:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ConnectionManager._connect (/root/homelab-docs/club77-checkin/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:222:24)
+    at async /root/homelab-docs/club77-checkin/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:174:32 {
+  parent: Error: getaddrinfo EAI_AGAIN club77_db
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'club77_db',
+    fatal: true
+  },
+  original: Error: getaddrinfo EAI_AGAIN club77_db
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'club77_db',
+    fatal: true
+  }
+}
+Failed to sync database: ConnectionError [SequelizeConnectionError]: getaddrinfo EAI_AGAIN club77_db
+    at ConnectionManager.connect (/root/homelab-docs/club77-checkin/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:102:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ConnectionManager._connect (/root/homelab-docs/club77-checkin/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:222:24)
+    at async /root/homelab-docs/club77-checkin/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:174:32 {
+  parent: Error: getaddrinfo EAI_AGAIN club77_db
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'club77_db',
+    fatal: true
+  },
+  original: Error: getaddrinfo EAI_AGAIN club77_db
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+    errno: -3001,
+    code: 'EAI_AGAIN',
+    syscall: 'getaddrinfo',
+    hostname: 'club77_db',
+    fatal: true
+  }
+}

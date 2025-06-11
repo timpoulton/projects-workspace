@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: club77_db
+    environment:
+      MYSQL_ROOT_PASSWORD: lkj654
+      MYSQL_DATABASE: club77
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      - club77_network
+    restart: always
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: club77_app
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: lkj654
+      DB_NAME: club77
+      PORT: 3001
+      WEBFLOW_WEBHOOK_SECRET: 5dd664b9f7f4413663d7e133b33b29475c953c8b5948e8b0e6877275f089d6de
+      WEBFLOW_API_TOKEN: f0840501141e3949ac2c4bfe2dd0c8f4b5acfd8e5ae3bfd7e428b3b12b360651
+      MUZEEK_API_TOKEN: mzku-MS03MTU2NTIxODUtYjI2ZjBlY2FkMDA2MjcwMDljYmI4OWU2NDA5ZjEyZDQ1ZGU2NzdiOQ
+      MAILCHIMP_API_KEY: 2692c472af4f17326f5c1384a61b4c5b-us12
+      MAILCHIMP_SERVER: us12
+      MAILCHIMP_LIST_ID: 53f56e2c77
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+    networks:
+      - club77_network
+    restart: always
+
+networks:
+  club77_network:
+    driver: bridge
+
+volumes:
+  db_data: 

@@ -1,0 +1,13 @@
+# DNS Configuration for test-pages.projekt-ai.net
+# Created: 2025-06-03 05:06:10
+
+To complete the setup, add this DNS record in Cloudflare:
+
+Type: A
+Name: test-pages
+Content: 125.253.107.197
+Proxy status: Proxied
+
+# Additional Configuration
+- Disable Rocket Loader for this subdomain
+- Create a Cache Rule to bypass cache for the test pages subdomain 

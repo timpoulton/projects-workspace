@@ -1,0 +1,22 @@
+[Unit]
+Description=Club77 Guest Check-In System
+After=network.target
+After=mysql.service
+Requires=mysql.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/homelab-docs/club77-checkin
+ExecStart=/usr/bin/node app.js
+Restart=on-failure
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=DB_HOST=localhost
+Environment=DB_USER=club77user
+Environment=DB_PASSWORD=club77pass
+Environment=DB_NAME=club77
+Environment=SESSION_SECRET=verySecretKey
+
+[Install]
+WantedBy=multi-user.target 

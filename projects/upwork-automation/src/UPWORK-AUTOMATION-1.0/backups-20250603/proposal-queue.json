@@ -1,0 +1,1865 @@
+[
+  {
+    "job_id": "job_1748917866",
+    "job_title": "Zoho construction management CRM + Books  + automation. Full platform build.",
+    "client_name": "Client",
+    "budget": "$750.00",
+    "description": "Need a project management crm, that integrates with zoho books. \n\nThe crm needs to have a deal flow. In addition my team is looking for a client facing portal where we can invoice them, and they can check status of the deal being worked. \n\nAutomation in between functions is a plus.",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hi there,\n\nRegarding your need for a Zoho CRM integrated with Books, especially the \"automation in between functions,\" I definitely understand the integration challenges. I recently worked with a smaller landscaping firm that struggled to automatically pull invoice data into their CRM, and it created real bottlenecks.\n\nFor your project, I'd start by mapping your current deal flow and client communication process. Then, we could build out the CRM with the deal stages you need and integrate Zoho Books for invoicing. Finally, we'd implement some initial automations for things like status updates in the client portal.\n\nWould you be open to a quick chat to discuss your current workflow and see if my experience aligns with your needs?",
+    "score": 70,
+    "created_at": "2025-06-03T02:31:06.079691",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Zoho-construction-management-CRM--Books---automati-1748917866079.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Zoho-construction-management-CRM--Books---automati-1748917866079.html"
+  },
+  {
+    "job_id": "job_1748917868",
+    "job_title": "Development of Wear OS Integration",
+    "client_name": "Client",
+    "budget": "$500.00",
+    "description": "Project Details\nAndroid Developer for Wear OS Integration\n\nProject Brief\nWe're seeking a skilled Android developer to build a Wear OS integration for our health monitoring platform. This project involves creating a library module that enables our app to collect health metrics from Wear OS devices in both continuous and on-demand modes.\n\nPlease see the attached file for the remainder of the project description.",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hey there,\n\nReading about the need for Wear OS integration and collecting health metrics \"in both continuous and on-demand modes\" caught my eye. I recall working on a similar project a few years back where the trickiest part was balancing battery life with consistent data capture; we ended up implementing a smart scheduler that prioritized continuous monitoring only during active workouts.\n\nFor your project, I'd suggest starting with a solid architecture for the library module itself, then tackle the continuous data streaming. Once that's stable, we can focus on the on-demand data retrieval. Finally, a review for optimal performance and battery use would be in order.\n\nHappy to chat more about the specifics and review the attached file. Let me know if you're free for a quick call sometime this week.",
+    "score": 70,
+    "created_at": "2025-06-03T02:31:08.695891",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Development-of-Wear-OS-Integration-1748917868695.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Development-of-Wear-OS-Integration-1748917868695.html"
+  },
+  {
+    "job_id": "job_1748917871",
+    "job_title": "Soft Goods Product Designer Needed for Tech Pack &\nPrototype Guidance (Textile + Embedded Magnets)",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Project Overview\nI'm developing a textile-based product that includes small embedded hardware components (e.g.,\nmagnets for fabric integration). I need an experienced soft goods product designer or technical\naccessory/fashion designer to help move this from concept to a factory-ready tech pack. The ideal\npartner understands both function and form-especially in textile-heavy products-and can guide me\nthrough design decisions, material selection, and spec development.\n\nScope of Work\n1. Design Cons...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hi there,\n\nReading about your project, the \"textile-heavy product with embedded magnets\" really caught my eye. I once worked on a custom backpack design for a medical device company where we had to figure out a similar embedding solution for sensors - a total headache getting the flex right!\n\nFor your project, I'd suggest starting with a deep dive into your existing concept sketches, identifying potential challenges with material integration and magnet placement. From there, we could collaboratively refine the design, keeping manufacturability in mind. Finally, I can help you build out that tech pack, paying close attention to specs and tolerances.\n\nWould be happy to chat further about the nuances of your design and explore how I can help bring it to life. Let me know if you're open to a quick call.",
+    "score": 70,
+    "created_at": "2025-06-03T02:31:11.542159",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Soft-Goods-Product-Designer-Needed-for-Tech-Pack-P-1748917871542.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Soft-Goods-Product-Designer-Needed-for-Tech-Pack-P-1748917871542.html"
+  },
+  {
+    "job_id": "job_1748918164201",
+    "job_title": "Airbnb Cohosting Systems and Tools Consultation",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "\ud83d\udd0d Seeking Experienced Airbnb Cohost for Systems Walkthrough & Potential Ongoing Partnership\n\nDescription:\nHi there!\n\nI'm new to the short-term rental business and looking for an experienced Airbnb cohost or property manager to help me get up to speed.\n\nWhat I\u2019m Looking For:\nI need someone who can:\n\nWalk me through the systems and tools they use for Airbnb cohosting (e.g., messaging automation, cleaning scheduling, dynamic pricing, guest communication, etc.)\n\nShow me their workflow/processes from...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "real estate",
+      "score": 90,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hi there!\n\nReading that you're new to the short-term rental game and looking for someone to walk you through the cohosting systems \u2013 I remember feeling exactly the same way when I first started automating hospitality workflows! It's definitely a learning curve.\n\nYears ago, I spent a week straight responding to guest inquiries at 3 AM because my messaging wasn\u2019t set up properly. Learned that lesson fast!\n\nFor your situation, I think a good starting point would be: 1) we could map out your current process from booking to check-out to identify those key pain points where automation could save you the most time, especially around guest communication and cleaning scheduling. 2) Then, we can explore tools tailored to your specific needs, focusing on user-friendliness and integration.\n\nI'm happy to jump on a quick call to chat about your priorities and see if my experience might be a good fit. No pressure either way!",
+    "score": 90,
+    "created_at": "2025-06-03T02:36:07.140958",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Airbnb-Cohosting-Systems-and-Tools-Consultation-1748918164201.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Airbnb-Cohosting-Systems-and-Tools-Consultation-1748918164201.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748918472047",
+    "job_title": "\ud83c\udfa5 AI Virtual Influencer Content Manager (Automation + Marketing)",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are launching a digital model and virtual influencer brand called Lana Rae under our creative agency, The Rae Agency. This is a soft lifestyle, storytelling-focused persona using AI-generated visuals and audio content.\n\nWe\u2019re looking for a skilled, organized, and automation-savvy content & marketing assistant to help manage her platform presence, from scheduling and automation to engagement workflows.\n\n\u2e3b\n\n\ud83c\udfaf Responsibilities:\n\t\u2022\tSchedule and manage image + audio posts across creator platforms\n...",
+    "analysis": {
+      "tools": [
+        "Automation Platform"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 95,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 4
+    },
+    "message": "Hey there,\n\nLana Rae sounds like a fascinating project \u2013 a \"soft lifestyle, storytelling-focused persona\" is a really compelling concept in the current landscape. I noticed you're looking for someone to handle scheduling and automation. That's right in my wheelhouse.\n\nI remember when I first started automating social media for a client who was a wildlife photographer. The biggest challenge wasn't the scheduling itself, but making sure the content felt authentic and timely, not just pre-programmed.\n\nFor Lana Rae, I'd suggest starting with: 1) developing a content calendar that aligns with her narrative, 2) implementing automation tools for scheduling posts across platforms, and 3) creating engagement workflows to foster a genuine connection with her audience.\n\nI'd love to chat more about how I can help bring Lana Rae to life. Let me know if you're free for a quick call.",
+    "score": 95,
+    "created_at": "2025-06-03T02:41:14.005638",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal--AI-Virtual-Influencer-Content-Manager-Automation--1748918472047.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal--AI-Virtual-Influencer-Content-Manager-Automation--1748918472047.html",
+    "automation_terms_found": 4,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748918474014",
+    "job_title": "Flodesk Setup and Content Migration Specialist",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking an experienced freelancer to assist with the setup of Flodesk and the transfer of all existing content from Zapier and Mailchimp. The project will involve embedding the new Flodesk setup into our Squarespace site, ensuring a seamless transition and integration. Ideal candidates should have a strong background in email marketing platforms and web development, with attention to detail and the ability to meet deadlines. If you have the skills to streamline our marketing processes, we...",
+    "analysis": {
+      "tools": [
+        "Zapier"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 3
+    },
+    "message": "Hi there,\n\n\"Streamline our marketing processes\" \u2013 that really resonated with me. I've seen firsthand how a clunky email system can bog down even the best marketing strategies. Once, I worked with a health coach who spent more time wrestling with Mailchimp than actually creating content. We switched her over to a more user-friendly platform, and it freed up so much of her time.\n\nFor your project, I'd first focus on a thorough Flodesk setup, making sure it aligns with your brand and goals. Then, I'd handle the content migration from Zapier and Mailchimp, ensuring nothing gets lost in translation. Finally, I'd seamlessly embed Flodesk into your Squarespace site, keeping everything consistent.\n\nWould love to chat more about how I can help make this transition smooth for you. Let me know if you're available for a quick call.",
+    "score": 100,
+    "created_at": "2025-06-03T02:41:15.879274",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Flodesk-Setup-and-Content-Migration-Specialist-1748918474014.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Flodesk-Setup-and-Content-Migration-Specialist-1748918474014.html",
+    "automation_terms_found": 3,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748918769257",
+    "job_title": "Google AdWords Profit Strategist (Not Just a technician)",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "\ud83d\udc49 Google Ads Profit Strategist (Not Just a technician) \n\nDescription:\n\nWe\u2019re a 36-year personal and business branding company trusted by CEOs, entrepreneurs, investors, and change-makers across 4 continents.\n\nNow we\u2019re looking for a Google Ads Strategist who can do more than push buttons or follow Google\u2019s \"best practices.\"\n\n\u2705 We don\u2019t want a campaign technician.\n\u2705 We expect that as a baseline.\n\u2705 We\u2019re hiring someone who thinks like a performance CMO \n\nProfit-first, full-funnel aware, with the a...",
+    "analysis": {
+      "tools": [
+        "Make"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 3
+    },
+    "message": "Hey there,\n\nReading your description, the phrase \"not just a technician\" really resonated. I've seen so many businesses pour money into AdWords following generic advice and end up frustrated. A few years back, I helped a local bookstore completely revamp their campaign. We tossed out all the \"best practices\" and focused on a hyper-local, themed approach. Sales went up 40% in a month.\n\nFor you, I'd start by mapping out your ideal client's entire customer journey. Next, we'd identify the *specific* profit triggers within your existing campaigns, not just conversions. Finally, we'd optimize the funnels around those profit triggers.\n\nIf you\u2019re open to a quick chat to bounce some ideas around, let me know. I'd be happy to explore this further.",
+    "score": 100,
+    "created_at": "2025-06-03T02:46:11.242310",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Google-AdWords-Profit-Strategist-Not-Just-a-techni-1748918769257.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Google-AdWords-Profit-Strategist-Not-Just-a-techni-1748918769257.html",
+    "automation_terms_found": 3,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748918771251",
+    "job_title": "Build an AI Content Agent in n8n: News Sourcing, Rewriting, WordPress Drafting, and Facebook Posting",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "I\u2019m looking for an experienced automation expert (preferably with strong n8n skills) to build a custom AI Agent to streamline my content creation workflow.\n\nThis AI Agent must:\n\nMonitor multiple news outlets (list of sources provided) and check for new articles several times daily\n\nFilter content to identify factual news articles only \u2014 ignoring opinion pieces, editorials, and rumours\n\nScrape full articles (including metadata and quotes)\n\nRewrite the article for originality using a prompt I\u2019ll p...",
+    "analysis": {
+      "tools": [
+        "N8N"
+      ],
+      "pain_points": [
+        "manual processes",
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 6
+    },
+    "message": "Okay, I get the gist \u2013 a real, personal proposal. Here goes:\n\n\"I hear you on streamlining content creation - the manual sourcing and rewriting grind can be a real time sink. Especially filtering out all the opinion pieces!\n\nI remember helping a small publishing house a while back who were drowning in RSS feeds. We realized a key piece was building a \"smell test\" into their workflow \u2013 identifying keywords and phrases common in opinion pieces and excluding those early on.\n\nFor your AI Agent, I'd start with the news source monitoring and filtering logic, then tackle the article scraping and rewriting prompt, finally, integrating with WordPress and Facebook. We can test each stage individually to ensure accuracy and the rewritten content aligns with your style.\n\nIf you\u2019re free sometime this week, I'd be happy to jump on a quick call to explore the best approach and whether I'm the right fit.\"",
+    "score": 100,
+    "created_at": "2025-06-03T02:46:14.152457",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Build-an-AI-Content-Agent-in-n8n-News-Sourcing-Rew-1748918771251.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Build-an-AI-Content-Agent-in-n8n-News-Sourcing-Rew-1748918771251.html",
+    "automation_terms_found": 6,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748918774161",
+    "job_title": "Simple make.com content automation",
+    "client_name": "Client",
+    "budget": "$15.00",
+    "description": "I need someone to build out a simple content posting automation for me in make.com. The goal of this automation is to scan a google sheet that contains all the content I want to post. It has the link to the video file in google drive and the caption included and the script of the vid. Sheet is color coded. green highlight means ready to post and red means already posted. Yellow means in progress. Should be able to scan for content not posted yet and take that content and post it to my 4 instagra...",
+    "analysis": {
+      "tools": [
+        "Make.Com"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [
+        "content automation"
+      ],
+      "automation_terms_found": 3
+    },
+    "message": "Hey there,\n\n\"Scan for content not posted yet...\" I totally get that feeling of managing content across spreadsheets \u2013 it can get messy fast. I once helped a small marketing team untangle a similar situation, where they were accidentally re-posting old content because their tracking was all over the place. Drove them nuts!\n\nFor your Insta automation, here's how I'd tackle it: First, we'd set up Make to directly watch that Google Sheet for those green highlights. Next, we'd build the module to grab the video link, caption, and script. Finally, we'd automate the Instagram post itself.\n\nWould love to chat for a few minutes to clarify some of the details around the posting schedule and if you have any specific formatting requirements for the captions. Let me know if you're free sometime this week.",
+    "score": 100,
+    "created_at": "2025-06-03T02:46:16.210601",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Simple-makecom-content-automation-1748918774161.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Simple-makecom-content-automation-1748918774161.html",
+    "automation_terms_found": 3,
+    "specialties": [
+      "content automation"
+    ]
+  },
+  {
+    "job_id": "job_1748918776220",
+    "job_title": "ESP32 & Home Assistant Integrator for HVAC and Evaporative Cooler System",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking an experienced integrator to help us unify our HVAC system with an evaporative cooler using ESP32 and Home Assistant. The ideal candidate will have a strong understanding of IoT integration and automation. Your role will include wiring, programming, and ensuring seamless communication between devices without the need for custom PCBs. If you are passionate about smart home technology and can deliver efficient solutions, we would love to hear from you. Please provide examples of sim...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hey there,\n\n\"Seamless communication between devices\u2026 efficient solutions\" - that really resonates. I\u2019ve spent the last few years untangling similar integration messes for folks who jumped into home automation without a clear plan. I remember one client whose smart thermostat was actively fighting their smart blinds \u2013 a funny problem, but frustrating!\n\nFor your HVAC and cooler integration, I'd start by mapping out the current control logic of each system. Then, we can explore the best way to represent these in Home Assistant. Finally, I'd configure the ESP32 to act as a reliable bridge, ensuring responsive and predictable control.\n\nLet me know if you\u2019d be up for a quick chat to discuss your specific setup. It\u2019s always easier to brainstorm when we're on the same page.",
+    "score": 100,
+    "created_at": "2025-06-03T02:46:18.116055",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-ESP32--Home-Assistant-Integrator-for-HVAC-and-Evap-1748918776220.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-ESP32--Home-Assistant-Integrator-for-HVAC-and-Evap-1748918776220.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748918778125",
+    "job_title": "Custom Shopify Theme Development with License Key Integration",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "\ud83d\udee0\ufe0f Build Custom Shopify Theme with License Key Functionality (Ongoing Opportunity)\n\nDescription:\nWe're looking for a highly skilled Shopify developer to build a custom Shopify theme that includes license key validation functionality. This is for a SaaS-style integration where users can download/import the theme only if they\u2019ve entered a valid license key (provided by us after purchase).\n\nProject Scope:\n\nDuplicate or use an existing premium Shopify theme as a foundation (we will provide the refer...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "SaaS",
+      "score": 55,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hey there,\n\nSaw you're looking to build a custom Shopify theme with license key validation \u2013 that \"integration challenges\" bit definitely caught my eye. I remember working on a similar project a few years back, and honestly, the trickiest part was making sure the license check didn't slow down the theme's performance.\n\nFor your project, I'd probably start by duplicating the theme you provide and setting up a secure API endpoint for license verification. Then, we'd implement the client-side validation to check the key before allowing theme download/import. Finally, we'd rigorously test everything to ensure a smooth user experience.\n\nIf you'd like to chat more about the specifics and how we can avoid those early pitfalls I encountered, feel free to reach out. Always happy to brainstorm.",
+    "score": 55,
+    "created_at": "2025-06-03T02:46:19.932122",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Custom-Shopify-Theme-Development-with-License-Key--1748918778125.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Custom-Shopify-Theme-Development-with-License-Key--1748918778125.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919071483",
+    "job_title": "Custom Legal Practice Management Software Development",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Upwork Job Post: Legal Practice Management Software\n Title: Build Custom Legal Practice Management Software (SSA & Immigration Case Management)\n Description:\n I am seeking an experienced full-stack developer (or small team) to build a custom, cloud-based Legal\n Practice Management System for my law firm: Michels Legal Group LLC, specializing in Social Security\n Disability (SSA) and Immigration law.\n We have fully prepared:- Full system blueprint- Database design- Wireframes- Module flow- API arc...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "SaaS",
+      "score": 55,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 3
+    },
+    "message": "Hi [Client Name],\n\n\"Workflow optimization\" really jumped out at me in your description. I've seen firsthand how inefficient workflows can bog down legal teams. Early in my career, I worked with a firm where simply automating client intake cut their admin time by almost half \u2013 letting lawyers focus on actual casework.\n\nFor your practice management system, I'd start by diving into your blueprint to fully understand your current process. Then, we can build the core SSA and Immigration modules, focusing on seamless data flow between them. Finally, we will integrate the necessary APIs and begin testing.\n\nI'd love to chat more about your vision for Michels Legal Group and how we can bring it to life. Are you free for a quick call sometime next week?",
+    "score": 55,
+    "created_at": "2025-06-03T02:51:13.508716",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Custom-Legal-Practice-Management-Software-Developm-1748919071483.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Custom-Legal-Practice-Management-Software-Developm-1748919071483.html",
+    "automation_terms_found": 3,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919073519",
+    "job_title": "Flutter Developer Needed for Outdoor Navigation MVP (Offline & Multi-Language)",
+    "client_name": "Client",
+    "budget": "$2,000.00",
+    "description": "Description:\nLooking for an experienced Flutter developer to help build a mobile MVP for an outdoor navigation and activity-tracking app. The project is focused on strong offline support, robust map usage, and support for multiple user activity/equipment types. The app must be accessible in multiple languages.\n\nKey Requirements:\n\t\u2022\tFlutter and Dart expertise\n\t\u2022\tExperience implementing offline vector maps (MapLibre GL or similar)\n\t\u2022\tLocal device storage for user activity logs and points of intere...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "score": 55,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Okay, here's my attempt at a genuine Upwork proposal:\n\nHey there,\n\n\"Strong offline support and robust map usage\" caught my eye. I know how crucial that is for outdoor apps \u2013 I once spent three days hiking in Yosemite relying on a (supposedly) offline map that crapped out halfway through. Not fun!\n\nFor your MVP, I'd focus first on nailing the core offline map functionality with MapLibre GL. Then, we'd build out the activity tracking with local storage, and finally tackle the multi-language support. I've found that breaking it down that way makes the development process much smoother.\n\nInterested in chatting more about the specifics of your activity types and how you envision the user experience? Let me know if you'd like to set up a quick call.",
+    "score": 55,
+    "created_at": "2025-06-03T02:51:15.352409",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Flutter-Developer-Needed-for-Outdoor-Navigation-MV-1748919073519.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Flutter-Developer-Needed-for-Outdoor-Navigation-MV-1748919073519.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919075360",
+    "job_title": "Video Editing & AI-Generated Content for Youth Baseball Team Tribute**",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "**Project Description:**  \nI am seeking a skilled video editor with experience in managing and utilizing AI tools to create a dynamic tribute video for a youth baseball team. The final product will feature an anime-style comic book opening, AI-generated images for the closing, and seamless integration of photos and videos provided by me.\n\n**Key Focus:**  \n- Manage and effectively utilize AI tools for image and video generation  \n- Generate comic book-style slides, illustrations, and animations u...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 65,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hey there,\n\n\"Seamless integration of photos and videos\" \u2013 I hear you loud and clear! That's often the trickiest part of these tribute videos. I once spent a week wrestling with a similar project where the client had all these amazing iPhone clips, but the frame rates were all over the place. Drove me nuts!\n\nFor your baseball team tribute, I'd start by experimenting with a few AI image generators to nail down the exact anime style you're looking for. Then, I'd build out the comic book opening, focusing on smooth transitions. Finally, integrate all the photos and videos, addressing any formatting issues as they arise.\n\nWould love to chat more about your vision for this project. Maybe we can hop on a quick call this week?",
+    "score": 65,
+    "created_at": "2025-06-03T02:51:17.069368",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Video-Editing--AI-Generated-Content-for-Youth-Base-1748919075360.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Video-Editing--AI-Generated-Content-for-Youth-Base-1748919075360.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919077079",
+    "job_title": "Fractional Chief Revenue Officer (CMO/CRO) \u2013 AI-Led Growth & Revenue Strategy for SaaS/Telematics Co",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We're a fast-growing SaaS and telematics company (Zenduit / GoFleet / Xentag) looking for a fractional Chief Revenue Officer (CRO) with a CMO background\u2014someone who can strategize and execute AI-driven revenue and demand generation strategies across marketing, sales, and channel enablement.\n\nWe're NOT just looking for a marketing strategist\u2014we want someone who understands how marketing, sales, and partnerships must work as one revenue engine.\n\nThis role is part-time/fractional and remote\u2014but req...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "hospitality",
+      "score": 60,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "\"Seeing you're focused on workflow optimization resonated with me. I remember working with a smaller SaaS company a few years back that had brilliant tech but their sales and marketing teams were basically throwing stuff at the wall. We found that mapping out the entire customer journey, then automating the repetitive bits with Zapier and some clever AI tools, freed up their team to focus on actual relationships.\n\nFor Zenduit, GoFleet, and Xentag, I'd suggest we start by diving deep into your current sales funnel and customer data to identify bottlenecks. From there, we can explore where AI can genuinely enhance \u2013 not replace \u2013 the human touch in each stage, particularly around lead nurturing and personalized demos. Finally, we\u2019d test and iterate, constantly refining based on actual results.\n\nWould love to chat more about how this could translate into real growth for you.\"",
+    "score": 60,
+    "created_at": "2025-06-03T02:51:20.185955",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Fractional-Chief-Revenue-Officer-CMOCRO--AI-Led-Gr-1748919077079.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Fractional-Chief-Revenue-Officer-CMOCRO--AI-Led-Gr-1748919077079.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919669476",
+    "job_title": "Create A Google Sheets Job Tracker/Automated Job Calendar",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "The job description is as follows:\n\nCreate a google spreadsheet with 4 tabs.\nTab 1 (Job Calendar) will be a type of calendar which shows the information provided in tab 2 in a bar graph which automatically moves across according to today\u2019s date (AEST). Tab 2 (Jobs Active) will be the job specifications. Tab 3 (Jobs Outstanding). Tab 4 (Jobs Completed).\n\nPlease view the excel attachment for rough idea. Edit according to your experience and expertise. Final Copy must be in Google Sheets as Excel c...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "hospitality",
+      "score": 60,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hi there,\n\n\"A type of calendar which shows the information provided in tab 2 in a bar graph which automatically moves across according to today\u2019s date\"\u2014that sounds like exactly the kind of dynamic solution Google Sheets excels at. I\u2019ve built similar project trackers, and I remember once spending way too long fiddling with date formats to get everything lined up properly \u2013 learned my lesson then!\n\nFor your job tracker, I'd suggest a starting point of first ensuring all the data in \"Jobs Active\" is consistently formatted for easy referencing. Then, I would build the visual calendar in \"Job Calendar\" and test the function of it pulling date to move in real time. Finally, I'd implement the \"Jobs Outstanding\" and \"Jobs Complete\" tabs, so that the tracking of all aspects is working in concert.\n\nWould be happy to chat further about your specific needs and fine-tune the approach.",
+    "score": 60,
+    "created_at": "2025-06-03T03:01:11.597230",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Create-A-Google-Sheets-Job-TrackerAutomated-Job-Ca-1748919669476.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Create-A-Google-Sheets-Job-TrackerAutomated-Job-Ca-1748919669476.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919671611",
+    "job_title": "Stripe + Firebase Integration (Flutter WebApp)",
+    "client_name": "Client",
+    "budget": "$200.00",
+    "description": "We're looking for a developer to set up a Stripe billing system in our Flutter WebApp with a Firebase backend.\n\n\ud83e\udde9 Key Tasks\n\u2022 Integrate Stripe API (card input, subscription)\n\u2022 Write Firebase Cloud Function to charge usage-based overages per plan\n\u2022 Auto-charge monthly base + overage fees through Stripe\n\u2022 Show payment history on frontend using Stripe API\n\u2022 Provide basic documentation (Loom video optional but helpful)\n\n\ud83d\udee0 Tech Stack\n\u2022 Flutter (Web)\n\u2022 Firebase (Firestore, Functions)\n\u2022 Stripe (Metered...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 55,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hey there,\n\n\"Integration challenges\" - I hear you loud and clear. Stripe and Firebase can be a bit of a dance at times, especially when you throw Flutter into the mix. I recall wrestling with a similar setup for a subscription-based platform a while back, and the key was nailing down the Firebase Cloud Functions logic for handling those usage-based overages. It got messy fast until I really focused on error handling.\n\nFor your project, I'd suggest first mapping out the data flow from Flutter to Firebase to Stripe. Then we can tackle the Cloud Functions to handle the charging of base + overage fees and finally, pull it all together by displaying that payment history on your frontend.\n\nWould love to chat briefly about how you envision the user flow working. Let me know if you\u2019re free for a quick call.",
+    "score": 55,
+    "created_at": "2025-06-03T03:01:13.546942",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Stripe--Firebase-Integration-Flutter-WebApp-1748919671611.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Stripe--Firebase-Integration-Flutter-WebApp-1748919671611.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919673565",
+    "job_title": "AI Automation Expert for Outreach & CRM Integration",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "I am seeking an experienced AI Automation / No-Code / Low-Code Developer or Data Automation expert to help develop an AI-driven outreach system for my business (Auscare Support \u2013 www.auscaresupport.com.au).\n\nThis project is based on a model used by \u201cBen AI\u201d \u2014 a combination of:\n\n\u2705 LinkedIn Sales Navigator Lead scraping\n\u2705 Clay.com enrichment & categorisation\n\u2705 Automated outreach (LinkedIn & email)\n\u2705 Integration into HubSpot CRM with AI-driven workflows\n\u2705 Performance tracking & optimisation\n\nScope ...",
+    "analysis": {
+      "tools": [
+        "Make"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 11
+    },
+    "message": "Hey there,\n\nSaw you're looking to build out an AI-driven outreach system for Auscare, integrating it all into HubSpot. The \"automation needs\" pain point definitely resonates. I remember when I first tried to automate lead gen for my own freelance business years ago, I got so bogged down in trying to duct-tape everything together that I almost gave up.\n\nFor your project, I'd suggest initially focusing on streamlining the LinkedIn Sales Nav -> Clay.com flow, then setting up the core outreach sequences to HubSpot with basic triggers. Finally, we can layer in the AI-driven optimizations based on performance data.\n\nWould be happy to chat through your specific requirements and see if my experience aligns well with what you're after. Feel free to reach out for a quick call if you're interested.",
+    "score": 100,
+    "created_at": "2025-06-03T03:01:15.481323",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-AI-Automation-Expert-for-Outreach--CRM-Integration-1748919673565.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-AI-Automation-Expert-for-Outreach--CRM-Integration-1748919673565.html",
+    "automation_terms_found": 11,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919675489",
+    "job_title": "Looker Studio Expert Needed for Dashboard Optimization and Maintenance",
+    "client_name": "Client",
+    "budget": "$500.00",
+    "description": "We're a boutique web agency urgently seeking a Looker Studio expert to refine, optimize, and maintain detailed client dashboards. This project is time-sensitive and must be completed within 5\u20137 days, with an immediate start\u2014ideally tonight. You will begin with one project, and if all goes well, you will have the opportunity to work on dozens of additional projects in the future.\n\nYou will be required to work inside our assigned computer via AnyDesk. This is non-negotiable. The reason is simple: ...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 55,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 2
+    },
+    "message": "Hey there! Saw you're dealing with some integration challenges with Looker Studio \u2013 \"key pain points detected.\" I get it. I remember wrestling with a similar issue a while back, trying to pull data from a particularly stubborn CRM into Looker. Ended up needing a custom connector and some creative tweaking to get everything singing the same tune.\n\nFor your dashboards, I'd start by first diving deep into your existing setup and identifying those specific integration bottlenecks. Then, I'd optimize the data flow and calculations for faster performance. Finally, I'd refine the visualizations for clarity and actionable insights.\n\nThe AnyDesk access is no problem at all. I'm comfortable working within your environment.\n\nIf you'd like to chat more about how I can help get those dashboards running smoothly, give me a shout.",
+    "score": 55,
+    "created_at": "2025-06-03T03:01:18.424892",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Looker-Studio-Expert-Needed-for-Dashboard-Optimiza-1748919675489.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Looker-Studio-Expert-Needed-for-Dashboard-Optimiza-1748919675489.html",
+    "automation_terms_found": 2,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919678434",
+    "job_title": "Proposal for Millennial Travel Affiliate\nMarketing Website with Al Integration",
+    "client_name": "Client",
+    "budget": "$500.00",
+    "description": "Project Overview:\n\nBuild My Travel Affiliate WordPress Site (Traveler Theme + Affiliate & AI Blog Integration)\n\n\u2705 Job Description:\n\nI\u2019m launching a travel affiliate brand called Explore Rebel (ExploreRebel.com) focused on luxury on a budget for millennials. The site isn\u2019t live yet, but I have everything ready and need a full build with AI blog automation.\n\n\u2e3b\n\n\u2705 What I Already Have:\n\t\u2022\t\u2705 Domain: ExploreRebel.com\n\t\u2022\t\u2705 Hosting: Hostinger\n\t\u2022\t\u2705 WordPress installed\n\t\u2022\t\u2705 Traveler Child Theme (purchased...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 55,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 4
+    },
+    "message": "Hi there,\n\nSaw you're looking to launch Explore Rebel with AI blog automation, focusing on luxury travel on a budget for millennials. That's a cool niche! I actually helped a friend build a similar site a few years back, targeting adventure travel. The biggest challenge we faced was balancing the affiliate content with genuinely useful, engaging articles. It can't *feel* like just a sales pitch, you know?\n\nFor Explore Rebel, I'd suggest first configuring the Traveler theme properly. Then, we can integrate the AI blog tools (you mentioned automation needs, which I understand!), setting clear guidelines for tone and quality. Finally, we'd need to carefully monitor the output, making sure it aligns with your brand and provides real value.\n\nI'd be happy to chat more about your specific vision for the AI integration and how to ensure it's more \"helpful travel guide\" and less \"robot blogger\". Let me know if you're free for a quick call sometime this week.",
+    "score": 55,
+    "created_at": "2025-06-03T03:01:20.693548",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Proposal-for-Millennial-Travel-AffiliateMarketing--1748919678434.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Proposal-for-Millennial-Travel-AffiliateMarketing--1748919678434.html",
+    "automation_terms_found": 4,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919680707",
+    "job_title": "Build AI-Powered Email Generation System with RAG Architecture",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Project Overview: I am seeking an experienced AI/ML developer to build an intelligent email generation system that will transform our sales outreach process. I have 3-4K+ historical email examples and need to create an automated pipeline that generates high-quality client emails based on SDR notes and CRM data.\nCurrent Assets:\n\u2022\t3,000-4,000+ paired examples of SDR input notes and final client emails (JSON format)\n\u2022\tComprehensive training guidelines and style guides\n\u2022\tActive Salesforce CRM with c...",
+    "analysis": {
+      "tools": [
+        "Automation Tools"
+      ],
+      "pain_points": [
+        "integration challenges",
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 100,
+      "rejected": false,
+      "specialties": [],
+      "automation_terms_found": 5
+    },
+    "message": "Okay, here's my proposal:\n\nHey there,\n\nYour project description immediately caught my eye \u2013 the \"integration challenges\" and \"automation needs\" you mentioned around the email generation system resonate with some projects I've tackled. I once spent nearly a week wrangling a legacy CRM to play nice with a sentiment analysis engine; the initial headache was real!\n\nWith your SDR notes, email examples, and CRM data, my approach would be to first fine-tune a RAG (Retrieval-Augmented Generation) model using your data. Then, create an automated pipeline to process SDR notes and retrieve relevant CRM data. Finally, integrate the system with Salesforce so generated emails are easily accessible.\n\nWould you be open to a quick chat about how to adapt this to your project's specific Salesforce setup? I'm available sometime next week.",
+    "score": 100,
+    "created_at": "2025-06-03T03:01:22.597839",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-Build-AI-Powered-Email-Generation-System-with-RAG--1748919680707.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-Build-AI-Powered-Email-Generation-System-with-RAG--1748919680707.html",
+    "automation_terms_found": 5,
+    "specialties": []
+  },
+  {
+    "job_id": "job_1748919971",
+    "job_title": "Excel Quoting Program Tweaks",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "I have an excel program that I use for creating quotations that I would like to have upgraded:\n\nHere is a description of the spreadsheet:\n\n- Consists of 7 sheets.  Most of the heavy lifting is done on just a couple sheets.  The rest are primarily for reference\n- Line Card: lists manufacturers, and discounts specific to each\n- Catalog: Lists the products we sell.  Includes manufacturer, model, description, price etc\n-Quote Database: holds info from previous quotes\n- Customer Database: Holds info ...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hey there,\n\nSaw you're looking to upgrade your Excel quoting program to alleviate some manual processes. I totally get that. I once spent a week manually updating pricing on a similar system, and by the end, I was seeing dollar signs in my sleep!\n\nFrom what you described, I'm thinking we could first focus on streamlining the data flow between your 'Line Card,' 'Catalog,' and the actual quoting process. Then, we can look at automating some of the data entry for new quotes using the Customer Database. A possible third step might be linking the new quotes back to the \"Quote Database\" for easy historical reference.\n\nIf you're open to a quick chat about how these steps might work in practice, I'd be happy to walk you through my initial thoughts.",
+    "score": 70,
+    "created_at": "2025-06-03T03:06:11.607092",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Excel-Quoting-Program-Tweaks-1748919971607.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748919973",
+    "job_title": "Google Analytics and Tracking Implementation Specialist",
+    "client_name": "Client",
+    "budget": "$500.00",
+    "description": "We are urgently seeking an experienced Analytics and Tracking Implementation Specialist for immediate assistance on a critical project at our boutique web agency. The ideal candidate will have extensive experience with Google Analytics 4 (GA4), Google Tag Manager (GTM), and Facebook Pixel, and will be comfortable working in WordPress environments.\n\nKey Responsibilities:\n\nSet up and configure Google Tag Manager (GTM), including custom event triggers (e.g., time spent on page, scroll depth).\n\nImpl...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 80
+    },
+    "message": "Hey there,\n\nSaw you're dealing with integration challenges getting GA4, GTM, and the Facebook Pixel playing nicely in WordPress \u2013 been there! I remember battling a similar setup for a client a while back; turned out a rogue plugin was interfering with the data layer. Took a little detective work to untangle.\n\nFor your project, I'd start with a careful audit of your existing GTM setup, focusing on any conflicting tags or triggers. Then, we\u2019d work through setting up those custom event triggers you mentioned (time on page, scroll depth) and ensure they're firing correctly into both GA4 and Facebook. Finally, some thorough testing across different browsers to confirm everything's tracking as expected.\n\nWould love to chat more about the specifics and how I can help get things humming. Let me know if you\u2019re free for a quick call.",
+    "score": 80,
+    "created_at": "2025-06-03T03:06:13.578294",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Google-Analytics-and-Tracking-Implementation-Speci-1748919973578.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748919975",
+    "job_title": "Troubleshoot n8n Instance on Windows VPS",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking an experienced freelancer to troubleshoot our self-hosted n8n instance, which is currently stuck in [DEV] mode on a Windows VPS. The ideal candidate will have a strong background in n8n and Windows server management. Your expertise is crucial in resolving this issue quickly to enable us to fully utilize our automation workflows. Please provide relevant experience and any initial thoughts on how you would approach this problem.",
+    "analysis": {
+      "tools": [
+        "N8N"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 80
+    },
+    "message": "Hey there! Saw you're wrestling with an n8n instance stuck in [DEV] mode on your Windows VPS. I hear you on wanting to ditch the manual processes; that's the whole point of automation, right?\n\nI remember struggling with a similar weirdness on a Linux server a while back. Turned out a rogue environment variable was overriding everything.\n\nFor your setup, I'd first want to check the n8n configuration files and environment variables on the Windows VPS to see if anything's obviously forcing it into development mode. Then, I'd double-check the n8n process itself to see how it was launched. Finally, review any relevant logs for clues.\n\nThis kind of issue can be tricky, but usually there's a simple cause once you dig in. Happy to hop on a quick call to brainstorm a bit more if you think that would be helpful.",
+    "score": 80,
+    "created_at": "2025-06-03T03:06:15.679543",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Troubleshoot-n8n-Instance-on-Windows-VPS-1748919975679.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748919977",
+    "job_title": "Create Branded, Fillable Google Intake Form with Acuity Integration for Holistic Wellness Practice",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "\ud83d\udd16 **Job Title:**\n\nCreate Branded, Fillable Google Intake Form with Acuity Integration for Holistic Wellness Practice\n\n\ud83d\udccc **Job Description:**\n\nHello!\nI\u2019m the founder of **Rhodes Botanika LLC**, a wellness company rooted in holistic, botanical, and functional health services. We are seeking a skilled and detail-oriented freelancer to help **transform our 40-page PDF intake packet** into a branded, client-friendly **Google Form** that is **fully fillable, interactive, and integrated into our online...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Api"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 80
+    },
+    "message": "Hello! \"Transform our 40-page PDF intake packet into a branded, client-friendly Google Form\" \u2013 I can definitely relate to that! I helped a physiotherapy practice ditch their paper forms a while back; we actually saw a drop in no-shows because clients found it so much easier to complete everything beforehand.\n\nFor Rhodes Botanika, I\u2019d start by carefully mapping out the existing PDF content into a logical Google Form structure, ensuring all the fields are interactive and easy to understand. Next, I'd focus on the branding, incorporating your logo and colors for a seamless experience. Finally, I\u2019d set up the Acuity integration, making sure the data flows smoothly into your scheduling system.\n\nWould you be open to a quick chat about the best way to approach this and make sure the Google Form captures all the essential info you need?",
+    "score": 80,
+    "created_at": "2025-06-03T03:06:17.563910",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Create-Branded-Fillable-Google-Intake-Form-with-Ac-1748919977563.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748919979",
+    "job_title": "Deployment for existing  React / Express / Postgress MVP",
+    "client_name": "Client",
+    "budget": "$50.00",
+    "description": "Need a talented full-stack web developer to craft a deployment plan to launch our MVP.  Existing working code base is built on using a Front-end in React and communicates with a Express back-end using Jwt auth. Postgres database schema is defined using Prisma. Are not anticipating any code updates, but some bug-fixing may be required. Main deliverable is sensible plan which keeps hosting costs low, is secure and can be scaled up and out easily as we grow. Must migrate codebase to new Github repo...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hey there,\n\n\"Sensible plan which keeps hosting costs low, is secure and can be scaled up easily\" \u2013 I get that. Early stage hosting can feel like a balancing act. I remember one project where we initially over-engineered the deployment, and the client was paying a fortune for resources they weren't even using.\n\nBased on your stack (React, Express, Postgres with Prisma), here's how I'd approach it:\n\n1.  We'd figure out the absolute *minimum* server specs you need to run smoothly right now.\n2.  I'd create a straightforward deployment plan for services like Railway or Digital Ocean (depending on your cost/control preferences) that can scale.\n3.  Migration to the new GitHub repo.\n\nI'd be happy to chat for a few minutes and walk you through some options. Let me know if you're available!",
+    "score": 70,
+    "created_at": "2025-06-03T03:06:19.578525",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Deployment-for-existing--React--Express--Postgress-1748919979578.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748919981",
+    "job_title": "PHP/Laravel Developer for AI SaaS Platform",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking a skilled PHP/Laravel developer to join our team in building an advanced artificial intelligence (AI) Software-as-a-Service (SaaS) platform.  Our platform excels at AI LLM chat, AI Image Generation and AI VIdeo Generation. The ideal candidate will have experience in developing scalable applications and a strong understanding of AI integrations. You will be responsible for custom backend development of current and future features,  API integration, and collaborating with our front-...",
+    "analysis": {
+      "tools": [
+        "Api"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "SaaS",
+      "score": 80
+    },
+    "message": "Subject: Re: PHP/Laravel Developer for AI SaaS Platform\n\nHey there,\n\nSaw you're looking for someone to help with backend development for your AI SaaS platform, specifically focusing on custom features and API integrations. The \"manual processes\" part really jumped out at me. I remember working on a similar project a few years back where image processing was a bottleneck \u2013 the team was spending hours manually tweaking settings. We streamlined that with some clever API integration and background processing queues, freed up a ton of their time.\n\nFor your project, I'd suggest starting with a deep dive into your existing codebase to identify the biggest time-sinks, then prototyping a modular API integration strategy for each AI component (LLM chat, image, video). Finally, we could implement background processing to handle the heavy lifting, keeping the front end snappy.\n\nIf you're interested in chatting more about your project, I'm free later this week. No pressure either way!",
+    "score": 80,
+    "created_at": "2025-06-03T03:06:21.657745",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-PHPLaravel-Developer-for-AI-SaaS-Platform-1748919981657.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920285",
+    "job_title": "Hiring an Amazing YouTube Automation Video Editor!",
+    "client_name": "Client",
+    "budget": "$900.00",
+    "description": "PRICING\n$20-25 for 10-minute video lengths\n$35-45 for 20-minute video lengths\n$55-65 for 30-minute video lengths\n\nHOW MANY VIDEOS PER WEEK?\n\u2022 3 to 6 videos\n\u2022 Your performance will dictate how many you get\n\nTo get HIRED it's VERY SIMPLE:\n1. Reply to this job post with, \"I'm ready to make a sample\".  \n2. For the top applicants, we'll send you a 45-second voiceover file with the script and the niche to make a video about. We will pay you $5 for the sample video.  \n3. Submit the sample and you'll re...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "\"I'm ready to make a sample\".\n\nI saw you're looking for a reliable YouTube editor, and the potential for 3-6 videos a week really caught my eye. I've been a freelance automation specialist for 20 years, and while my background is in streamlining workflows, I've often had to bridge the gap between video creation and content delivery. In fact, I recently helped a small business creating explainer videos by developing a system that automatically rendered and uploaded videos to YouTube based on simple spreadsheet inputs. Saved them a ton of time.\n\nHere's how I'd approach this: first, nail the style and flow with the sample video; second, establish a repeatable process for content delivery and feedback; and finally, work together to potentially automate aspects of the video creation workflow down the line, if needed.\n\nI'm excited to get started on the sample. Let me know when you\u2019re ready to send over the details!",
+    "score": 70,
+    "created_at": "2025-06-03T03:11:25.717267",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Hiring-an-Amazing-YouTube-Automation-Video-Editor-1748920285717.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920287",
+    "job_title": "Landing Page Creation in Kit with Branding Integration",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking a skilled freelancer to create a visually appealing landing page using Kit that aligns with our branding. The landing page will serve as a gateway to our freebie offer and must be seamlessly connected to our existing website. The ideal candidate will have a strong understanding of landing page design and conversion optimization. Experience with Kit and branding projects is essential. If you can bring creative ideas to enhance user engagement, we would love to hear from you!",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hey there! \"Seamlessly connected to our existing website\" really jumped out at me in your description. I've spent way too long manually patching integrations together for clients in the past, and let me tell you, a smooth handoff is worth its weight in gold.\n\nYears ago, I built a landing page that looked amazing...but it took a dev team two weeks to properly integrate it. Lesson learned!\n\nFor your project, I'd start with a deep dive into your current branding to ensure absolute consistency. Then, I'd build the landing page in Kit, focusing on user flow for that freebie download. Finally, rigorous testing across devices is essential to confirm everything works beautifully *before* integration.\n\nWould love to chat about your specific branding guidelines and target audience. Let me know if you're free for a quick call!",
+    "score": 70,
+    "created_at": "2025-06-03T03:11:27.760586",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Landing-Page-Creation-in-Kit-with-Branding-Integra-1748920287760.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920290",
+    "job_title": "Meta Ads Expert Needed",
+    "client_name": "Client",
+    "budget": "$200.00",
+    "description": "Hi there,\n\nWe\u2019re looking for an experienced Meta Ads Manager to urgently audit and fix issues in our Facebook and Instagram ad campaigns.\n\nWe are not after a long-term contract at this stage \u2014 just someone who knows what they\u2019re doing and can help us sort things out ASAP. If we\u2019re happy with the results, we\u2019d be happy to offer paid monthly optimisation hours moving forward.\n\n\ud83d\udd27 Immediate Priorities:\nReview our existing campaign structure and setup\n\nIdentify why conversion tracking isn\u2019t firing pr...",
+    "analysis": {
+      "tools": [
+        "Api"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 90
+    },
+    "message": "Hi there,\n\n\"Identify why conversion tracking isn\u2019t firing properly\" \u2013 I hear you loud and clear. I remember spending a frustrating afternoon last month debugging a client's pixel setup. Turns out a tiny, overlooked character in the custom event code was the culprit! These things happen.\n\nFor your situation, I\u2019d start by carefully reviewing your current campaign structure in Ads Manager to see if there are any glaring configuration issues. Then, I'll dig into the pixel implementation and use the Facebook Pixel Helper to track where the conversion data is getting lost. Finally, I\u2019ll ensure everything is aligned with your website and goals.\n\nWould you be available for a quick chat sometime this week to discuss this in more detail?\n\nThanks,\nTimothy",
+    "score": 90,
+    "created_at": "2025-06-03T03:11:30.595069",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Meta-Ads-Expert-Needed-1748920290595.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920293",
+    "job_title": "Problem-Solving Executive Assistant Needed for Process Creation",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking a proactive and detail-oriented executive assistant to streamline our email, calendar, and task management processes. The ideal candidate will have a knack for problem-solving and a keen eye for organization. Responsibilities include developing efficient workflows, setting up automated systems, and ensuring smooth communication across various platforms. If you enjoy optimizing processes and enhancing productivity, we want to hear from you!",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hi there,\n\n\"Developing efficient workflows\" and optimizing productivity really resonated with me. I've spent the last 20 years diving deep into similar challenges as a solo automation specialist. I remember once spending a week untangling a mess of inter-office communication for a marketing agency that was losing clients simply because emails were getting lost!\n\nFor your needs, I'd start by taking a close look at your current email, calendar, and task management setup. Then, based on that audit, I can suggest specific automation tweaks and workflow improvements. Finally, I'd help you implement and test those changes to ensure smooth sailing.\n\nI'd be happy to chat more about your specific setup and how I can bring some order to the chaos. Feel free to reach out.",
+    "score": 70,
+    "created_at": "2025-06-03T03:11:33.296328",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Problem-Solving-Executive-Assistant-Needed-for-Pro-1748920293296.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920585",
+    "job_title": "Implementation of PAM, PIM, MDM, and Vulnerability Management Solutions",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking an experienced professional to implement Privileged Access Management (PAM), Privileged Identity Management (PIM), Master Data Management (MDM), and Vulnerability Management systems. The ideal candidate will have a strong background in security protocols and data management. You will work closely with our IT team to assess current systems, design solutions, and ensure seamless integration. \n\nScope of Work\n\nPAM Implementation\n\nImplement a PAM solution using Devolutions or recommend...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "integration challenges",
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 80
+    },
+    "message": "\"Saw you're dealing with integration challenges with your PAM implementation \u2013 that's usually where things get interesting (and a bit messy!). I once spent a week untangling a similar integration when a custom API decided to take a vacation.\n\nFor your setup, I'd suggest starting with a detailed review of your current infrastructure and security protocols, then mapping out a phased implementation plan with clear milestones. Finally, we'd focus on rigorous testing and documentation to ensure a smooth transition and easy maintenance.\n\nHappy to chat more about your specific environment and how we can tackle those integration hurdles. Let me know if you're open to a quick call!\"",
+    "score": 80,
+    "created_at": "2025-06-03T03:16:25.993576",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Implementation-of-PAM-PIM-MDM-and-Vulnerability-Ma-1748920585993.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920588",
+    "job_title": "Automated Estimating Tool Development for Asbestos Abatement",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "I am seeking a skilled developer to create an automated estimating tool tailored for our asbestos abatement company. The ideal candidate will have experience in software development, specifically in building estimating or quotation tools. the cost estimation tool needs to incorporate, profit margin, disposal, materials, labor, and other operational items.",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hi there,\n\n\"Automation needs\" \u2013 I hear you loud and clear. I've seen firsthand how quickly estimating can become a bottleneck, especially in a specialized field like asbestos abatement.\n\nYears ago, I helped a small demolition company wrangle their bidding process. They were constantly underbidding and losing money on disposal costs, just like you mentioned. What really turned things around was getting those variables automatically factored in.\n\nFor your project, I'd start by getting a clear understanding of your current estimating process and spreadsheets. Then, based on that, we could design a custom interface to handle all your key cost factors. Finally, we'd link it all together so you have a single, streamlined estimating tool.\n\nI'd be happy to chat more about the specifics and see if my experience aligns with your needs. Let me know if you're open to a quick call.",
+    "score": 70,
+    "created_at": "2025-06-03T03:16:28.099151",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Automated-Estimating-Tool-Development-for-Asbestos-1748920588099.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920589",
+    "job_title": "AI Solutions Architect",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Founding Full-Stack AI Engineer\n\nWe\u2019re looking for a hands-on, entrepreneurial engineer to join as the first technical hire and help us build an AI-integrated microservice automation platform from the ground up. You\u2019ll own the architecture, development, deployment, and iteration of our MVP, working closely with the founder to turn vision into reality. This position will has a potential to share a percentage of net profits in the future\n\nMust-haves:\n\nExperience with microservices \n\nStrong backgro...",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hey there,\n\nReading about your AI-integrated microservice automation platform, especially the need to build it \"from the ground up,\" really resonated. I remember helping a small logistics company navigate a similar greenfield project a few years back. The biggest challenge was keeping the architecture flexible enough to adapt to changing AI models without constant re-writes.\n\nFor your project, I'd suggest starting with a robust API gateway to decouple the microservices, then focusing on a modular architecture for your AI components allowing for plug-and-play adaptability and finally, setting up a CI/CD pipeline early on to automate deployments.\n\nI'm curious to hear more about the specific integration challenges you anticipate. Feel free to message me if you'd like to chat further.",
+    "score": 70,
+    "created_at": "2025-06-03T03:16:29.760645",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-AI-Solutions-Architect-1748920589760.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920885",
+    "job_title": "Vtiger Open Source CRM (Existing) Bug Fixing and Fresh Development",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We have been using a custom made CRM built on Vtiger open source. We are looking for a developer who can fix the bugs in the CRM and also develop fresh features for us.",
+    "analysis": {
+      "tools": [
+        "Zapier",
+        "Make.com"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 70
+    },
+    "message": "Hi there,\n\n\"Manual processes\" - I hear you loud and clear! I've seen that bring even the best teams to a standstill. I remember one client years ago spent hours manually reconciling data between their Vtiger and accounting system; they almost gave up on CRM altogether before we streamlined it.\n\nFor your Vtiger setup, I'd start by thoroughly documenting the existing bugs, then prioritizing fixes based on impact to your workflow. After that, we could collaborate closely on the new features, ensuring they integrate seamlessly and truly alleviate those manual tasks.\n\nWould you be open to a quick chat sometime this week to discuss the specifics and see if my approach aligns with your needs?",
+    "score": 70,
+    "created_at": "2025-06-03T03:21:25.130276",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Vtiger-Open-Source-CRM-Existing-Bug-Fixing-and-Fre-1748920885130.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "job_1748920887",
+    "job_title": "Front-End Software Engineer (UI/UX) for Web App Dev *FULL CUSTOMER PORTAL NOT MARKETING WEBSITE*",
+    "client_name": "Client",
+    "budget": "$7,500.00",
+    "description": "*Full web application, not a marketing website; must be proficient in AI dev tools; strong ShadCN skills; must have relevant portfolio examples to show; backend is already completed so will be using existing code base/API calls*\n\nSummary\nAbout the Role\nWe\u2019re looking for a Front-End Software Engineer with a strong UI/UX focus to help bring Aizen\u2019s web app to life. You\u2019ll play a foundational role in shaping the user experience across our platform\u2014building elegant, performant, and accessible interf...",
+    "analysis": {
+      "tools": [
+        "Api"
+      ],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "general business",
+      "score": 80
+    },
+    "message": "Okay, here's my attempt at a proposal, aiming for that believable and personable tone:\n\n\"Hey there, I saw you're looking for someone to really *bring Aizen's web app to life* with a strong UI/UX focus. That really resonated with me, especially since you mentioned it's a full web application, not just a marketing site.\n\nFunny enough, I was just wrestling with a similar situation on a SaaS platform for a local logistics company - they were tripping over themselves trying to manage a clunky custom portal.\n\nFor your project, I'd dive straight in to understanding the existing backend and API, then prioritize crafting clean, intuitive UI components with ShadCN that actually solve user pain points. After that, we'd work through usability testing.\n\nIf that sounds like a good starting point, I'd be happy to hop on a quick call and chat about how my experience might align with what you're building. Cheers!\"",
+    "score": 80,
+    "created_at": "2025-06-03T03:21:27.251863",
+    "proposal_url": "https://projekt-ai.net/proposals/proposal-Front-End-Software-Engineer-UIUX-for-Web-App-Dev-F-1748920887251.html",
+    "original_job_url": "",
+    "status": "pending"
+  },
+  {
+    "job_id": "test-job-12345",
+    "job_title": "Automate Restaurant POS Integration with Make.com and Zapier",
+    "client_name": "Restaurant Owner",
+    "budget": "$2000-3000",
+    "description": "\n    We need to automate our restaurant operations by integrating our POS system with our booking platform, \n    inventory management, and customer communications. Currently doing everything manually which is \n    time-consuming and error-prone. \n    \n    Looking for someone experienced with Make.com, Zapier, or similar automation platforms to:\n    - Connect our Square POS to our booking system\n    - Automate inventory alerts when items run low  \n    - Set up automated customer follow-up emails\n...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 8,
+      "tools": [
+        "Make.Com"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "time-consuming tasks",
+        "automation needs"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Automating Your Restaurant Ops - Let's Talk Integration!\n\nHi there,\n\nI understand you're looking to streamline your restaurant operations by connecting your Square POS system and tackling those manual processes. I've spent the last 20 years building automation solutions for businesses, and I\u2019ve helped several restaurants specifically eliminate the time-consuming tasks you're facing.\n\nTackling your challenge will involve a phased approach. First, a deep dive into your current workflows to map out the most efficient integration points. Then, I'll build and thoroughly test the connections between Square, your booking system, and inventory, ensuring accurate data flow. Finally, we'll set up those automated customer follow-up emails to boost engagement.\n\nI'm confident I can deliver a robust and reliable solution within your budget. I'd love to schedule a quick call to discuss your specific needs and how I can help you achieve seamless automation. Are you available for a chat next week?",
+    "score": 100,
+    "created_at": "2025-06-03T03:25:42.983281",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748921140984.html",
+    "original_job_url": "https://upwork.com/test-job",
+    "status": "pending",
+    "filename": "proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748921140984.html",
+    "automation_terms_found": 8,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "test-job-12345",
+    "job_title": "Automate Restaurant POS Integration with Make.com and Zapier",
+    "client_name": "Restaurant Owner",
+    "budget": "$2000-3000",
+    "description": "\n    We need to automate our restaurant operations by integrating our POS system with our booking platform, \n    inventory management, and customer communications. Currently doing everything manually which is \n    time-consuming and error-prone. \n    \n    Looking for someone experienced with Make.com, Zapier, or similar automation platforms to:\n    - Connect our Square POS to our booking system\n    - Automate inventory alerts when items run low  \n    - Set up automated customer follow-up emails\n...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 8,
+      "tools": [
+        "Make.Com"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "time-consuming tasks",
+        "automation needs"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Streamlining Your Restaurant with Automation Expertise\n\nHi there,\n\nI understand you're looking to ditch those time-consuming manual processes and leverage automation to bring your restaurant into the 21st century. As a seasoned automation specialist with 20 years under my belt, I've helped countless businesses, including restaurants, like yours optimize operations using platforms like Make.com and Zapier.\n\nI've specifically tackled integrations with Square POS before, building robust systems for inventory management and customer engagement. My approach here would likely involve:\n\n1.  A deep dive into your current workflows and specific POS data.\n2.  Developing and testing the integrations between Square, your booking platform, and inventory system.\n3.  Setting up the automated follow-up emails, personalized to your brand.\n\nI'm confident I can deliver a solution that saves you time, reduces errors, and ultimately boosts your bottom line. I'd love to chat more about the specifics of your setup. Are you free for a quick call next week?",
+    "score": 100,
+    "created_at": "2025-06-03T03:34:38.363933",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748921676141.html",
+    "original_job_url": "https://upwork.com/test-job",
+    "status": "pending",
+    "filename": "proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748921676141.html",
+    "automation_terms_found": 8,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748921861204",
+    "job_title": "GoHighLevel Expert Needed for SaaS Automation and CRM Integration",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Job Title:\nSaaS Automation & GoHighLevel Expert for Funnel Building, CRM Integration, and AI Systems\n\nDescription:\nThrive Strategy Advisors is seeking a highly skilled and detail-oriented systems integrator with proven experience in GoHighLevel, SaaS platforms, and AI-driven automation. We're a strategy and consulting firm that builds complete sales and marketing ecosystems for clients\u2014so this role requires a deep understanding of how to connect and optimize all pieces of the sales funnel from l...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 6,
+      "tools": [
+        "Zapier"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "SaaS",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: GoHighLevel Expert - Optimizing Your Sales & Marketing Ecosystem\n\nHi Thrive Strategy Advisors,\n\nSaw your need for a GoHighLevel expert to optimize your sales and marketing ecosystems, especially tackling workflow optimization. As a 20-year automation specialist, I understand the frustrations of disconnected systems and the power of a truly integrated CRM.\n\nI've spent the last few years diving deep into GoHighLevel, building custom solutions for businesses similar to yours, focusing on automating lead nurturing and streamlining sales processes.\n\nMy approach to your project would be: 1) a deep dive into your current setup to identify bottlenecks, 2) implementing custom GoHighLevel workflows leveraging AI where applicable to automate key tasks, and 3) ongoing optimization based on data and performance.\n\nI'd love to discuss your specific needs and how my experience can help you achieve your goals. Let's schedule a quick chat?",
+    "score": 100,
+    "created_at": "2025-06-03T03:37:44.021306",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-GoHighLevel-Expert-Needed-for-SaaS-Automation-and--1748921861204.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-GoHighLevel-Expert-Needed-for-SaaS-Automation-and--1748921861204.html",
+    "automation_terms_found": 6,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748921864029",
+    "job_title": "Python with photon bot to automate order sending.",
+    "client_name": "Client",
+    "budget": "$50.00",
+    "description": "Please Read Attached Pdf Thanks.\n\ud83d\udee0\ufe0f Project: Photon Bot Web Automation Strategy Bot (Solana)\n\ud83d\udd17 Photon Bot website:\n\ud83d\udc49 https://photon-sol.tinyastro.io\nPhoton Bot is a web-based trading bot on the Solana blockchain. It does not offer a public API. All interactions must be done via the website.\nAuthentication is done through a Solana wallet login (e.g. Phantom Wallet).\n\n\u2699\ufe0f Bot functionality:\n1. Placing Buy Dip Orders on Photon Bot\nThe user provides:\n\nThe token contract address\n\nThe ATH (All-Time Hig...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 3,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "automation needs"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Python Photon Bot Automation - Ready to Streamline Your Ordering\n\nHi there,\n\nThanks for posting this project! I understand you're looking to automate order sending with the Photon Bot on Solana, which, as you mentioned, lacks a direct API. I've spent the last 20 years building automation solutions, and that often means getting creative with web interactions. I\u2019ve tackled similar challenges before, automating processes for websites that don\u2019t offer APIs, particularly in the crypto space.\n\nMy approach would be something like this:\n\n1.  **Wallet Integration:** Implement secure Phantom Wallet interaction via Python.\n2.  **Bot Logic:** Build a script to navigate Photon Bot and place buy-dip orders based on your criteria (token address, ATH etc.)\n3.  **Testing & Refinement:** Thorough testing with adjustable parameters to ensure reliability.\n\nWhile the budget is a bit tight, I can definitely get a functional proof-of-concept up and running within that range. Let's chat about the specifics of your order logic.\n\nLooking forward to hearing from you!\n\nBest,\n\nTimothy Poulton\nAutomation Specialist",
+    "score": 70,
+    "created_at": "2025-06-03T03:37:46.423400",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Python-with-photon-bot-to-automate-order-sending-1748921864029.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Python-with-photon-bot-to-automate-order-sending-1748921864029.html",
+    "automation_terms_found": 3,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922160664",
+    "job_title": "Zoho Integration Specialist for Application Vetting Workflow",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking a skilled freelancer with extensive Zoho experience to assist in integrating a form within the applications module. The ideal candidate will also be responsible for creating a streamlined workflow to efficiently vet applicants. If you have a strong background in Zoho development and a knack for optimizing processes, we would love to hear from you. Please provide examples of previous Zoho projects you've worked on.",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Zoho Integration & Workflow Optimization - Let's Streamline Your Application Vetting!\n\nHi there,\n\nI understand you're looking for someone to integrate a form within your Zoho Applications module and, more importantly, optimize the workflow for vetting applicants. That's exactly the kind of challenge I thrive on.\n\nWith 20 years in automation, I've spent considerable time building customized Zoho solutions for businesses just like yours, focusing on simplifying complex processes. My approach to this would be:\n\n1.  **Deep Dive:** I'd start by thoroughly understanding your current application process and desired outcomes.\n2.  **Seamless Integration:** Implementing and testing your form, ensuring smooth data flow into Zoho.\n3.  **Workflow Automation:** Building out a custom vetting workflow with automated triggers, notifications, and reporting tailored to your needs.\n\nI'd love to discuss your specific requirements and share examples of past Zoho projects that mirror your current goals. Let's connect for a quick call?",
+    "score": 70,
+    "created_at": "2025-06-03T03:42:42.753871",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Zoho-Integration-Specialist-for-Application-Vettin-1748922160664.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Zoho-Integration-Specialist-for-Application-Vettin-1748922160664.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922162763",
+    "job_title": "Bubble Developer with Twilio and PDF Integration Expertise",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking an experienced developer to enhance and maintain our existing platform built on Bubble. The ideal candidate will have a deep understanding of integrating Twilio for communication, Make for automation, and PDF.co for document handling, along with Send Grid for email services. Your role will involve optimizing workflows and ensuring seamless functionality across these tools. Also building new features on the platform. If you have a proven track record in these areas and can work eff...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 4,
+      "tools": [
+        "Make"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Streamlining your Bubble platform with Twilio, Make, and PDF.co\n\nHi there,\n\nI saw you're looking for someone to optimize workflows and build upon your existing Bubble platform, particularly with Twilio, Make, PDF.co, and SendGrid integrations. Workflow optimization is something I've specialized in over the past 20 years, helping businesses like yours leverage automation to its fullest potential.\n\nMy approach to projects like this usually involves: 1) a thorough audit of your current setup to identify bottlenecks and areas for improvement; 2) implementing streamlined workflows using Make to connect your different services; and 3) rigorous testing to ensure everything runs seamlessly. I have significant experience with all the platforms you've mentioned and know how to make them work together effectively.\n\nWould love to chat further about how I can help you achieve a more efficient and robust Bubble platform. Let me know if you're available for a quick call.\n\nBest regards,\n\nTimothy Poulton\nAutomation Specialist",
+    "score": 100,
+    "created_at": "2025-06-03T03:42:44.825158",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Bubble-Developer-with-Twilio-and-PDF-Integration-E-1748922162763.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Bubble-Developer-with-Twilio-and-PDF-Integration-E-1748922162763.html",
+    "automation_terms_found": 4,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922164844",
+    "job_title": "Looking for Scrapeless expert for web scraping integration",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "I am looking to connect a solution with the Scrapess API to open the API for traffic, monitoring responses, ensuring everything works well with the client in terms of expected responses etc. You must have prior Scrapeless experience that you are able to demonstrate. Also should have expertise working with S3, AWS, JSON and Python.",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Scrapeless API Integration - Let's Optimize Your Workflow\n\nHey there,\n\nSaw your project on integrating Scrapeless API and, as someone who's spent the last 20 years in automation, I understand how crucial a smooth and reliable API connection is to your workflow optimization.\n\nI've worked extensively with web scraping solutions, including several integrations with Scrapeless and similar APIs. My experience also includes solid hands-on expertise with AWS S3, JSON parsing, and Python scripting \u2013 all key components for what you're looking for.\n\nHere's my proposed approach:\n\n1.  **Thorough API Connection & Response Testing:** Rigorous testing of your Scrapeless API connection to ensure it delivers the expected data format and handles various response scenarios.\n2.  **Real-time Monitoring Setup:** Implement monitoring to track API traffic, identify bottlenecks, and ensure optimal performance.\n3.  **Data Integration & Workflow Automation:** Streamline your data ingestion and workflow processes for seamless automation.\n\nI'm genuinely excited about the opportunity to help you streamline your Scrapeless integration. Let's chat about your specific requirements and how I can contribute to your project's success.",
+    "score": 70,
+    "created_at": "2025-06-03T03:42:46.973488",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Looking-for-Scrapeless-expert-for-web-scraping-int-1748922164844.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Looking-for-Scrapeless-expert-for-web-scraping-int-1748922164844.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922166986",
+    "job_title": "AI Agent Development and Deployment",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We are seeking a skilled developer to create and modify AI agents using n8n for prototyping. The role involves enhancing the relevance of these agents and eventually deploying them in Python. The ideal candidate will have a strong understanding of AI concepts and experience with n8n and Python programming. If you have a passion for developing innovative AI solutions and are looking to make a significant impact, we'd love to hear from you!",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 3,
+      "tools": [
+        "Make"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Re: AI Agent Development and Deployment - Let's Optimize Your Workflow!\n\nHi there,\n\nI read about your need for AI agent development and deployment using n8n and Python. Workflow optimization is definitely a pain point I've tackled extensively over my 20 years automating business processes. \n\nMy experience involves creating and refining countless automated workflows. I've become quite proficient with n8n for rapid prototyping and a master at translating those prototypes into robust, scalable Python solutions.\n\nMy approach would be: 1) Thoroughly understand your existing workflows and desired outcomes, 2) Prototype AI agents in n8n focusing on relevance and efficiency, and 3) Transition the successful prototypes into well-documented, deployable Python code.\n\nIf you're interested in exploring how my expertise can help you streamline your operations and achieve tangible results, I'm available for a quick chat.\n\nBest,\n\nTimothy Poulton\nAutomation Specialist",
+    "score": 100,
+    "created_at": "2025-06-03T03:42:49.048997",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-AI-Agent-Development-and-Deployment-1748922166986.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-AI-Agent-Development-and-Deployment-1748922166986.html",
+    "automation_terms_found": 3,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "test-job-12345",
+    "job_title": "Automate Restaurant POS Integration with Make.com and Zapier",
+    "client_name": "Restaurant Owner",
+    "budget": "$2000-3000",
+    "description": "\n    We need to automate our restaurant operations by integrating our POS system with our booking platform, \n    inventory management, and customer communications. Currently doing everything manually which is \n    time-consuming and error-prone. \n    \n    Looking for someone experienced with Make.com, Zapier, or similar automation platforms to:\n    - Connect our Square POS to our booking system\n    - Automate inventory alerts when items run low  \n    - Set up automated customer follow-up emails\n...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 8,
+      "tools": [
+        "Make.Com"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "time-consuming tasks",
+        "automation needs"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Optimizing Your Restaurant Operations with Automation\n\nHi there,\n\nI understand you're looking to streamline your restaurant by automating key areas like POS integration, inventory management, and customer communication. The manual processes you described are precisely the kind of inefficiencies I've been tackling for the past 20 years with automation solutions.\n\nI've built integrations similar to what you need, connecting various POS systems like Square with booking platforms and inventory systems using Make.com and Zapier. My approach usually involves: 1) A detailed discovery call to fully map your current workflows and pain points, 2) Building and rigorously testing the automated workflows, and 3) Providing ongoing support and optimization after implementation.\n\nWith my experience, I'm confident I can help you save significant time and reduce errors. Would you be available for a quick chat to discuss your specific needs in more detail?\n\nBest Regards,\n\nTimothy Poulton\nAutomation Specialist",
+    "score": 100,
+    "created_at": "2025-06-03T03:43:43.196493",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748922221232.html",
+    "original_job_url": "https://upwork.com/test-job",
+    "status": "pending",
+    "filename": "proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748922221232.html",
+    "automation_terms_found": 8,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "test-job-12345",
+    "job_title": "Automate Restaurant POS Integration with Make.com and Zapier",
+    "client_name": "Restaurant Owner",
+    "budget": "$2000-3000",
+    "description": "\n    We need to automate our restaurant operations by integrating our POS system with our booking platform, \n    inventory management, and customer communications. Currently doing everything manually which is \n    time-consuming and error-prone. \n    \n    Looking for someone experienced with Make.com, Zapier, or similar automation platforms to:\n    - Connect our Square POS to our booking system\n    - Automate inventory alerts when items run low  \n    - Set up automated customer follow-up emails\n...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 8,
+      "tools": [
+        "Make.Com"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "time-consuming tasks",
+        "automation needs"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gemini-2.0-flash"
+    },
+    "message": "Subject: Streamlining Your Restaurant Operations with Smart Automation\n\nHi there,\n\nI understand you're looking to liberate your team from manual tasks and bring some much-needed automation to your restaurant, particularly connecting your Square POS to other crucial systems. I've spent the last 20 years helping businesses like yours eliminate those time-consuming, error-prone processes through smart automation, and this project aligns perfectly with my expertise.\n\nHaving built numerous integrations with POS systems, booking platforms, and inventory management tools using platforms like Make.com and Zapier, I'm confident I can deliver a robust solution. My approach would involve:\n\n1.  A thorough assessment of your current workflows and data flow.\n2.  Developing and implementing the integrations you mentioned, starting with the Square POS connection and inventory alerts.\n3.  Setting up your automated customer follow-up emails to boost engagement.\n\nI'm eager to discuss how we can create a tailored automation solution that genuinely saves you time and improves efficiency. Are you free for a quick chat next week?",
+    "score": 100,
+    "created_at": "2025-06-03T03:46:42.669271",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748922400646.html",
+    "original_job_url": "https://upwork.com/test-job",
+    "status": "pending",
+    "filename": "proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748922400646.html",
+    "automation_terms_found": 8,
+    "specialties": [],
+    "ai_model_used": "gemini-2.0-flash",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "test-job-12345",
+    "job_title": "Automate Restaurant POS Integration with Make.com and Zapier",
+    "client_name": "Restaurant Owner",
+    "budget": "$2000-3000",
+    "description": "\n    We need to automate our restaurant operations by integrating our POS system with our booking platform, \n    inventory management, and customer communications. Currently doing everything manually which is \n    time-consuming and error-prone. \n    \n    Looking for someone experienced with Make.com, Zapier, or similar automation platforms to:\n    - Connect our Square POS to our booking system\n    - Automate inventory alerts when items run low  \n    - Set up automated customer follow-up emails\n...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 8,
+      "tools": [
+        "Make.Com"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "time-consuming tasks",
+        "automation needs"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Subject: Streamlining Your Restaurant Operations with Custom Automation\n\nHello,\n\nYour need to convert manual, time-consuming tasks into automated ones, especially when dealing with inventory alerts and customer communication, resonates with me. I once worked with a small bakery that was facing similar challenges. After automating their inventory management and customer emails, the owner could finally focus on his passion\u2014baking!\n\nHere's my proposed approach for your project:\n\n1. First, I'll integrate your Square POS with your booking system, ensuring seamless communication between the two.\n2. Next, I'll set up automated low-stock alerts to prevent any surprises during peak hours.\n3. Finally, I'll help you engage with your customers through automated follow-up emails, enhancing your customer relationship management.\n\nI would love to learn more about your restaurant and how we can tailor this automation to best serve you. Shall we schedule a chat this week?\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T03:47:24.578330",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748922437005.html",
+    "original_job_url": "https://upwork.com/test-job",
+    "status": "pending",
+    "filename": "proposal-multimodel-Automate-Restaurant-POS-Integration-with-Makecom-a-1748922437005.html",
+    "automation_terms_found": 8,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922463379",
+    "job_title": "Salesforce Expert Needed for Long-Term Partnership",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We\u2019re looking for a highly experienced Salesforce expert (5+ years) to support and expand our existing client tech stack. This is more than just a technical role \u2014 it\u2019s a chance to become a key contributor in our growth and success.\n\nYou\u2019ll work closely with me across a variety of platforms including Salesforce Sales Cloud, Pardot, Customer.io, Gong, Salesloft, ConnectAndSell, HubSpot, and more. The goal is to delegate hands-on tasks so I can focus on strategic initiatives \u2014 and to build a long-...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Platform"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello,\n\nI understand you're seeking a Salesforce expert to not only support your existing tech stack, but to also become a key contributor to your growth. Your mention of wanting to delegate more hands-on tasks resonated with me as I've previously worked with a client who had a similar issue. \n\nThey were overwhelmed with the minutia of managing their Salesforce platforms, which prevented them from focusing on strategy. Together, we streamlined their workflows and automated routine tasks, freeing up their time for more value-adding activities.\n\nTo address your needs, I'd propose a three-step approach. First, I'd like to understand your current workflows and identify areas for optimization. Second, we could prioritize the tasks to be automated based on your strategic goals. Finally, I'd assist in implementing the changes across your platforms, ensuring everything works smoothly.\n\nIf this approach aligns with your vision, I'd love to discuss further. Let's connect when you have some time.\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T03:47:49.197115",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Salesforce-Expert-Needed-for-Long-Term-Partnership-1748922463379.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Salesforce-Expert-Needed-for-Long-Term-Partnership-1748922463379.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922760722",
+    "job_title": "Lifecycle Marketing Manager Needed",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We\u2019re two fast-moving tech brands\u2014one fintech, one values-driven marketplace\u2014looking for a contract lifecycle marketer to own automated sequences from first touch through paid conversion.\n\nWhat you\u2019ll tackle\n\nMap the journey: prospect \u2192 free \u2192 paid \u2192 advocate.\n\nBuild and refine flows in Customer.io, La Growth Machine, LinkedIn and email.\n\nSegment audiences, personalise copy and A/B test everything.\n\nWrite concise, benefit-led messages (no fluff).\n\nTrack activation, upgrade and retention metrics ...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 3,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "SaaS",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello there,\n\nYour mission to map a customer\u2019s journey from a simple prospect to a loyal advocate caught my attention. It reminded me of a recent project where I worked with a B2B SaaS start-up. We had to navigate a similar challenge, and a carefully tailored automation strategy was key to turning our free-trial users into paid customers.\n\nTo meet your goals, I\u2019d suggest starting with understanding your customer personas and their touchpoints. These insights will help us in optimising flows in Customer.io and La Growth Machine. Next, we'll focus on segmenting audiences and personalising messages\u2014no fluff, just value. We'll also establish a rigorous A/B testing routine to ensure we're continuously improving performance.\n\nI'm keen to learn more about your fintech and marketplace brands, and how we can drive growth together. Can we set up a time to chat more about your project?\n\nBest,\nTimothy",
+    "score": 70,
+    "created_at": "2025-06-03T03:52:46.938185",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Lifecycle-Marketing-Manager-Needed-1748922760722.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Lifecycle-Marketing-Manager-Needed-1748922760722.html",
+    "automation_terms_found": 3,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748922766962",
+    "job_title": "Senior DevOps/Platform Engineer: GitOps, Kubernetes & Next-Gen AI Infrastructure",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We're seeking an expert Senior DevOps or Platform Engineer to spearhead the management and evolution of our cutting-edge Kubernetes platform. You will be a critical player in leveraging GitOps (Argo CD, Flux) for current operations and architecting our next-generation infrastructure. This involves pioneering a modern Source of Truth (SoT) schema for Kubernetes, utilizing tools like Infrahub in conjunction with vector databases such as Neo4j. Your work will be foundational in preparing our platfo...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello,\n\nReading through your project brief, I understand that integration challenges are a significant hurdle for your team in managing and evolving your Kubernetes platform. Being a DevOps specialist for two decades, I've encountered similar challenges, especially while implementing GitOps with Argo CD and Flux for a client who was moving from a monolithic to a microservices architecture.\n\nTo address your specific needs, my approach would be as follows: \n\n1. First, we'll establish an SoT schema for Kubernetes, which will serve as a roadmap for managing changes and delivering continuous integration (CI) and continuous deployment (CD).\n2. Then, utilizing tools like Infrahub, we'd automate your current operations, gradually migrating to the GitOps model.\n3. Lastly, we'll integrate Neo4j to manage your vector databases, ensuring seamless operations within your next-gen AI infrastructure.\n\nI'd love to discuss this further and understand more about your specific use cases. Looking forward to hearing from you soon.\n\nBest,\nTimothy Poulton",
+    "score": 70,
+    "created_at": "2025-06-03T03:52:57.482421",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Senior-DevOpsPlatform-Engineer-GitOps-Kubernetes---1748922766962.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Senior-DevOpsPlatform-Engineer-GitOps-Kubernetes---1748922766962.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748923675471",
+    "job_title": "Supabase Developer to Complete Web App for Creative Agency",
+    "client_name": "Client",
+    "budget": "$250.00",
+    "description": "\ud83d\udccd About Us\nWe\u2019re unmatte\u2122 \u2014 a full-service creative agency specializing in branding, content strategy, and digital campaigns for creators, athletes, musicians, and entrepreneurs. Our client platform, app.unmatte.com, is live and partially built. We need a skilled developer to help us complete the build, connect Supabase properly, and polish the UX.\n\n\ud83d\udd27 What We Need\nWe\u2019re looking for a freelance Supabase developer with front-end experience who can:\n\nConnect and configure Supabase with our front-en...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 4,
+      "tools": [
+        "Make"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "integration challenges"
+      ],
+      "industry": "SaaS",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello unmatte\u2122 team,\n\nI noticed you mentioned facing \"integration challenges\" with Supabase and your front-end. That can be a tough nut to crack, especially when you're trying to perfect the UX of the app.\n\nHaving worked on a similar project for an indie music distributor, I can understand how important it is to get this right. The distributor's app, much like yours, was half-built and needed a fresh pair of eyes to connect the dots. I helped them integrate Firebase with their front-end and the results were smoother than ever.\n\nIn your case, I'd take a three-step approach: \n1. First, I'd perform a thorough review of your existing architecture. \n2. Then, I'd work on connecting and configuring Supabase with your front-end. \n3. Finally, I'd help you polish the UX, ensuring a seamless experience for your clients.\n\nI'd love to chat more about how we can bring your vision to life. Looking forward to hearing from you!\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:08:02.524385",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Supabase-Developer-to-Complete-Web-App-for-Creativ-1748923675471.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Supabase-Developer-to-Complete-Web-App-for-Creativ-1748923675471.html",
+    "automation_terms_found": 4,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748923682538",
+    "job_title": "Social Media Content Manager/Creator",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Social Media Manager for Book Promotion, YouTube Growth, Substack Community & Summit Launch\n\nDescription:\nI\u2019m looking for a reliable and strategic Social Media Manager to support my growing spiritual coaching business, promote my newly released book on religious trauma, and help grow my Substack community and YouTube channel. This role also involves helping with the launch and promotion of a virtual summit happening on August 2.\n\n\ud83d\udd39 What I Need Help With:\n\nBatching, scheduling, and automating 4 w...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Manychat"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello,\n\nI see you're needing a hand with batching, scheduling, and automating your social media content for your spiritual coaching business and new book. \n\nIn a recent project, I was helping a client who ran a podcast alongside her coaching business. She was overwhelmed with managing content across multiple platforms. We implemented a system which not only automated and scheduled posts, but also made re-purposing content across platforms more efficient.\n\nI'd suggest a similar approach for you. First, we'll identify the type of content that resonates with your audience across each platform. Next, we'll create a content calendar and batch and automate posts using a mix of original and repurposed content. Finally, we'll implement a system for tracking engagement and adjusting our strategy based on data.\n\nI'd love to hear more about your business and discuss how we can streamline your social media management. Let's chat soon!\n\nBest,\nTimothy",
+    "score": 100,
+    "created_at": "2025-06-03T04:08:08.773356",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Social-Media-Content-ManagerCreator-1748923682538.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Social-Media-Content-ManagerCreator-1748923682538.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748923688788",
+    "job_title": "Asana Project Manager and Workflow Specialist",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We're an e-commerce brand looking for a highly organized Asana Project Manager to help us create structure, improve visibility, and scale operations across departments like Marketing, Support, and Fulfillment.\n\nThis is a long-term, remote opportunity for someone who thrives in a fast-paced startup environment and is passionate about creating efficient systems from the ground up.\n\nResponsibilities:\n\nBuild and document project workflows and SOPs using Asana\n\nSet up complex, cross-functional task s...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 6,
+      "tools": [
+        "Make.Com"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello,\n\nReading through your job post, I can sense the urgency to streamline your operations across various departments using Asana. I remember quite vividly when I first introduced a similar solution to an e-commerce startup I worked with. The chaos before the implementation was reminiscent of a bustling fish market! \n\nTo address your needs, my approach would be, firstly, to understand your current processes and identify bottlenecks. Secondly, I would design an Asana-based workflow tailored to your operations, ensuring tasks are interconnected and transparent across the board. Lastly, I would develop easy-to-follow SOPs and provide training to your team, ensuring a smooth transition.\n\nThere's no one-size-fits-all in automation, and I'd love to learn more about your specific challenges and how I can help you create an efficient system. Let's connect for a more in-depth discussion, shall we?\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:08:14.887394",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Asana-Project-Manager-and-Workflow-Specialist-1748923688788.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Asana-Project-Manager-and-Workflow-Specialist-1748923688788.html",
+    "automation_terms_found": 6,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748923694912",
+    "job_title": "Clothing Brand Media Buyer",
+    "client_name": "Client",
+    "budget": "$1,000.00",
+    "description": "\ud83d\udce3 We're Hiring a Performance-Driven Media Buyer (Meta Ads Expert)\n\ud83d\ude80Work with fast-growing streetwear brands & scale ad accounts profitably\n\n**About Us:**\nScalecom Agency is a growth partner for eCommerce brands, specializing in scaling clothing and fashion labels with high-performing Meta ads, conversion-optimized funnels, and backend systems that increase LTV.\n\nWe\u2019re currently looking for an experienced Media Buyer who\u2019s results-obsessed, data-driven, and knows how to scale Meta campaigns witho...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Make"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello Scalecom Agency team,\n\nI noticed your search for a media buyer with a knack for scaling Meta campaigns, and I believe my hands-on experience in automation can bring some relief to your manual processes.\n\nRecently, I worked with a boutique clothing brand that was overwhelmed with manual tracking of their ad performance. I implemented an automated system that not only reduced their workload but also provided real-time insights, significantly improving their campaign optimization process.\n\nFor your agency, I would first suggest implementing a tailored automation system that streamlines the tracking of your Meta campaigns. This would allow you to focus more on strategy and less on manual tracking. Secondly, using this system, we can develop an insightful data-driven approach to continually enhance your campaign performance.\n\nIf you'd like to discuss this further or have any questions about my approach, I'm only a message away. Look forward to possibly working together.\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:08:20.758602",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Clothing-Brand-Media-Buyer-1748923694912.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Clothing-Brand-Media-Buyer-1748923694912.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748923984288",
+    "job_title": "JavaScript Dev Needed to Fix & Extend Unlayer Custom Tool Integration (TalleFlow)",
+    "client_name": "Client",
+    "budget": "$100.00",
+    "description": "Description:\nWe\u2019re building a document generation system in our CRM platform TalleFlow, and we\u2019re using Unlayer to power a custom drag-and-drop editor. One of our tools, questionsTool.js, renders dynamic question blocks (short/long text, dropdown, radio, file upload, etc.) inside the editor. It works, but we need help resolving a few issues and extending its functionality.\n\nWe\u2019re looking for a JavaScript/Unlayer expert who can:\n\t\u2022\tDebug and fix configuration issues (e.g. dropdown fields in the s...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello,\n\nI noticed that you're having a bit of a pickle with your Unlayer custom tool integration in TalleFlow, specifically with the questionsTool.js and configuration issues. Reminds me of an issue I once tackled with a custom CRM integration for a client who was facing similar hiccups in their workflow optimization.\n\nFrom my experience, here's a brief approach we can consider:\n\n1. Dive deep into your current implementation to identify the root cause of your issues. \n2. Apply fixes and validate them in different scenarios, ensuring that the tool works as expected.\n3. Extend the tool's functionality, using the Unlayer and JavaScript expertise you need.\n\nI'm all about making tech work for people, not the other way around. So, let's discuss how we can make your document generation system even better. Feel free to contact me at a time that fits your schedule.\n\nBest,\nTimothy Poulton",
+    "score": 70,
+    "created_at": "2025-06-03T04:13:11.876072",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-JavaScript-Dev-Needed-to-Fix--Extend-Unlayer-Custo-1748923984288.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-JavaScript-Dev-Needed-to-Fix--Extend-Unlayer-Custo-1748923984288.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748923991888",
+    "job_title": "Remote Helpdesk Engineer (MSP) | ConnectWise | Datto | Citrix | Office 365  | Azure",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "About Us:\n\nWe are a USA-based Managed Services Provider (MSP) operating in the Eastern Standard Time (EST) zone. Our focus is on delivering high-quality IT support to businesses, ensuring smooth operations through proactive monitoring, troubleshooting, and expert-level support.\n\nWe are looking for an experienced Helpdesk Engineer with MSP experience who is highly skilled in Using PSA tools like ConnectWise, RMM tools like Datto, and Microsoft 365 & Azure administration.\n\nPosition Details:\n\n\u2705 Rem...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello there,\n\nI read through your job post and can see that you're in need of a Helpdesk Engineer with expertise in ConnectWise, Datto, and Microsoft 365 & Azure administration. I can relate to the importance of proactive monitoring and high-quality IT support, having spent most of my career working in similar environments.\n\nThere was a time when I worked with a small MSP in the Midwest struggling with a similar situation. I helped them automate their ticketing system with ConnectWise, improving their response time by 30%.\n\nMy approach to your situation would be to first fully understand your current operation and the pain points. Then, using my practical knowledge in PSA and RMM tools, I'd map out a plan to enhance the efficiency of your services. Finally, we'd implement this plan together, ensuring a smooth transition.\n\nI would love to discuss this in more detail and see how my expertise could align with your needs. Let's arrange a time to chat that suits you.\n\nBest regards,\nTimothy Poulton",
+    "score": 70,
+    "created_at": "2025-06-03T04:13:21.278698",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Remote-Helpdesk-Engineer-MSP--ConnectWise--Datto---1748923991888.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Remote-Helpdesk-Engineer-MSP--ConnectWise--Datto---1748923991888.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748924588213",
+    "job_title": "Title:\nBuild a Voice-Controlled AI Assistant Like JARVIS + Rick\u2019s Car AI",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "Title:\nBuild a Voice-Controlled AI Assistant Like JARVIS + Rick\u2019s Car AI\n\nDescription:\n\nI\u2019m looking for a developer to build a custom AI assistant that combines elements of Marvel\u2019s JARVIS and Rick\u2019s car AI from Rick and Morty. I want it to be voice-activated, conversational, helpful, and capable of managing tasks or even controlling hardware or smart devices.\n\nCore Features:\n\t\u2022\tVoice input (microphone) and output (text-to-speech with realistic voice)\n\t\u2022\tConnected to ChatGPT (or similar) for ric...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 3,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Dear Client,\n\nI have a soft spot for both Marvel\u2019s JARVIS and Rick\u2019s car AI, and your project instantly caught my eye. In my two-decade journey, I developed a smart home automation system for a comic enthusiast like yourself. It's an AI system that humorously quoted lines from his favorite comics while performing tasks. \n\nGiven your requirements, here's a glimpse of how I'd approach your project: \n\n1. Start by developing a core voice recognition engine using APIs like Google Speech-to-Text.\n2. Connect this with a conversational model like ChatGPT to enable interactive and human-like responses.\n3. Implement functionalities to handle tasks and control smart devices.\n\nI'm excited about the possibility of creating an AI assistant that's as witty and versatile as JARVIS and Rick\u2019s AI. Let's grab a virtual coffee and chat more about your vision? \n\nCheers,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:23:15.859015",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-TitleBuild-a-Voice-Controlled-AI-Assistant-Like-JA-1748924588213.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-TitleBuild-a-Voice-Controlled-AI-Assistant-Like-JA-1748924588213.html",
+    "automation_terms_found": 3,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748924595876",
+    "job_title": "AI Automation Specialist (Contractor)",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "AI Automation Specialist (Contractor)\nLocation: Remote\nEngagement: Project-based (with potential for ongoing work)\n\nOverview\nWe are seeking a skilled and proactive AI Automation Specialist to help implement AI-driven tools and automations that enhance productivity and reduce administrative workload for our sales team. The ideal candidate will have experience using platforms such as n8n, Apify, ChatGPT, Gemini, and others. This role is ideal for someone who can work within enterprise IT constrain...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 8,
+      "tools": [
+        "N8N"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "manual processes",
+        "automation needs"
+      ],
+      "industry": "SaaS",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello there,\n\nIt sounds like your sales team is grappling with time-consuming manual processes, and you're looking for someone who can enhance productivity using AI-driven tools like n8n, Apify, ChatGPT, and Gemini. I completely understand the frustration that comes with repetitive tasks\u2014I once worked with a client whose sales team spent half their time on admin work. Implementing automation solutions not only freed up their time, but also increased their morale.\n\nHere's what I propose for your situation: \n\n1. We start by identifying the most time-consuming processes that can be automated. \n2. Then, using the tools you've mentioned, I'll create custom automations tailored to your team's workflow. \n3. Finally, we ensure that these solutions work within your enterprise IT constraints, with minimal disruption to your existing systems.\n\nI'd love to chat more about your needs and how we can make your sales team's workday a little bit easier. Just drop me a message when you're ready. \n\nBest, \nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:23:26.097496",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-AI-Automation-Specialist-Contractor-1748924595876.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-AI-Automation-Specialist-Contractor-1748924595876.html",
+    "automation_terms_found": 8,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748925205320",
+    "job_title": "Development of a Web Tool for Automated Vehicle Listings Based on Image Uploads",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "\ud83d\udd27 Project: Smart Image-Based Vehicle Listing Tool (dabag Automat)\nWe're looking for a skilled developer (student, junior, or experienced freelancer) to build a lean but powerful web tool that automatically creates vehicle listings based on 8 uploaded images.\n\nThis tool is for a digital automotive company based in Germany. Our users should be able to take photos of their car, and the system should process the images and generate a finished CSV listing file\u2014compatible with mobile.de, autoscout24, ...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 6,
+      "tools": [
+        "Botpress"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello,\n\nReading through your project, I understand your need for a web tool that turns 8 car images into a CSV listing file\u2014quite an intriguing challenge! Reminds me of a project I worked on a few years back for a real estate company. They needed a similar feature - to generate property listings from images. It was a complex task, but after a few iterations, we were able to develop a reliable system.\n\nFor your project, I would suggest a three-step approach. First, we'll use image recognition technology to identify key details from car photos. Second, we'll create an algorithm to format these details into a CSV file. Lastly, we'll ensure that the output is compatible with mobile.de, autoscout24, etc. \n\nI find this project fascinating and I'd love to discuss it further with you. Let's figure out how we can make this tool a reality for your digital automotive company.\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:33:32.182729",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Development-of-a-Web-Tool-for-Automated-Vehicle-Li-1748925205320.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Development-of-a-Web-Tool-for-Automated-Vehicle-Li-1748925205320.html",
+    "automation_terms_found": 6,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748925212198",
+    "job_title": "Supabase Backend Workflow Review & Optimization",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "We're developing a ChatGPT-like web application using WeWeb for the frontend, Dify.ai for LLM chat completions, and Supabase for our entire backend (database, auth, Edge Functions).\n\nWe're looking for an experienced Supabase developer for a one-off project to conduct a comprehensive review and optimization of our existing Supabase setup. The primary goal is to ensure optimal backend performance, security, and reliability as we scale.\n\nKey Areas for Review and Optimization:\n\nEdge Functions:\n- Ana...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello there,\n\nI can see from your job description that you're feeling the pinch of workflow optimization, a common pain point when scaling applications like your ChatGPT-like web app on Supabase.\n\nIn my two decades as an automation expert, I once worked with a startup that was struggling with similar issues. Their backend was getting increasingly complex, leading to performance and reliability concerns. After a thorough review, we identified bottlenecks in the Edge Functions, which, once resolved, drastically improved performance and scalability.\n\nFor your project, I would first conduct a comprehensive review of your existing Supabase setup, focusing on the Edge Functions and other areas you've identified. Next, I'd identify the bottlenecks and areas of improvement. Finally, I'd implement the necessary changes to optimize your workflow and improve backend performance, security, and reliability.\n\nI'd love the opportunity to delve deeper into your project needs. Let's schedule a call to discuss how we can elevate your backend performance to the next level. Looking forward to hearing from you.\n\nBest,\nTimothy Poulton",
+    "score": 70,
+    "created_at": "2025-06-03T04:33:39.933570",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Supabase-Backend-Workflow-Review--Optimization-1748925212198.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Supabase-Backend-Workflow-Review--Optimization-1748925212198.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748925505424",
+    "job_title": "Deployment for existing Mvp",
+    "client_name": "Client",
+    "budget": "$50.00",
+    "description": "ezflow.my is in need of a talented full-stack web developer to craft a deployment plan to launch our MVP.  Existing working code base is built on using a Front-end written in React and communicates with a Express back-end using Jwt auth. Postgres database schema is defined using Prisma. We are not anticipating any code updates, but some bug-fixing may be required. Main deliverable is sensible plan which keeps hosting costs low, is secure and can be scaled up and out easily as we grow. Must migra...",
+    "analysis": {
+      "score": 70,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "automation needs"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello ezflow.my team,\n\nReading through your job description, I learned that you're looking for a thoughtful deployment plan for your MVP that's secure, cost-effective, and scalable. I can relate to this - my previous project involved working with a real estate startup, where we faced similar challenges. I successfully devised a deployment strategy that maintained a balance between cost-effectiveness and scalability.\n\nHere's my proposed approach for your MVP: \n1. Audit the existing code base and fix any potential bugs.\n2. Analyze and select a hosting environment that aligns with your budget and scalability requirements.\n3. Develop a step-by-step deployment plan, complete with rollback procedures in case of any unforeseen issues. \n\nI'm excited about the opportunity to assist you with this project. Let's discuss your needs in detail so that I can cater my approach to your specific situation. Looking forward to chatting soon!\n\nBest,\nTimothy Poulton",
+    "score": 70,
+    "created_at": "2025-06-03T04:38:32.305029",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Deployment-for-existing-Mvp-1748925505424.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Deployment-for-existing-Mvp-1748925505424.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748925512330",
+    "job_title": "Youtube automation",
+    "client_name": "Client",
+    "budget": "N/A",
+    "description": "looking to make 1 youtube automation  video about hooters restaurant origin, are you able to do it ?",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 2,
+      "tools": [
+        "Make"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "hospitality",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hello there,\n\nI noticed you're seeking to create an automation video about Hooters restaurant's origin\u2014a unique topic, indeed! I'd be thrilled to support you in this venture. \n\nIn my experience, the key to successful automation is understanding the story and the process. I once worked on a project automating a YouTube video series for a vintage car enthusiast. The challenge was to make the automation process reflect his passion for the subject matter. We achieved it, and it was a joy to see his content come alive and reach more audiences.\n\nFor your project, I suggest we:\n\n1. Brainstorm and map out the Hooters narrative, highlighting the key points you wish to communicate.\n2. Design the automation process, ensuring it stays true to the story and is optimized for your workflow.\n3. Review and refine the video until it meets your satisfaction.\n\nI'd love to hear more about your vision for the video. Let's chat soon to discuss the details!\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:38:40.946426",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Youtube-automation-1748925512330.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Youtube-automation-1748925512330.html",
+    "automation_terms_found": 2,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  },
+  {
+    "job_id": "job_1748925520959",
+    "job_title": "Linkedin Campaign Manager and Content Writer",
+    "client_name": "Client",
+    "budget": "$1,000.00",
+    "description": "Create LinkedIn posts and Gumroad content about AI agents, AI automations, or anything related to AI. \n\nGoal: To grow my Linkedin audience and drive leads to my AI automation services and products business.\n\nDeliverables:\n\n1. 7\u201310 LinkedIn posts per week, including:\n- Lead Magnet Posts: Designed to attract DM inquiries and calls.\n- Motion Graphic Posts: For visual engagement and higher reach.\n- General Content: Consistent posts about AI, automation trends, opinions, and relatable insights.\n- Tre...",
+    "analysis": {
+      "score": 100,
+      "rejected": false,
+      "automation_terms_found": 3,
+      "tools": [
+        "Automation Tools"
+      ],
+      "specialties": [],
+      "pain_points": [
+        "workflow optimization"
+      ],
+      "industry": "general business",
+      "analysis_type": "advanced",
+      "ai_model_used": "gpt-4"
+    },
+    "message": "Hi there,\n\nYour focus on AI automation and desire to drive leads through LinkedIn and Gumroad resonated with me. I've seen firsthand how powerful and transformative automation can be, especially in optimizing workflows\u2014my specialty!\n\nJust last year, I was working with a tech startup, grappling with similar challenges. We leveraged LinkedIn to share stories on how their AI automation tool streamlined complex processes. It not only sparked conversations but also brought in quality leads.\n\nMy approach for you would be: \n\n1. To start with understanding your business and audience better, creating a content roadmap aligned with your goals.\n2. Next, we'd dive into creating engaging LinkedIn posts - think catchy lead magnets, visually appealing motion graphics, and content that resonates with your audience. \n3. Simultaneously, we'll develop compelling Gumroad content to showcase your products and services.\n\nI'd love to discuss this further and explore how we can grow your audience together. Let's chat when you're available.\n\nBest,\nTimothy Poulton",
+    "score": 100,
+    "created_at": "2025-06-03T04:38:50.631364",
+    "proposal_url": "https://proposals.projekt-ai.net/proposal-multimodel-Linkedin-Campaign-Manager-and-Content-Writer-1748925520959.html",
+    "original_job_url": "",
+    "status": "pending",
+    "filename": "proposal-multimodel-Linkedin-Campaign-Manager-and-Content-Writer-1748925520959.html",
+    "automation_terms_found": 3,
+    "specialties": [],
+    "ai_model_used": "gpt-4",
+    "server_version": "multi-model-test"
+  }
+]

@@ -1,0 +1,23 @@
+=== AI server started with latest code ===
+🚀 MULTI-MODEL AI PRODUCTION SERVER
+📡 Port: 5001 (production)
+🤖 AI Models Available:
+   • OpenAI GPT-4: ✅
+   • Gemini 2.0 Flash: ✅
+   • Cohere: ✅
+📊 Status endpoint: http://192.168.1.107:5001/status
+🔗 Webhook: http://192.168.1.107:5001/webhook/rss-jobs
+📋 Queue file: /root/homelab-docs/scripts/upwork-automation/proposal-queue.json
+📁 Proposals dir: /var/www/projekt-ai.net/proposals/
+Traceback (most recent call last):
+  File "/root/homelab-docs/scripts/upwork-automation/upwork-proposal-server-multimodel.py", line 905, in <module>
+    run_server() 
+    ^^^^^^^^^^^^
+  File "/root/homelab-docs/scripts/upwork-automation/upwork-proposal-server-multimodel.py", line 900, in run_server
+    with ReusableUpworkServer(("", PORT), UpworkProposalServer) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use

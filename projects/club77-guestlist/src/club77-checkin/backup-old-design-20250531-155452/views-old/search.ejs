@@ -1,0 +1,138 @@
+<div class="row mb-4">
+  <div class="col-md-12">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="card-title">
+            Search Results: "<%= searchQuery %>"
+            <% if (currentEvent) { %>
+              <small class="text-muted">in <%= currentEvent.name %></small>
+            <% } %>
+          </h2>
+          
+          <div class="stats">
+            <span class="badge bg-primary fs-6 me-2">Total: <%= stats.total %></span>
+            <span class="badge bg-success fs-6 me-2">Checked In: <%= stats.checkedIn %></span>
+            <span class="badge bg-info fs-6"><%= stats.percentage %>%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover" id="search-results-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Event</th>
+                <th>DOB</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (guests.length > 0) { %>
+                <% guests.forEach(guest => { %>
+                  <tr data-guest-id="<%= guest.id %>" class="<%= guest.checked_in ? 'table-success' : '' %>">
+                    <td><%= guest.first_name %> <%= guest.last_name %></td>
+                    <td><%= guest.email || 'N/A' %></td>
+                    <td>
+                      <a href="/events/<%= guest.event_id %>">
+                        <%= guest.event ? guest.event.name : 'N/A' %>
+                      </a>
+                    </td>
+                    <td><%= guest.dob ? new Date(guest.dob).toLocaleDateString() : 'N/A' %></td>
+                    <td>
+                      <% if (guest.checked_in) { %>
+                        <span class="badge bg-success">Checked In</span>
+                        <% if (guest.check_in_time) { %>
+                          <small class="text-muted d-block">
+                            <%= new Date(guest.check_in_time).toLocaleTimeString() %>
+                          </small>
+                        <% } %>
+                      <% } else { %>
+                        <span class="badge bg-danger">Not Checked In</span>
+                      <% } %>
+                    </td>
+                    <td>
+                      <% if (guest.checked_in) { %>
+                        <button class="btn btn-sm btn-outline-danger check-out-btn" 
+                                data-guest-id="<%= guest.id %>">
+                          Check Out
+                        </button>
+                      <% } else { %>
+                        <button class="btn btn-sm btn-success check-in-btn" 
+                                data-guest-id="<%= guest.id %>">
+                          Check In
+                        </button>
+                      <% } %>
+                    </td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="6" class="text-center">No results found for "<%= searchQuery %>"</td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="mt-4">
+          <% if (currentEvent) { %>
+            <a href="/events/<%= currentEvent.id %>" class="btn btn-outline-primary">
+              Back to <%= currentEvent.name %>
+            </a>
+          <% } else { %>
+            <a href="/" class="btn btn-outline-primary">Back to Events</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Guest Check-In Modal -->
+<div class="modal fade" id="checkInModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Check-In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to check in <span id="guest-name"></span>?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" id="confirm-check-in">Confirm Check-In</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Guest Check-Out Modal -->
+<div class="modal fade" id="checkOutModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Check-Out</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to check out <span id="checkout-guest-name"></span>?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" id="confirm-check-out">Confirm Check-Out</button>
+      </div>
+    </div>
+  </div>
+</div> 

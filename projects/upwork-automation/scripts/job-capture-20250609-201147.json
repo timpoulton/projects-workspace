@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Example Job Title",
+    "url": "https://www.upwork.com/jobs/example",
+    "jobType": "Hourly",
+    "skillLevel": "Expert",
+    "budget": "N/A",
+    "hourlyRange": "$30-50",
+    "estimatedTime": "Less than 30 hrs/week",
+    "description": "This is an example job description that demonstrates all available fields.",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "API Development"
+    ],
+    "paymentVerified": true,
+    "clientRating": "4.95",
+    "clientSpent": "$10K+ spent",
+    "clientCountry": "United States",
+    "questions": [
+      "What similar projects have you worked on?",
+      "What is your experience with React?"
+    ],
+    "scrapedAt": 1749499907617,
+    "scrapedAtHuman": "10/06/2025, 06:11:47",
+    "clientLocation": "San Francisco, CA",
+    "sourceUrl": "https://www.upwork.com/nx/search/jobs/?sort=recency",
+    "source": {
+      "name": "New Configuration",
+      "searchUrl": "https://www.upwork.com/nx/search/jobs/?sort=recency&q=automation%20OR%20n8n%20OR%20workflow%20OR%20zapier%20OR%20integration%20OR%20make.com%20OR%20manychat%20OR%20chatbot%20OR%20%22ai%20agent%22%20OR%20%22ai%20automation%22%20OR%20%22process%20automation%22%20OR%20%22OR%20webhookbusiness%20automation%22%20OR%20api%20",
+      "webhookUrl": "http://192.168.1.107:5055/webhook/test-capture"
+    }
+  }
+]

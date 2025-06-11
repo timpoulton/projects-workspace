@@ -1,0 +1,14 @@
+[Unit]
+Description=Upwork Proposal Automation Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/homelab-docs
+ExecStart=/usr/bin/python3 /root/homelab-docs/scripts/upwork-automation/upwork-proposal-server.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 

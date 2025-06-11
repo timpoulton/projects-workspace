@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal for {{CLIENT_NAME}} - {{JOB_TITLE}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; border-bottom: 2px solid #007cba; padding-bottom: 20px; }
+        .section { margin: 30px 0; }
+        .workflow-step { display: flex; align-items: center; margin: 15px 0; }
+        .step-number { background: #007cba; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; }
+        .process-item { margin: 20px 0; padding: 15px; background: #f9f9f9; border-left: 4px solid #007cba; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 5px 0; border-bottom: 1px solid #eee; }
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccc; }
+        .job-reference { margin: 20px 0; padding: 15px; background: #e8f4fd; border-left: 4px solid #007cba; border-radius: 5px; }
+        .job-reference a { color: #007cba; text-decoration: none; font-weight: bold; }
+        .job-reference a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Project Proposal</h1>
+            <h2>{{JOB_TITLE}}</h2>
+            <p><strong>For:</strong> {{CLIENT_NAME}} | <strong>Budget:</strong> {{JOB_BUDGET}} | <strong>Score:</strong> {{SCORE}}</p>
+        </div>
+        
+        <div class="job-reference">
+            <h3>📋 Original Job Posting</h3>
+            <p><a href="{{ORIGINAL_JOB_URL}}" target="_blank">View Original Upwork Job Posting →</a></p>
+            <small>Reference this link to review the full job requirements and apply directly on Upwork.</small>
+        </div>
+        
+        <div class="section">
+            <h3>Current Situation</h3>
+            <p>{{CURRENT_PROCESS}}</p>
+            
+            <h3>Desired Outcome</h3>
+            <p>{{DESIRED_OUTCOME}}</p>
+            
+            <h3>Tools & Technologies</h3>
+            <p>{{TOOLS}}</p>
+        </div>
+        
+        <div class="section">
+            <h3>Workflow Process</h3>
+            {{WORKFLOW_STEPS}}
+        </div>
+        
+        <div class="section">
+            <h3>Services Included</h3>
+            <ul>{{SERVICES}}</ul>
+        </div>
+        
+        <div class="section">
+            <h3>📋 Problem Analysis</h3>
+            <p>{{PROBLEM_ANALYSIS}}</p>
+            
+            <h3>🎯 Proposed Solution</h3>
+            <p>{{PROPOSED_SOLUTION}}</p>
+            
+            <h3>⚙️ Technical Implementation</h3>
+            <p>{{TECHNICAL_DETAILS}}</p>
+        </div>
+        
+        <div class="section">
+            <h3>🚀 Step-by-Step Implementation</h3>
+            {{IMPLEMENTATION_STEPS}}
+        </div>
+        
+        <div class="section">
+            <h3>📦 Deliverables</h3>
+            <ul>{{DELIVERABLES}}</ul>
+        </div>
+        
+        <div class="section">
+            <h3>⏱️ Timeline</h3>
+            <p>{{TIMELINE}}</p>
+            
+            <h3>📊 Success Metrics</h3>
+            <p>{{SUCCESS_METRICS}}</p>
+        </div>
+        
+        <div class="section">
+            <h3>💪 Why I'm Perfect for This Project</h3>
+            <p>{{WHY_ME}}</p>
+        </div>
+        
+        <div class="footer">
+            <p>Generated: {{TIMESTAMP}}</p>
+            <p><strong>Tim Poulton</strong> | Automation Specialist | projekt-ai.net</p>
+        </div>
+    </div>
+</body>
+</html>
