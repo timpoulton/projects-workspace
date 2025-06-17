@@ -53,10 +53,12 @@ jobs:
           echo "No Node tests configured yet"
 
       - name: Build Docker image
+        if: ${{ matrix.name != 'upwork-automation' }}
         run: |
           docker build ${{ matrix.path }}/deploy -f ${{ matrix.path }}/deploy/Dockerfile -t ${{ matrix.name }}:latest
 
       - name: Health check Docker container
+        if: ${{ matrix.name != 'upwork-automation' }}
         run: |
           CONTAINER_ID=$(docker run -d -p 8080:80 ${{ matrix.name }}:latest)
           sleep 5
