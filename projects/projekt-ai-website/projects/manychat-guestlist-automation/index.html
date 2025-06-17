@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManyChat Guestlist Automation - Projekt AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/portfolio-dark.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="container">
+        <a href="/" class="logo">Projekt AI®</a>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- Menu Overlay -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- Slide-out Menu -->
+<div class="slide-menu" id="slideMenu">
+    <div class="menu-header">
+        <div class="menu-logo">Projekt AI®</div>
+        <button class="close-btn" id="closeMenu">✕</button>
+    </div>
+
+    <nav class="menu-nav">
+        <ul>
+            <li><a href="/index.html#work">Work</a></li>
+            <li><a href="/index.html#about">About</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-footer"></div>
+</div>
+
+<!-- Project Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="client-name">Sydney Nightclub</div>
+                
+                <h1>ManyChat Guestlist Automation</h1>
+                <p class="subtitle">Automated guest list, ticketing & messaging system leveraging ManyChat and Google Sheets</p>
+                
+                <!-- No public live link available -->
+            </div>
+            
+            <div class="hero-right">
+                <div class="services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Chatbot Automation</li>
+                        <li>API Integration</li>
+                        <li>Guestlist Management</li>
+                        <li>Data Sync & Analytics</li>
+                        <li>Automated Messaging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Image -->
+<section class="project-image">
+    <div class="container">
+        <img src="../../assets/img/uploads/manychat-workflow.png" alt="ManyChat Guestlist Automation Workflow" />
+        <!-- Secondary image retained from original design -->
+        <img src="../../assets/img/uploads/manychat-ui.png" alt="ManyChat Messenger UI" style="margin-top:40px; max-width:600px; width:100%; display:block; margin-left:auto; margin-right:auto;" />
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section class="overview-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title">Overview</div>
+            <div></div>
+        </div>
+        
+        <div class="overview-content">
+            <div>
+                <h3>Challenge</h3>
+                <p>Managing nightly guest lists, ticketing, and last-minute changes was entirely manual, error-prone, and slow. Staff juggled spreadsheets, SMS threads, and club management software—all while doors were opening.</p>
+            </div>
+            <div>
+                <h3>Approach</h3>
+                <p>We designed a ManyChat-driven workflow that pulls event data from the booking API, collects guest details in Messenger, synchronises everything to Google Sheets, and issues dynamic QR tickets via Twilio—all without human intervention.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title">Process</div>
+            <div></div>
+        </div>
+        
+        <div class="process-grid">
+            <div class="process-item">
+                <div class="process-number">01</div>
+                <h4>Discovery & Requirements</h4>
+                <p>Interviewed venue staff, mapped existing processes, and defined automation success metrics.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">02</div>
+                <h4>Chatbot Architecture</h4>
+                <p>Built a modular ManyChat flow handling guest sign-up, ticket issuance, and status updates.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">03</div>
+                <h4>API Integration</h4>
+                <p>Connected booking software and Google Sheets via Apps Script, ensuring real-time data sync.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">04</div>
+                <h4>Testing & Launch</h4>
+                <p>Executed test runs during off-peak nights, iterated on feedback, and rolled out to live events.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Highlights -->
+<section class="highlights-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title">Project Highlights</div>
+            <div></div>
+        </div>
+        
+        <div class="highlight-item">
+            <div class="highlight-content">
+                <h3>85% Less Manual Work</h3>
+                <p>Door staff shifted focus from spreadsheets to service as guest check-ins became automatic.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-item">
+            <div class="highlight-content">
+                <h3>Patron Rating System</h3>
+                <p>Automated point system ranks guests based on engagement, enabling VIP targeting.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-item">
+            <div class="highlight-content">
+                <h3>Revenue Uplift &#x2191;</h3>
+                <p>Improved repeat-visit rates by 23% through timely post-event marketing sequences.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Projects -->
+<section class="related-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title">Related Projects</div>
+            <h2>More work from passionate projects</h2>
+        </div>
+        
+        <div class="related-grid">
+            <a href="../dj-recording-manager/index.html" class="related-card">
+                <img src="../../assets/img/uploads/recording-manager-thumb.jpg" alt="DJ Recording Manager" />
+                <div class="related-card-content">
+                    <h4>DJ Recording Manager</h4>
+                    <p>Web App Automation</p>
+                    <span class="view-link">View Case Study</span>
+                </div>
+            </a>
+            
+            <a href="../club77-content-pipeline/index.html" class="related-card">
+                <img src="../../assets/img/uploads/club77-thumb.jpg" alt="Club77 Content Pipeline" />
+                <div class="related-card-content">
+                    <h4>Club77 Content Pipeline</h4>
+                    <p>AI Content Automation</p>
+                    <span class="view-link">View Case Study</span>
+                </div>
+            </a>
+            
+            <a href="../upwork_proposal_automation/index.html" class="related-card">
+                <img src="../../assets/img/uploads/upwork-thumb.jpg" alt="Upwork Proposal Automation" />
+                <div class="related-card-content">
+                    <h4>Upwork Proposal Automation</h4>
+                    <p>AI Copy Automation</p>
+                    <span class="view-link">View Case Study</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <h2>Ready to start your next project?</h2>
+        <p>Whether you know a little or a lot about your next automation project, want to collaborate, or have questions about my services - let's chat.</p>
+        <a href="mailto:tim@projekt-ai.net" class="button">Contact me</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p><strong>Timothy Poulton - Projekt AI®</strong> | PROJEKT AI © 2025</p>
+            <div class="footer-links">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Menu Script -->
+<script>
+function initializeMenu(){const t=document.getElementById("menuToggle"),e=document.getElementById("slideMenu"),n=document.getElementById("menuOverlay"),o=document.getElementById("closeMenu");function c(){e.classList.add("active"),n.classList.add("active"),t.classList.add("active"),document.body.style.overflow="hidden"}function s(){e.classList.remove("active"),n.classList.remove("active"),t.classList.remove("active"),document.body.style.overflow=""}t.addEventListener("click",c),o.addEventListener("click",s),n.addEventListener("click",s);document.querySelectorAll('.menu-nav a').forEach(a=>a.addEventListener('click',s))}
+document.addEventListener('DOMContentLoaded',initializeMenu);
+</script>
+
+</body>
+</html> 

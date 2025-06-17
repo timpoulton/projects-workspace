@@ -1,0 +1,26 @@
+{
+  "sync_date": "2025-05-31T02:25:40.798Z",
+  "figma_file_id": "DegzkaFinaMjSokEJoNC6w",
+  "components": [
+    {
+      "name": "Favicon",
+      "filename": "favicon.png",
+      "figma_id": "2:31"
+    },
+    {
+      "name": "Header Logo",
+      "filename": "header-logo.png",
+      "figma_id": "2:24"
+    },
+    {
+      "name": "Header Logo Light",
+      "filename": "header-logo-light.png",
+      "figma_id": "2:22"
+    },
+    {
+      "name": "Logo Icon",
+      "filename": "logo-icon.png",
+      "figma_id": "2:27"
+    }
+  ]
+}

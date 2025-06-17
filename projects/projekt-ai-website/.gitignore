@@ -1,0 +1,50 @@
+# DJ Recording Manager files
+# assets/archives/dj-recording-manager/
+# projects/dj-recording-manager/
+
+# Backups directory
+backups/
+
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Keep image generator files
+!assets/img/generator/
+!assets/img/uploads/
+# Don't commit virtual-envs, build artefacts, or archives
+venv/
+dist/
+assets/archives/**/*.zip
+node_modules/
+*.log
+
+# Ignore virtual environments, build outputs, and large archives
+venv/
+node_modules/
+dist/
+assets/archives/**/*.zip
