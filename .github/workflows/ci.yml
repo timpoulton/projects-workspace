@@ -44,7 +44,7 @@ jobs:
       - name: Install and build Node projects
         if: matrix.name == 'projekt-ai-website'
         run: |
-          cd ${{ matrix.path }}/src/projekt-ai-website
+          cd ${{ matrix.path }}
           npm install
           npm run build
       - name: (Optional) Run Node tests
@@ -53,12 +53,12 @@ jobs:
           echo "No Node tests configured yet"
 
       - name: Build Docker image
-        if: ${{ matrix.name != 'upwork-automation' }}
+        if: matrix.name == 'projekt-ai-website'
         run: |
           docker build ${{ matrix.path }}/deploy -f ${{ matrix.path }}/deploy/Dockerfile -t ${{ matrix.name }}:latest
 
       - name: Health check Docker container
-        if: ${{ matrix.name != 'upwork-automation' }}
+        if: matrix.name == 'projekt-ai-website'
         run: |
           CONTAINER_ID=$(docker run -d -p 8080:80 ${{ matrix.name }}:latest)
           sleep 5
