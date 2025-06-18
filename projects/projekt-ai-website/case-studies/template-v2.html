@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study • PROJECT NAME</title>
+    <meta name="description" content="How PROJECT NAME delivered OUTCOME for CLIENT." />
+
+    <!-- Core styles -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/case-study.css" />
+</head>
+<body>
+    <!-- ========= HERO (v2) ========= -->
+    <section class="hero-v2">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <h1 class="hero-title">PROJECT NAME</h1>
+                <p class="hero-desc">1-sentence punchline describing the transformation delivered for CLIENT.</p>
+            </div>
+            <div class="hero-right">
+                <h4 style="margin:0 0 0.75rem; color:var(--text-secondary);">Services</h4>
+                <ul class="hero-services">
+                    <li>Experience Strategy</li>
+                    <li>Workflow Automation</li>
+                    <li>UI/UX Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky section tabs -->
+    <nav class="section-tabs">
+        <a href="#overview" class="tab-link">Overview</a>
+        <a href="#challenge" class="tab-link">Challenge</a>
+        <a href="#approach" class="tab-link">Approach</a>
+        <a href="#process" class="tab-link">Process</a>
+    </nav>
+
+    <!-- ========= CONTENT SECTIONS ========= -->
+    <section id="overview" style="padding:6rem 0;">
+        <div class="container" style="max-width:900px;">
+            <h2>Overview</h2>
+            <p>Introduce the client, business goals and the overall result.</p>
+        </div>
+    </section>
+
+    <section id="challenge" style="padding:6rem 0; background:var(--bg-secondary);">
+        <div class="container" style="max-width:900px;">
+            <h2>Challenge</h2>
+            <p>Outline pain points and constraints.</p>
+        </div>
+    </section>
+
+    <section id="approach" style="padding:6rem 0;">
+        <div class="container" style="max-width:900px;">
+            <h2>Approach</h2>
+            <p>Explain the strategy and reasoning behind the solution.</p>
+        </div>
+    </section>
+
+    <!-- Full-bleed image example -->
+    <img src="../assets/img/case-studies/sample-1.jpg" alt="Mockup" class="full-bleed-img" />
+
+    <section id="process" style="padding:6rem 0; background:var(--bg-secondary);">
+        <div class="container" style="max-width:1100px;">
+            <h2>Process</h2>
+            <div class="process-list">
+                <div class="process-row"><span>01</span><p>Discovery &amp; Audit</p></div>
+                <div class="process-row"><span>02</span><p>Workflow Mapping</p></div>
+                <div class="process-row"><span>03</span><p>Build &amp; Integrate</p></div>
+                <div class="process-row"><span>04</span><p>Iterate &amp; Launch</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="padding:6rem 0;">
+        <div class="container" style="max-width:900px; text-align:center;">
+            <h2>Ready to Automate?</h2>
+            <p>Book a free blueprint consultation and see what AI can unlock.</p>
+            <a href="mailto:hello@projekt-ai.net" class="btn btn-primary" style="margin-top:1.5rem;">Request Blueprint</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>PROJEKT AI © 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Active tab highlight script -->
+    <script>
+      const links = document.querySelectorAll('.tab-link');
+      const sections = [...links].map(l => document.querySelector(l.getAttribute('href')));
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              const idx = sections.indexOf(entry.target);
+              if(idx > -1){ links[idx].classList.toggle('active', entry.isIntersecting); }
+          });
+      }, {threshold:0.3, rootMargin:'0px 0px -50% 0px'});
+      sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+</html> 
