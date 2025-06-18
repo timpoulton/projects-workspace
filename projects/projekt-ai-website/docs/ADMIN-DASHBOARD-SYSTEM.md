@@ -164,7 +164,7 @@ All admin dashboard files have been created and styled consistently. Ready to de
 
 ### **🔄 DEPLOYMENT COMMANDS:**
 ```bash
-cd /root/homelab-docs/projekt-ai-website
+cd projects/projekt-ai-website
 git add index.html admin-login.html admin-dashboard.html upwork-dashboard.html  
 git commit -m "Deploy admin dashboard system with consistent styling"
 git push origin main
