@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-case-theme="green">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study • PROJECT NAME</title>
+    <!-- SEO placeholders; replace per-case-study -->
+    <meta name="description" content="How PROJECT NAME delivered OUTCOME for CLIENT." />
+    <!-- Global styles already bundled in assets/css/main.css -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+        /* --- Case-study specific hooks (extend /override global) --- */
+        [data-case-theme="green"]{
+            --accent: #00ff9c;
+        }
+        .cs-section{padding:120px 0;}
+        .cs-hero{background:linear-gradient(135deg,var(--accent) 0%,transparent 100%);min-height:70vh;display:flex;align-items:center;color:#fff;text-align:center;position:relative;overflow:hidden;}
+        .cs-hero h1{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1rem;}
+        .cs-stats{display:flex;gap:40px;justify-content:center;margin-top:2rem;flex-wrap:wrap;}
+        .cs-stat{font-size:1.25rem;}
+        .cs-problem,.cs-solution,.cs-results{max-width:800px;margin:auto;}
+        .cs-badge{background:rgba(255,255,255,.1);padding:4px 10px;border-radius:4px;font-size:.85rem;margin-right:8px;}
+        .cs-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;max-width:1200px;margin:40px auto;}
+        .cs-gallery img,.cs-gallery video{width:100%;border-radius:8px;}
+        .cs-before-after{position:relative;max-width:900px;margin:60px auto;overflow:hidden;border-radius:8px;}
+        .cs-cta{background:var(--accent);color:#000;padding:60px 30px;text-align:center;border-radius:8px;}
+        .cs-cta a{background:#000;color:#fff;padding:14px 28px;border-radius:30px;font-weight:500;display:inline-block;margin-top:20px;}
+        /* simple lightbox placeholder */
+        .cs-gallery a{display:block;cursor:zoom-in;}
+    </style>
+</head>
+<body>
+    <!-- Header copied from main site for consistency -->
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">Projekt AI®</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+    <!-- Slide-menu & overlay reused via global JS -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="slide-menu" id="slideMenu">
+        <div class="menu-header">
+            <div class="menu-logo">Projekt AI®</div>
+            <button class="close-btn" id="closeMenu">✕</button>
+        </div>
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/case-studies/">Case Studies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero -->
+    <section class="cs-hero cs-section">
+        <div class="container">
+            <h1>+62% Ticket Sales in 4 Weeks</h1>
+            <p>Automated social-content pipeline for Club77 Nightclub</p>
+            <div class="cs-stats">
+                <div class="cs-stat"><strong>26 hrs</strong> Staff Time Saved / week</div>
+                <div class="cs-stat"><strong>3.4x</strong> Instagram Engagement</div>
+                <div class="cs-stat"><strong>£14k</strong> New Revenue</div>
+            </div>
+            <a href="#walkthrough" class="button primary" style="margin-top:2.5rem;">Watch 90-sec Walkthrough</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="cs-problem cs-section">
+        <div class="container">
+            <h2>The Challenge</h2>
+            <p>Club77's marketing team spent 6+ hours per event creating social content, yet engagement was stagnating. Manual processes meant slow turnaround, inconsistent visuals, and missed revenue opportunities.</p>
+            <ul>
+                <li>Team: 2 marketers & 1 designer</li>
+                <li>Stack: Google Sheets, Canva, Instagram</li>
+                <li>Goal: Increase ticket sales without additional hires</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="cs-solution cs-section">
+        <div class="container">
+            <h2>The Automated Solution</h2>
+            <p>We built a zero-touch content generator powered by GPT-4, integrated with Airtable and n8n. Event data triggers instant production of carousel posts, captions, and story assets—delivered straight to a shared Google Drive.</p>
+            <div>
+                <span class="cs-badge">GPT-4</span>
+                <span class="cs-badge">n8n</span>
+                <span class="cs-badge">Airtable</span>
+                <span class="cs-badge">Google Drive API</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loom Video -->
+    <section id="walkthrough" class="cs-section">
+        <div class="container">
+            <h2>Video Walkthrough</h2>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;">
+                <iframe src="https://www.loom.com/embed/VIDEO_ID?hide_owner=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="cs-section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="cs-gallery">
+                <a href="/assets/img/case-studies/sample-1.jpg"><img src="/assets/img/case-studies/sample-1.jpg" alt="Generated Carousel" loading="lazy" /></a>
+                <a href="/assets/img/case-studies/sample-2.jpg"><img src="/assets/img/case-studies/sample-2.jpg" alt="Scheduling Automation" loading="lazy" /></a>
+                <a href="/assets/img/case-studies/sample-3.jpg"><img src="/assets/img/case-studies/sample-3.jpg" alt="Analytics Dashboard" loading="lazy" /></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="cs-results cs-section">
+        <div class="container">
+            <h2>Results</h2>
+            <div class="cs-before-after">
+                <!-- Placeholder images; will replace with JS range slider -->
+                <img src="/assets/img/case-studies/before.jpg" alt="Before" />
+                <img src="/assets/img/case-studies/after.jpg" alt="After" style="position:absolute;top:0;left:0;clip-path:inset(0 50% 0 0);transition:clip-path 0.3s;" />
+            </div>
+            <table>
+                <tr><th>Metric</th><th>Before</th><th>After</th></tr>
+                <tr><td>Ticket Sales</td><td>120 / wk</td><td>195 / wk</td></tr>
+                <tr><td>Marketing Hours</td><td>6 hrs / event</td><td>1 hr / event</td></tr>
+                <tr><td>ROI</td><td>—</td><td>3.1×</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cs-cta cs-section">
+        <div class="container">
+            <h2>Create a Similar Transformation</h2>
+            <p>Ready to unlock automated growth? Let's map out your workflow.</p>
+            <a href="mailto:tim@projekt-ai.net">Book My Free Automation Audit</a>
+        </div>
+    </section>
+
+    <!-- Footer reuse -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>PROJEKT AI © 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global bundle -->
+    <script src="../assets/main.3a35abec.js"></script>
+    <script>
+        // page-specific JS hooks can go here if needed later
+    </script>
+</body>
+</html> 
