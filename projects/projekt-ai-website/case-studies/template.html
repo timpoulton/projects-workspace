@@ -6,28 +6,10 @@
     <title>Case Study • PROJECT NAME</title>
     <!-- SEO placeholders; replace per-case-study -->
     <meta name="description" content="How PROJECT NAME delivered OUTCOME for CLIENT." />
-    <!-- Global styles already bundled in assets/css/main.css -->
+    <!-- Base dark theme styles from existing proposal template -->
+    <link rel="stylesheet" href="../assets/css/portfolio-dark.css" />
+    <!-- Global styles bundle -->
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <style>
-        /* --- Case-study specific hooks (extend /override global) --- */
-        [data-case-theme="green"]{
-            --accent: #00ff9c;
-        }
-        .cs-section{padding:120px 0;}
-        .cs-hero{background:linear-gradient(135deg,var(--accent) 0%,transparent 100%);min-height:70vh;display:flex;align-items:center;color:#fff;text-align:center;position:relative;overflow:hidden;}
-        .cs-hero h1{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1rem;}
-        .cs-stats{display:flex;gap:40px;justify-content:center;margin-top:2rem;flex-wrap:wrap;}
-        .cs-stat{font-size:1.25rem;}
-        .cs-problem,.cs-solution,.cs-results{max-width:800px;margin:auto;}
-        .cs-badge{background:rgba(255,255,255,.1);padding:4px 10px;border-radius:4px;font-size:.85rem;margin-right:8px;}
-        .cs-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;max-width:1200px;margin:40px auto;}
-        .cs-gallery img,.cs-gallery video{width:100%;border-radius:8px;}
-        .cs-before-after{position:relative;max-width:900px;margin:60px auto;overflow:hidden;border-radius:8px;}
-        .cs-cta{background:var(--accent);color:#000;padding:60px 30px;text-align:center;border-radius:8px;}
-        .cs-cta a{background:#000;color:#fff;padding:14px 28px;border-radius:30px;font-weight:500;display:inline-block;margin-top:20px;}
-        /* simple lightbox placeholder */
-        .cs-gallery a{display:block;cursor:zoom-in;}
-    </style>
 </head>
 <body>
     <!-- Header copied from main site for consistency -->
