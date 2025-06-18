@@ -7,10 +7,10 @@
     "start": "npx serve dist",
     "dev": "npm run start",
     "build": "npm run build:prod",
-    "build:dev": "npm run clean:dist && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
-    "build:prod": "npm run clean:dist && npm run portfolio:generate && npm run quality:validate-all && npm run seo:generate-sitemap && npm run copy:dist",
-    "build:preview": "npm run clean:dist && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
-    "build:branch": "npm run clean:dist && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
+    "build:dev": "npm run clean:dist && npm run lint && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
+    "build:prod": "npm run clean:dist && npm run lint && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:validate-all && npm run seo:generate-sitemap && npm run copy:dist",
+    "build:preview": "npm run clean:dist && npm run lint && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
+    "build:branch": "npm run clean:dist && npm run lint && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
     "clean:dist": "rm -rf dist && mkdir -p dist",
     "copy:dist": "cp -r *.html dist/ && cp -r assets dist/ && cp -r admin-dashboard dist/ && cp -r sitemap.xml dist/ && echo '✅ Files copied to dist directory'",
     "portfolio:generate": "node scripts/portfolio-generator.js generate",
@@ -35,7 +35,12 @@
     "maintenance:backup-config": "cp portfolio-config.json backups/portfolio-config-$(date +%Y%m%d-%H%M%S).json",
     "maintenance:validate-config": "node -e \"try { JSON.parse(require('fs').readFileSync('portfolio-config.json', 'utf8')); console.log('✅ Configuration valid'); } catch(e) { console.error('❌ Configuration invalid:', e.message); process.exit(1); }\"",
     "analytics:generate-report": "node -e \"const config = require('./portfolio-config.json'); const live = config.portfolio_projects.filter(p => p.status === 'live'); console.log('📊 Portfolio Analytics:\\n'); console.log('Live Projects:', live.length); console.log('Total Projects:', config.portfolio_projects.length); console.log('Categories:', [...new Set(config.portfolio_projects.map(p => p.category))].join(', '));\"",
-    "help": "echo '\n🎯 PROJEKT AI PORTFOLIO SYSTEM\n\n📋 Portfolio Management:\n  npm run portfolio:generate    # Generate all portfolio pages\n  npm run portfolio:deploy      # Deploy to production\n  npm run portfolio:update-main # Update main page only\n\n🔧 Project Lifecycle:\n  npm run project:list          # List all projects\n  npm run project:develop <id>  # Enter development mode\n  npm run project:build <id>    # Build staging version\n  npm run project:review <id>   # Quality review\n  npm run project:deploy <id>   # Deploy specific project\n\n🚀 Quick Commands:\n  npm start                     # Start local server\n  npm run deploy:safe           # Safe deployment with backup\n  npm run quality:validate-all  # Check all projects\n  npm run help                  # Show this help\n'"
+    "help": "echo '\n🎯 PROJEKT AI PORTFOLIO SYSTEM\n\n📋 Portfolio Management:\n  npm run portfolio:generate    # Generate all portfolio pages\n  npm run portfolio:deploy      # Deploy to production\n  npm run portfolio:update-main # Update main page only\n\n🔧 Project Lifecycle:\n  npm run project:list          # List all projects\n  npm run project:develop <id>  # Enter development mode\n  npm run project:build <id>    # Build staging version\n  npm run project:review <id>   # Quality review\n  npm run project:deploy <id>   # Deploy specific project\n\n🚀 Quick Commands:\n  npm start                     # Start local server\n  npm run deploy:safe           # Safe deployment with backup\n  npm run quality:validate-all  # Check all projects\n  npm run help                  # Show this help\n'",
+    "lint:css": "stylelint \"assets/css/**/*.css\" --max-warnings=0",
+    "lint:js": "eslint \"assets/js/**/*.js\"",
+    "build:css": "postcss assets/css/main.css -o assets/css/main.css",
+    "build:js": "esbuild assets/js/main.js --bundle --minify --outfile=assets/js/main.js",
+    "optimize:images": "imagemin assets/img/* --out-dir=assets/img"
   },
   "keywords": [
     "portfolio",
@@ -70,5 +75,20 @@
   },
   "bugs": {
     "url": "https://github.com/timpoulton/projekt-ai-website/issues"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "esbuild": "^0.25.5",
+    "eslint": "^9.29.0",
+    "eslint-plugin-import": "^2.31.0",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "postcss-cli": "^11.0.1",
+    "stylelint": "^16.20.0",
+    "stylelint-config-standard": "^38.0.0"
   }
 }
