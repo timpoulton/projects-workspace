@@ -12,7 +12,7 @@
     "build:preview": "npm run clean:dist && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
     "build:branch": "npm run clean:dist && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
     "clean:dist": "rm -rf dist && mkdir -p dist",
-    "copy:dist": "cp -r *.html dist/ && cp -r assets dist/ && cp -r admin-dashboard dist/ && cp -r sitemap.xml dist/ && echo '✅ Files copied to dist directory'",
+    "copy:dist": "cp -r *.html dist/ && cp -r assets dist/ && cp -r admin-dashboard dist/ && cp -r case-studies dist/ && cp -r sitemap.xml dist/ && echo '✅ Files copied to dist directory'",
     "portfolio:generate": "node scripts/portfolio-generator.js generate",
     "portfolio:deploy": "node scripts/portfolio-generator.js deploy",
     "portfolio:update-main": "node scripts/portfolio-generator.js update-main",
