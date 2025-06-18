@@ -1,149 +1,4 @@
-// Main JavaScript for Projekt AI website
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Add active class to navigation links on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (scrollY >= (sectionTop - 100)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-
-        // Add scroll animations for sections
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (scrollY >= (sectionTop - window.innerHeight / 1.2)) {
-                section.classList.add('animated');
-            }
-        });
-    });
-    
-    // Button hover effects
-    const buttons = document.querySelectorAll('.btn, .demo-button, .workflow-button');
-    
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = 'translateY(-3px)';
-        });
-        
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Gradient text effect
-    const gradientTextElements = document.querySelectorAll('.gradient-text');
-    let gradientAngle = 0;
-
-    function animateGradients() {
-        gradientAngle = (gradientAngle + 0.5) % 360;
-        gradientTextElements.forEach(el => {
-            el.style.background = `linear-gradient(${gradientAngle}deg, #00c6ff, #bc61ff)`;
-            el.style.webkitBackgroundClip = 'text';
-            el.style.backgroundClip = 'text';
-            el.style.color = 'transparent';
-        });
-        requestAnimationFrame(animateGradients);
-    }
-
-    animateGradients();
-    
-    // API Demo Tab Functionality
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const demoPanels = document.querySelectorAll('.demo-panel');
-    
-    if (tabButtons.length > 0 && demoPanels.length > 0) {
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons and panels
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                demoPanels.forEach(panel => panel.classList.remove('active'));
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                // Show corresponding panel
-                const targetPanelId = button.getAttribute('data-tab');
-                const targetPanel = document.getElementById(targetPanelId);
-                if (targetPanel) {
-                    targetPanel.classList.add('active');
-                    
-                    // Add animation to the appearing panel
-                    targetPanel.style.opacity = 0;
-                    targetPanel.style.transform = 'translateY(20px)';
-                    
-                    setTimeout(() => {
-                        targetPanel.style.transition = 'opacity 0.5s, transform 0.5s';
-                        targetPanel.style.opacity = 1;
-                        targetPanel.style.transform = 'translateY(0)';
-                    }, 50);
-                }
-            });
-        });
-    }
-    
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // In a real implementation, you would send this data to a server
-            // For demo purposes, just show an alert
-            alert(`Thank you for your message, ${name}! We'll get back to you at ${email} soon.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
-    
-    // Create modal element for workflow diagrams
-    const modal = document.querySelector('.workflow-modal');
-    const closeModal = document.querySelector('.close-modal');
-    
-    // Workflow diagrams data
-    const workflowData = {
-        'customer-support': {
-            title: 'Customer Support Automation Workflow',
-            image: 'assets/img/workflow-support.png',
-            description: `
+(()=>{document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();let o=this.getAttribute("href"),n=document.querySelector(o);n&&window.scrollTo({top:n.offsetTop-80,behavior:"smooth"})})});let c=document.querySelectorAll("section"),v=document.querySelectorAll(".nav-links a");window.addEventListener("scroll",()=>{let t="";c.forEach(e=>{let o=e.offsetTop,n=e.clientHeight;scrollY>=o-100&&(t=e.getAttribute("id"))}),v.forEach(e=>{e.classList.remove("active"),e.getAttribute("href").substring(1)===t&&e.classList.add("active")}),c.forEach(e=>{let o=e.offsetTop;scrollY>=o-window.innerHeight/1.2&&e.classList.add("animated")})}),document.querySelectorAll(".btn, .demo-button, .workflow-button").forEach(t=>{t.addEventListener("mouseenter",()=>{t.style.transform="translateY(-3px)"}),t.addEventListener("mouseleave",()=>{t.style.transform="translateY(0)"})});let w=document.querySelectorAll(".gradient-text"),i=0;function d(){i=(i+.5)%360,w.forEach(t=>{t.style.background=`linear-gradient(${i}deg, #00c6ff, #bc61ff)`,t.style.webkitBackgroundClip="text",t.style.backgroundClip="text",t.style.color="transparent"}),requestAnimationFrame(d)}d();let l=document.querySelectorAll(".tab-button"),u=document.querySelectorAll(".demo-panel");l.length>0&&u.length>0&&l.forEach(t=>{t.addEventListener("click",()=>{l.forEach(n=>n.classList.remove("active")),u.forEach(n=>n.classList.remove("active")),t.classList.add("active");let e=t.getAttribute("data-tab"),o=document.getElementById(e);o&&(o.classList.add("active"),o.style.opacity=0,o.style.transform="translateY(20px)",setTimeout(()=>{o.style.transition="opacity 0.5s, transform 0.5s",o.style.opacity=1,o.style.transform="translateY(0)"},50))})});let a=document.getElementById("contactForm");a&&a.addEventListener("submit",function(t){t.preventDefault();let e=document.getElementById("name").value,o=document.getElementById("email").value,n=document.getElementById("message").value;alert(`Thank you for your message, ${e}! We'll get back to you at ${o} soon.`),a.reset()});let s=document.querySelector(".workflow-modal"),p=document.querySelector(".close-modal"),m={"customer-support":{title:"Customer Support Automation Workflow",image:"assets/img/workflow-support.png",description:`
                 <p>This automation workflow reduces response times by 68% through intelligent ticket routing and AI-powered response generation.</p>
                 <h4>Key Components:</h4>
                 <ul>
@@ -154,12 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><strong>Automated Follow-up:</strong> Schedules follow-up communications and satisfaction surveys</li>
                 </ul>
                 <p>This workflow can be customized for your specific support channels, team structure, and business rules.</p>
-            `
-        },
-        'data-processing': {
-            title: 'Data Processing Pipeline',
-            image: 'assets/img/workflow-data.png',
-            description: `
+            `},"data-processing":{title:"Data Processing Pipeline",image:"assets/img/workflow-data.png",description:`
                 <p>This end-to-end data automation workflow saves 15+ hours weekly by streamlining data collection, cleaning, analysis, and reporting.</p>
                 <h4>Key Components:</h4>
                 <ul>
@@ -171,12 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><strong>Error Handling:</strong> Detects and resolves common issues without manual intervention</li>
                 </ul>
                 <p>This workflow can be adapted to your data sources, analysis requirements, and reporting needs.</p>
-            `
-        },
-        'sales-leads': {
-            title: 'Sales Lead Qualification System',
-            image: 'assets/img/workflow-sales.png',
-            description: `
+            `},"sales-leads":{title:"Sales Lead Qualification System",image:"assets/img/workflow-sales.png",description:`
                 <p>This AI-powered lead qualification workflow increased conversion rates by 32% by automating the scoring and routing of sales leads.</p>
                 <h4>Key Components:</h4>
                 <ul>
@@ -188,202 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><strong>Follow-up Automation:</strong> Schedules personalized outreach through preferred channels</li>
                 </ul>
                 <p>This workflow can be tailored to your specific sales process, qualification criteria, and CRM system.</p>
-            `
-        }
-    };
-    
-    // Handle workflow button clicks
-    const workflowButtons = document.querySelectorAll('.workflow-button');
-    
-    workflowButtons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-            // Determine which workflow was clicked based on title or index
-            let workflowId;
-            const cardTitle = this.closest('.workflow-card').querySelector('h3').textContent.toLowerCase();
-            
-            if (cardTitle.includes('customer support')) {
-                workflowId = 'customer-support';
-            } else if (cardTitle.includes('data processing')) {
-                workflowId = 'data-processing';
-            } else if (cardTitle.includes('sales lead')) {
-                workflowId = 'sales-leads';
-            }
-            
-            if (workflowId && workflowData[workflowId]) {
-                const data = workflowData[workflowId];
-                
-                // Populate modal with workflow data
-                modal.querySelector('.modal-title').textContent = data.title;
-                modal.querySelector('.modal-image').src = data.image;
-                modal.querySelector('.modal-description').innerHTML = data.description;
-                
-                // Show modal with animation
-                modal.style.display = 'flex';
-                modal.style.opacity = 0;
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-                
-                setTimeout(() => {
-                    modal.style.transition = 'opacity 0.3s ease';
-                    modal.style.opacity = 1;
-                }, 50);
-            }
-        });
-    });
-    
-    // Close modal when clicking the X
-    if (closeModal) {
-        closeModal.addEventListener('click', function() {
-            modal.style.opacity = 0;
-            
-            setTimeout(() => {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Enable scrolling again
-            }, 300);
-        });
-    }
-    
-    // Close modal when clicking outside the content
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.opacity = 0;
-                
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }, 300);
-            }
-        });
-    }
-    
-    // Handle demo button clicks
-    const demoButtons = document.querySelectorAll('.demo-button');
-    
-    demoButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Get parent demo panel
-            const demoPanel = this.closest('.demo-panel');
-            if (demoPanel) {
-                const demoTitle = demoPanel.querySelector('h3').textContent;
-                
-                // Create a simple popup
-                const popup = document.createElement('div');
-                popup.className = 'demo-popup';
-                popup.innerHTML = `
+            `}};document.querySelectorAll(".workflow-button").forEach((t,e)=>{t.addEventListener("click",function(){let o,n=this.closest(".workflow-card").querySelector("h3").textContent.toLowerCase();if(n.includes("customer support")?o="customer-support":n.includes("data processing")?o="data-processing":n.includes("sales lead")&&(o="sales-leads"),o&&m[o]){let r=m[o];s.querySelector(".modal-title").textContent=r.title,s.querySelector(".modal-image").src=r.image,s.querySelector(".modal-description").innerHTML=r.description,s.style.display="flex",s.style.opacity=0,document.body.style.overflow="hidden",setTimeout(()=>{s.style.transition="opacity 0.3s ease",s.style.opacity=1},50)}})}),p&&p.addEventListener("click",function(){s.style.opacity=0,setTimeout(()=>{s.style.display="none",document.body.style.overflow="auto"},300)}),s&&s.addEventListener("click",function(t){t.target===s&&(s.style.opacity=0,setTimeout(()=>{s.style.display="none",document.body.style.overflow="auto"},300))}),document.querySelectorAll(".demo-button").forEach(t=>{t.addEventListener("click",function(){let e=this.closest(".demo-panel");if(e){let o=e.querySelector("h3").textContent,n=document.createElement("div");n.className="demo-popup",n.innerHTML=`
                     <div class="demo-popup-content">
                         <button class="close-popup">&times;</button>
                         <h3>Demo Coming Soon</h3>
-                        <p>${demoTitle} demo is currently in development.</p>
+                        <p>${o} demo is currently in development.</p>
                         <p>Sign up for early access to our platform demos.</p>
                         <div class="popup-actions">
                             <button class="btn btn-primary popup-signup">Sign Up for Early Access</button>
                         </div>
                     </div>
-                `;
-                
-                document.body.appendChild(popup);
-                document.body.style.overflow = 'hidden';
-                
-                // Add animation
-                setTimeout(() => {
-                    popup.style.opacity = 1;
-                }, 50);
-                
-                // Handle popup close
-                popup.querySelector('.close-popup').addEventListener('click', () => {
-                    popup.style.opacity = 0;
-                    setTimeout(() => {
-                        document.body.removeChild(popup);
-                        document.body.style.overflow = 'auto';
-                    }, 300);
-                });
-                
-                // Handle signup button
-                popup.querySelector('.popup-signup').addEventListener('click', () => {
-                    popup.style.opacity = 0;
-                    setTimeout(() => {
-                        document.body.removeChild(popup);
-                        document.body.style.overflow = 'auto';
-                        
-                        // Scroll to signup section
-                        const contactSection = document.querySelector('#contact');
-                        if (contactSection) {
-                            window.scrollTo({
-                                top: contactSection.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }, 300);
-                });
-            }
-        });
-    });
-    
-    // Handle custom workflow request button
-    const requestCustomWorkflowBtn = document.querySelector('.workflow-request .btn');
-    if (requestCustomWorkflowBtn) {
-        requestCustomWorkflowBtn.addEventListener('click', function() {
-            // Scroll to contact section
-            const contactSection = document.querySelector('#contact');
-            if (contactSection) {
-                window.scrollTo({
-                    top: contactSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
-    
-    // Handle modal buttons
-    const requestCustomizationBtn = document.querySelector('.request-customization');
-    const downloadWorkflowBtn = document.querySelector('.download-workflow');
-    
-    if (requestCustomizationBtn) {
-        requestCustomizationBtn.addEventListener('click', function() {
-            // Close modal
-            modal.style.opacity = 0;
-            
-            setTimeout(() => {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                
-                // Scroll to contact section
-                const contactSection = document.querySelector('#contact');
-                if (contactSection) {
-                    window.scrollTo({
-                        top: contactSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            }, 300);
-        });
-    }
-    
-    if (downloadWorkflowBtn) {
-        downloadWorkflowBtn.addEventListener('click', function() {
-            // Get current workflow diagram
-            const workflowImage = modal.querySelector('.modal-image').src;
-            const workflowTitle = modal.querySelector('.modal-title').textContent;
-            
-            // Create a download link
-            const downloadLink = document.createElement('a');
-            downloadLink.href = workflowImage;
-            downloadLink.download = workflowTitle.replace(/\s+/g, '-').toLowerCase() + '.png';
-            downloadLink.click();
-        });
-    }
-    
-    // Handle call-to-action buttons
-    const signUpFreeBtn = document.querySelector('.signup-offer .btn');
-    
-    if (signUpFreeBtn) {
-        signUpFreeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Create a signup form popup
-            const popup = document.createElement('div');
-            popup.className = 'demo-popup';
-            popup.innerHTML = `
+                `,document.body.appendChild(n),document.body.style.overflow="hidden",setTimeout(()=>{n.style.opacity=1},50),n.querySelector(".close-popup").addEventListener("click",()=>{n.style.opacity=0,setTimeout(()=>{document.body.removeChild(n),document.body.style.overflow="auto"},300)}),n.querySelector(".popup-signup").addEventListener("click",()=>{n.style.opacity=0,setTimeout(()=>{document.body.removeChild(n),document.body.style.overflow="auto";let r=document.querySelector("#contact");r&&window.scrollTo({top:r.offsetTop-80,behavior:"smooth"})},300)})}})});let y=document.querySelector(".workflow-request .btn");y&&y.addEventListener("click",function(){let t=document.querySelector("#contact");t&&window.scrollTo({top:t.offsetTop-80,behavior:"smooth"})});let g=document.querySelector(".request-customization"),f=document.querySelector(".download-workflow");g&&g.addEventListener("click",function(){s.style.opacity=0,setTimeout(()=>{s.style.display="none",document.body.style.overflow="auto";let t=document.querySelector("#contact");t&&window.scrollTo({top:t.offsetTop-80,behavior:"smooth"})},300)}),f&&f.addEventListener("click",function(){let t=s.querySelector(".modal-image").src,e=s.querySelector(".modal-title").textContent,o=document.createElement("a");o.href=t,o.download=e.replace(/\s+/g,"-").toLowerCase()+".png",o.click()});let h=document.querySelector(".signup-offer .btn");h&&h.addEventListener("click",function(t){t.preventDefault();let e=document.createElement("div");e.className="demo-popup",e.innerHTML=`
                 <div class="demo-popup-content">
                     <button class="close-popup">&times;</button>
                     <h3>Get Your Free Credits</h3>
@@ -404,54 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         <button type="submit" class="btn btn-primary">Sign Up</button>
                     </form>
                 </div>
-            `;
-            
-            document.body.appendChild(popup);
-            document.body.style.overflow = 'hidden';
-            
-            // Add animation
-            setTimeout(() => {
-                popup.style.opacity = 1;
-            }, 50);
-            
-            // Handle popup close
-            popup.querySelector('.close-popup').addEventListener('click', () => {
-                popup.style.opacity = 0;
-                setTimeout(() => {
-                    document.body.removeChild(popup);
-                    document.body.style.overflow = 'auto';
-                }, 300);
-            });
-            
-            // Handle signup form submission
-            popup.querySelector('#signupForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-                const name = popup.querySelector('#signup-name').value;
-                const email = popup.querySelector('#signup-email').value;
-                
-                // Update popup content to show success message
-                popup.querySelector('.demo-popup-content').innerHTML = `
+            `,document.body.appendChild(e),document.body.style.overflow="hidden",setTimeout(()=>{e.style.opacity=1},50),e.querySelector(".close-popup").addEventListener("click",()=>{e.style.opacity=0,setTimeout(()=>{document.body.removeChild(e),document.body.style.overflow="auto"},300)}),e.querySelector("#signupForm").addEventListener("submit",o=>{o.preventDefault();let n=e.querySelector("#signup-name").value,r=e.querySelector("#signup-email").value;e.querySelector(".demo-popup-content").innerHTML=`
                     <h3>Thank You!</h3>
-                    <p>Thanks, ${name}! We've sent your free credits information to ${email}.</p>
+                    <p>Thanks, ${n}! We've sent your free credits information to ${r}.</p>
                     <p>You can start using the platform immediately.</p>
                     <button class="btn btn-primary close-popup">Close</button>
-                `;
-                
-                // Handle close button
-                popup.querySelector('.close-popup').addEventListener('click', () => {
-                    popup.style.opacity = 0;
-                    setTimeout(() => {
-                        document.body.removeChild(popup);
-                        document.body.style.overflow = 'auto';
-                    }, 300);
-                });
-            });
-        });
-    }
-
-    // Add CSS for popups
-    const popupStyles = document.createElement('style');
-    popupStyles.textContent = `
+                `,e.querySelector(".close-popup").addEventListener("click",()=>{e.style.opacity=0,setTimeout(()=>{document.body.removeChild(e),document.body.style.overflow="auto"},300)})})});let b=document.createElement("style");b.textContent=`
         .demo-popup {
             position: fixed;
             top: 0;
@@ -502,6 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
             display: flex;
             justify-content: center;
         }
-    `;
-    document.head.appendChild(popupStyles);
-}); 
+    `,document.head.appendChild(b)});})();
