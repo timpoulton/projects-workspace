@@ -1139,12 +1139,13 @@
 
     <nav class="menu-nav">
         <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="/services/">Services</a></li>
             <li><a href="/admin-dashboard/admin-login.html">Admin</a></li>
-            </ul>
-        </nav>
+            <li><a href="/case-studies/reel-builder-automation.html">Case Study</a></li>
+        </ul>
+    </nav>
     
     <div class="menu-footer">
         <!-- LinkedIn link removed -->
@@ -1376,118 +1377,118 @@
         // Ensure chat widget loads with correct backend URL
         window.CHAT_API_ENDPOINT = 'http://192.168.1.107:5005/api/chat';
 
-        // Header Color Change on Scroll
-        function handleHeaderScroll() {
-            const header = document.querySelector('header');
-            const logo = document.querySelector('.logo');
+// Header Color Change on Scroll
+function handleHeaderScroll() {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo');
             const menuToggle = document.querySelector('.menu-toggle');
-
-            const lightSections = [
-                document.querySelector('.about-section'),
-                document.querySelector('.clients-section')
-            ];
-
-            const scrollY = window.scrollY;
-            const headerHeight = header.offsetHeight;
-            let isOverLightSection = false;
-
-            lightSections.forEach(section => {
-                if (section) {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
-                    if (scrollY + headerHeight > sectionTop && scrollY < sectionBottom) {
-                        isOverLightSection = true;
-                    }
-                }
-            });
-
-            if (isOverLightSection) {
-                header.classList.add('dark');
-                logo.classList.add('dark');
-                menuToggle.classList.add('dark');
-            } else {
-                header.classList.remove('dark');
-                logo.classList.remove('dark');
-                menuToggle.classList.remove('dark');
+    
+    const lightSections = [
+        document.querySelector('.about-section'),
+        document.querySelector('.clients-section')
+    ];
+    
+    const scrollY = window.scrollY;
+    const headerHeight = header.offsetHeight;
+    let isOverLightSection = false;
+    
+    lightSections.forEach(section => {
+        if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollY + headerHeight > sectionTop && scrollY < sectionBottom) {
+                isOverLightSection = true;
             }
         }
+    });
+    
+    if (isOverLightSection) {
+        header.classList.add('dark');
+        logo.classList.add('dark');
+        menuToggle.classList.add('dark');
+    } else {
+        header.classList.remove('dark');
+        logo.classList.remove('dark');
+        menuToggle.classList.remove('dark');
+    }
+}
 
-        // Menu Functionality
-        function initializeMenu() {
-            const menuToggle = document.getElementById('menuToggle');
-            const slideMenu = document.getElementById('slideMenu');
-            const menuOverlay = document.getElementById('menuOverlay');
-            const closeMenu = document.getElementById('closeMenu');
-
-            function openMenu() {
-                slideMenu.classList.add('active');
-                menuOverlay.classList.add('active');
-                menuToggle.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeMenuFunc() {
-                slideMenu.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                menuToggle.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            menuToggle.addEventListener('click', openMenu);
-            closeMenu.addEventListener('click', closeMenuFunc);
-            menuOverlay.addEventListener('click', closeMenuFunc);
-
+// Menu Functionality
+function initializeMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const slideMenu = document.getElementById('slideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const closeMenu = document.getElementById('closeMenu');
+    
+    function openMenu() {
+        slideMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        menuToggle.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenuFunc() {
+        slideMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        menuToggle.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    menuToggle.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuFunc);
+    menuOverlay.addEventListener('click', closeMenuFunc);
+    
             document.querySelectorAll('.menu-nav a').forEach(link => {
-                link.addEventListener('click', closeMenuFunc);
-            });
-        }
+        link.addEventListener('click', closeMenuFunc);
+    });
+}
 
-        // Custom Cursor Functionality
-        function initializeCursor() {
-            const cursor = document.querySelector('.custom-cursor');
+// Custom Cursor Functionality
+function initializeCursor() {
+    const cursor = document.querySelector('.custom-cursor');
             if (!cursor) return;
 
-            let mouseX = 0;
-            let mouseY = 0;
-            let cursorX = 0;
-            let cursorY = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
 
             document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
 
-            function animateCursor() {
-                cursorX += (mouseX - cursorX) * 0.25;
-                cursorY += (mouseY - cursorY) * 0.25;
-                cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
-                requestAnimationFrame(animateCursor);
-            }
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.25;
+        cursorY += (mouseY - cursorY) * 0.25;
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(animateCursor);
+    }
 
-            animateCursor();
+    animateCursor();
 
-            const hoverElements = document.querySelectorAll('a, button, .button, .project-card, .client-logo');
+    const hoverElements = document.querySelectorAll('a, button, .button, .project-card, .client-logo');
             hoverElements.forEach(el => {
                 el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-            });
-
+                });
+                
             document.addEventListener('mouseleave', () => {
-                cursor.style.opacity = '0';
-            });
+        cursor.style.opacity = '0';
+    });
 
             document.addEventListener('mouseenter', () => {
-                cursor.style.opacity = '1';
-            });
-        }
+        cursor.style.opacity = '1';
+    });
+}
 
         document.addEventListener('DOMContentLoaded', () => {
-            initializeMenu();
-            window.addEventListener('scroll', handleHeaderScroll);
-            handleHeaderScroll();
-            initializeCursor();
+    initializeMenu();
+    window.addEventListener('scroll', handleHeaderScroll);
+    handleHeaderScroll();
+    initializeCursor();
         });
     </script>
-</footer>
+    </footer>
 </body>
 </html> 
