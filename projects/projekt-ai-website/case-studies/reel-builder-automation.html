@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Builder Automation – AI Case Study | Projekt AI</title>
+
+    <!-- SEO -->
+    <meta name="description" content="See how Projekt AI turns simple text inputs into polished, social-ready reels in minutes using an end-to-end AI automation pipeline.">
+    <meta name="keywords" content="AI automation, video automation, reel builder, social media, content creation, music industry, hospitality marketing">
+    <meta name="author" content="Projekt AI">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Reel Builder Automation – AI Case Study">
+    <meta property="og:description" content="90 %+ time saved, <$0.50 per reel – explore the workflow powering automated short-form content.">
+    <meta property="og:image" content="assets/img/poster-automation-overview.png">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/case-study.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad:true, theme:"dark" });</script>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav>
+            <div class="logo">Projekt<span>AI</span></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../services/index.html">Services</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#cta" class="btn btn-primary">Get Blueprint</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="case-study-hero">
+        <div class="container">
+            <div class="case-study-header">
+                <div class="back-link">
+                    <a href="../index.html#workflow"><i class="fas fa-arrow-left"></i> Back to Workflows</a>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-info">
+                        <div class="case-study-category">
+                            <span class="category-tag">Video Automation</span>
+                            <span class="industry-tag">Music & Hospitality</span>
+                        </div>
+                        <h1>AI Reel Builder Automation</h1>
+                        <p class="case-study-subtitle">Turn simple profile inputs into polished, social-ready video reels in under five minutes – no editing skills required.</p>
+
+                        <div class="results-preview">
+                            <div class="result-stat">
+                                <span class="stat-number">95 %</span>
+                                <span class="stat-label">Time Saved</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="stat-number">< $0.50</span>
+                                <span class="stat-label">Cost / Reel</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="stat-number">2 min</span>
+                                <span class="stat-label">Turnaround</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-visual">
+                        <video src="../assets/videos/automation-overview.mp4" poster="../assets/img/poster-automation-overview.png" controls style="width:100%;border-radius:16px;box-shadow:var(--shadow-medium);"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WORKFLOW DIAGRAM ===== -->
+    <section id="workflow-breakdown">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It <span class="gradient-text">Works</span></h2>
+                <p class="section-subtitle">A high-level overview of the automation pipeline</p>
+            </div>
+            <div class="workflow-diagram">
+<pre class="mermaid">
+flowchart TD;
+    A["User initiates automation<br/>via preferred channel"] --> B{"Choose input source"};
+    B -->|"Telegram Bot"| C["Bot asks for name<br/>e.g. 'Tom Trago'"];
+    B -->|"WhatsApp"| C;
+    B -->|"Airtable Form"| C;
+    B -->|"Web Form"| C;
+    C --> D["Prompt for four short text entries<br/>(captions / highlights)"];
+    D --> E["Automation compiles inputs<br/>into storyboard & assets"];
+    E --> F["Creatomate renders<br/>polished social-ready video"];
+    F --> G["Finished reel returned<br/>within minutes"];
+    classDef decision fill:#ffffff22,stroke:#ffffff66,stroke-width:1px;
+    classDef step fill:#ffffff11,stroke:#ffffff55,stroke-width:1px;
+    class B decision;
+    class C,D,E,F,G step;
+</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO OUTPUT ===== -->
+    <section id="results-showcase" style="padding:140px 0; background:var(--bg-secondary);">
+        <div class="container" style="max-width:900px;text-align:center;">
+            <h2>See The Output</h2>
+            <video src="../assets/videos/reel-output.mp4" poster="../assets/img/poster-reel-output.png" controls style="width:100%;border-radius:16px;box-shadow:var(--shadow-medium);"></video>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Build Reels On Autopilot?</h2>
+                    <p>Get a customised blueprint for your venue or label – we'll break down costs, integrations and ROI.</p>
+                </div>
+                <a href="mailto:hello@projekt-ai.net" class="btn btn-primary">Request Blueprint</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2025 Projekt AI</p>
+            <div class="footer-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
