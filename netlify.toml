@@ -1,7 +1,7 @@
 [build]
-  base = "projects/projekt-ai-website/src/projekt-ai-website"
-  publish = "dist"
-  command = "npm install && npm run clean:dist && npm run build:prod"
+base = "projects/projekt-ai-website/src/projekt-ai-website"
+publish = "dist"
+command = "npm install && npm run clean:dist && npm run build:prod"
 
 [build.environment]
   NODE_VERSION = "18.17.0"
@@ -45,21 +45,21 @@
   timeout = 15
 
 [context.development]
-  command = "npm install && npm run clean:dist && npm run build:dev"
+command = "npm install && npm run clean:dist && npm run build:dev"
 
 [context.development.environment]
   NODE_ENV = "development"
   DEBUG = "true"
 
 [context.production]
-  command = "npm install && npm run clean:dist && npm run build:prod"
+command = "npm install && npm run clean:dist && npm run build:prod"
 
 [context.production.environment]
   NODE_ENV = "production"
   DEBUG = "false"
 
 [context.deploy-preview]
-  command = "npm install && npm run clean:dist && npm run build:preview"
+command = "npm install && npm run clean:dist && npm run build:preview"
 
 [context.branch-deploy]
-  command = "npm install && npm run clean:dist && npm run build:branch"
+command = "npm install && npm run clean:dist && npm run build:branch"
