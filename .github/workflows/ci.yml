@@ -40,14 +40,22 @@ jobs:
         if: matrix.name != 'upwork-automation'
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Install and build Node projects
         if: matrix.name == 'projekt-ai-website'
         run: |
           cd ${{ matrix.path }}
           npm install
           npm run build
+      - name: Deploy to Netlify
+        if: matrix.name == 'projekt-ai-website' && github.ref == 'refs/heads/main'
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=dist --prod --site ${{ secrets.NETLIFY_SITE_ID }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        working-directory: ${{ matrix.path }}
       - name: (Optional) Run Node tests
         if: matrix.name != 'upwork-automation'
         run: |
-          echo "No Node tests configured yet" 
+          echo "No Node tests configured yet"
