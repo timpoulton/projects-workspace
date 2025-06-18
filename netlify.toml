@@ -4,6 +4,6 @@
   command = "npm install && npm run clean:dist && npm run build:prod"
 
 [[redirects]]
-  from = "/*"
-  to   = "/index.html"
+  from   = "/*"
+  to     = "/index.html"
   status = 200
