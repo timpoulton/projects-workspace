@@ -51,10 +51,9 @@ jobs:
         if: matrix.name == 'projekt-ai-website' && github.ref == 'refs/heads/main'
         uses: netlify/actions/cli@master
         with:
-          args: deploy --dir=dist --prod --site ${{ secrets.NETLIFY_SITE_ID }}
+          args: deploy --dir=${{ matrix.path }}/dist --prod --site ${{ secrets.NETLIFY_SITE_ID }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        working-directory: ${{ matrix.path }}
       - name: (Optional) Run Node tests
         if: matrix.name != 'upwork-automation'
         run: |
