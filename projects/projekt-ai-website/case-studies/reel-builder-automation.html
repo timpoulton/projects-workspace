@@ -12,33 +12,34 @@
     <meta property="og:description" content="An automated system that transforms raw music recording session footage into engaging, branded Instagram Reels with minimal human intervention.">
     <meta property="og:image" content="../assets/img/portfolio/reel-builder-automation-full.jpg">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/logos/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/logos/favicon.svg">
+    
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/extramedium.css">
     <link rel="stylesheet" href="../assets/css/case-study.css">
     
     <style>
-        /* Case study specific styles */
+        /* Extra Medium Case Study Styles */
         .case-hero {
-            padding: 180px 0 100px;
-            background-color: var(--bg-primary);
+            padding: 120px 0 80px;
+            background: #ffffff;
         }
         
         .case-back {
             margin-bottom: 2rem;
             display: block;
-            color: var(--text-tertiary);
+            color: #666666;
             text-decoration: none;
-            transition: var(--transition-fast);
+            transition: color 0.2s ease;
         }
         
         .case-back:hover {
-            color: var(--text-primary);
+            color: #1a1a1a;
         }
         
         .case-back span {
@@ -52,6 +53,8 @@
         
         .case-subtitle {
             margin-bottom: 1.5rem;
+            color: #666666;
+            font-size: 18px;
         }
         
         .case-metadata {
@@ -62,30 +65,31 @@
         }
         
         .meta-group h5 {
-            font-size: 0.875rem;
-            color: var(--text-tertiary);
+            font-size: 14px;
+            color: #666666;
             margin-bottom: 0.5rem;
             text-transform: uppercase;
+            font-weight: 600;
         }
         
         .meta-group p {
             margin-bottom: 0;
+            color: #1a1a1a;
+            font-weight: 500;
         }
         
-        /* Featured image */
         .case-featured-image {
             width: 100%;
             height: auto;
             margin: 4rem 0;
         }
         
-        /* Case study sections */
         .case-section {
             padding: 5rem 0;
         }
         
         .case-section:nth-child(odd) {
-            background-color: var(--bg-secondary);
+            background: #f8f9fa;
         }
         
         .case-section-inner {
@@ -96,16 +100,16 @@
         
         .case-section h3 {
             margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
         }
         
-        /* Challenge/solution */
         .cs-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
         
-        /* Process steps */
         .process-steps {
             counter-reset: step;
             margin-top: 4rem;
@@ -128,16 +132,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid var(--text-tertiary);
-            border-radius: 50%;
+            border: 1px solid #e9ecef;
+            background: #ffffff;
             font-weight: 600;
+            color: #1a1a1a;
         }
         
         .process-step h4 {
             margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
         }
         
-        /* Results metrics */
         .results-metrics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -146,7 +152,8 @@
         }
         
         .metric-card {
-            background-color: var(--bg-tertiary);
+            background: #ffffff;
+            border: 1px solid #e9ecef;
             padding: 2rem;
             text-align: center;
         }
@@ -155,19 +162,20 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            color: #1a1a1a;
         }
         
-        /* Video showcase */
         .video-showcase {
             margin: 3rem 0;
         }
         
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             margin-bottom: 1rem;
+            background: #f8f9fa;
         }
         
         .video-container video {
@@ -178,15 +186,16 @@
             height: 100%;
         }
         
-        /* Next projects */
         .next-projects {
             padding: 5rem 0;
-            background-color: var(--bg-secondary);
+            background: #f8f9fa;
         }
         
         .next-projects h3 {
             text-align: center;
             margin-bottom: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
         }
         
         .next-grid {

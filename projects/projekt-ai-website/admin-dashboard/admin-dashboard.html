@@ -4,29 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Projekt AI</title>
-    <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/logos/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/logos/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Extra Medium Admin Dashboard Styling */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #1a1a1a;
-            color: #ffffff;
-            min-height: 100vh;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
         }
 
-        /* Header */
         .header {
-            background: rgba(26, 26, 26, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: #ffffff;
+            border-bottom: 1px solid #e9ecef;
             padding: 20px 0;
             position: sticky;
             top: 0;
@@ -34,139 +27,113 @@
         }
 
         .header-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            height: 40px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
         }
 
         .header-right {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
         }
 
         .admin-badge {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
             padding: 8px 16px;
-            border-radius: 20px;
             font-size: 14px;
-            color: #fff;
+            color: #666666;
+            font-weight: 500;
         }
 
         .logout-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 8px;
+            background: #1a1a1a;
             color: #ffffff;
+            padding: 10px 20px;
             text-decoration: none;
             font-size: 14px;
-            transition: all 0.3s ease;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
         }
 
         .logout-btn:hover {
-            background: rgba(255, 68, 68, 0.2);
-            border-color: rgba(255, 68, 68, 0.3);
+            opacity: 0.8;
         }
 
-        /* Main Content */
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 40px;
+            padding: 60px 20px;
         }
 
         .page-title {
             font-size: 48px;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #fff;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
         }
 
         .page-subtitle {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            color: #666666;
             margin-bottom: 60px;
+            max-width: 600px;
         }
 
-        /* Tools Grid */
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
 
         .tool-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            transition: all 0.3s ease;
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            padding: 30px;
+            transition: transform 0.2s ease;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tool-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.05);
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
 
         .tool-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .tool-card:hover::before {
-            opacity: 1;
+            transform: translateY(-2px);
         }
 
         .tool-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
+            width: 48px;
+            height: 48px;
+            background: #f8f9fa;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
         }
 
         .tool-title {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 8px;
+            color: #1a1a1a;
         }
 
         .tool-description {
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
+            color: #666666;
+            margin-bottom: 16px;
+            font-size: 14px;
         }
 
         .tool-status {
@@ -174,252 +141,173 @@
             align-items: center;
             gap: 8px;
             font-size: 14px;
-            position: relative;
-            z-index: 1;
+            color: #666666;
         }
 
         .status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #00ff88;
+            width: 6px;
+            height: 6px;
+            background: #1a1a1a;
         }
 
         .status-dot.inactive {
-            background: #ff4444;
+            background: #666666;
         }
 
-        /* Stats Section */
         .stats-section {
             margin-top: 60px;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
         }
 
         .stats-title {
             font-size: 24px;
+            font-weight: 600;
             margin-bottom: 30px;
+            color: #1a1a1a;
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 30px;
         }
 
         .stat-item {
             text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .stat-value {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 700;
-            color: #fff;
+            color: #1a1a1a;
+            margin-bottom: 8px;
         }
 
         .stat-label {
-            color: rgba(255, 255, 255, 0.6);
             font-size: 14px;
-            margin-top: 8px;
+            color: #666666;
+            font-weight: 500;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 40px 20px;
+            .header-content {
+                padding: 0 20px;
             }
             
             .page-title {
                 font-size: 36px;
             }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
-    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <img src="assets/img/logos/header-logo-light.svg" alt="Projekt AI" class="logo">
+            <a href="/" class="logo">Projekt AI®</a>
             <div class="header-right">
-                <span class="admin-badge">Admin Access</span>
-                <a href="admin-login.html" class="logout-btn">Logout</a>
+                <div class="admin-badge">Admin Panel</div>
+                <a href="#" class="logout-btn">Logout</a>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
+    <main class="container">
         <h1 class="page-title">Admin Dashboard</h1>
-        <p class="page-subtitle">Manage your tools and automation systems</p>
+        <p class="page-subtitle">Manage your automation projects, monitor performance, and control system settings.</p>
 
-        <!-- Tools Grid -->
         <div class="tools-grid">
-            <!-- File Upload Tool -->
-            <div class="tool-card" onclick="openTool('upload')">
-                <div class="tool-icon">📤</div>
-                <h3 class="tool-title">File Upload System</h3>
-                <p class="tool-description">Upload and organize files with automatic categorization. Supports all file types with smart organization.</p>
-                <div class="tool-status">
-                    <span class="status-dot"></span>
-                    <span>Active on port 8087</span>
-                </div>
-            </div>
-
-            <!-- Upwork Automation -->
-            <div class="tool-card" onclick="openTool('upwork')">
-                <div class="tool-icon">🤖</div>
-                <h3 class="tool-title">Upwork Automation</h3>
-                <p class="tool-description">AI-powered proposal generation system. Review, approve, and manage automated job applications.</p>
-                <div class="tool-status">
-                    <span class="status-dot"></span>
-                    <span>Active on port 3007</span>
-                </div>
-            </div>
-
-            <!-- Client Proposals -->
-            <div class="tool-card" onclick="openTool('proposals')">
-                <div class="tool-icon">📄</div>
-                <h3 class="tool-title">Client Proposals</h3>
-                <p class="tool-description">Create and manage professional proposals for clients with customizable templates.</p>
-                <div class="tool-status">
-                    <span class="status-dot"></span>
-                    <span>Active on port 3003</span>
-                </div>
-            </div>
-
-            <!-- Club77 Check-in -->
-            <div class="tool-card" onclick="openTool('club77')">
-                <div class="tool-icon">✅</div>
-                <h3 class="tool-title">Club77 Check-in</h3>
-                <p class="tool-description">Guest list management and check-in system for Club77 events.</p>
-                <div class="tool-status">
-                    <span class="status-dot"></span>
-                    <span>Active on port 3005</span>
-                </div>
-            </div>
-
-            <!-- Portfolio Generator -->
-            <div class="tool-card" onclick="openTool('portfolio')">
-                <div class="tool-icon">🖼️</div>
-                <h3 class="tool-title">Portfolio Generator</h3>
-                <p class="tool-description">Create dark-theme case studies with AI-assisted content.</p>
-                <div class="tool-status">
-                    <span class="status-dot"></span>
-                    <span>Active on port 5000</span>
-                </div>
-            </div>
-
-            <!-- Blueprint Generator -->
-            <div class="tool-card" onclick="openTool('blueprint')">
-                <div class="tool-icon">🏗️</div>
-                <h3 class="tool-title">Blueprint Generator</h3>
-                <p class="tool-description">Generate project blueprints and technical documentation automatically.</p>
-                <div class="tool-status">
-                    <span class="status-dot"></span>
-                    <span>Active on port 3004</span>
-                </div>
-            </div>
-
-            <!-- System Monitor -->
-            <div class="tool-card" onclick="openTool('monitor')">
+            <div class="tool-card" onclick="window.location.href='portfolio-generator.html'">
                 <div class="tool-icon">📊</div>
-                <h3 class="tool-title">System Monitor</h3>
-                <p class="tool-description">Monitor server health, service status, and system resources in real-time.</p>
+                <h3 class="tool-title">Portfolio Generator</h3>
+                <p class="tool-description">Generate and manage case study portfolios automatically</p>
                 <div class="tool-status">
-                    <span class="status-dot inactive"></span>
-                    <span>Coming Soon</span>
+                    <div class="status-dot"></div>
+                    <span>Active</span>
+                </div>
+            </div>
+
+            <div class="tool-card" onclick="window.location.href='admin-login.html'">
+                <div class="tool-icon">🔐</div>
+                <h3 class="tool-title">Access Control</h3>
+                <p class="tool-description">Manage user access and authentication settings</p>
+                <div class="tool-status">
+                    <div class="status-dot"></div>
+                    <span>Active</span>
+                </div>
+            </div>
+
+            <div class="tool-card" onclick="alert('Coming Soon')">
+                <div class="tool-icon">⚙️</div>
+                <h3 class="tool-title">System Settings</h3>
+                <p class="tool-description">Configure automation parameters and system preferences</p>
+                <div class="tool-status">
+                    <div class="status-dot inactive"></div>
+                    <span>Development</span>
+                </div>
+            </div>
+
+            <div class="tool-card" onclick="alert('Coming Soon')">
+                <div class="tool-icon">📈</div>
+                <h3 class="tool-title">Analytics</h3>
+                <p class="tool-description">View performance metrics and usage statistics</p>
+                <div class="tool-status">
+                    <div class="status-dot inactive"></div>
+                    <span>Development</span>
+                </div>
+            </div>
+
+            <div class="tool-card" onclick="alert('Coming Soon')">
+                <div class="tool-icon">🔄</div>
+                <h3 class="tool-title">Automation Queue</h3>
+                <p class="tool-description">Monitor and manage active automation processes</p>
+                <div class="tool-status">
+                    <div class="status-dot"></div>
+                    <span>Active</span>
+                </div>
+            </div>
+
+            <div class="tool-card" onclick="alert('Coming Soon')">
+                <div class="tool-icon">📝</div>
+                <h3 class="tool-title">Content Manager</h3>
+                <p class="tool-description">Edit and organize case studies and portfolio content</p>
+                <div class="tool-status">
+                    <div class="status-dot inactive"></div>
+                    <span>Development</span>
                 </div>
             </div>
         </div>
 
-        <!-- Stats Section -->
-        <div class="stats-section">
+        <section class="stats-section">
             <h2 class="stats-title">System Overview</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-value">6</div>
-                    <div class="stat-label">Active Tools</div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Active Projects</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">24</div>
-                    <div class="stat-label">Proposals Today</div>
+                    <div class="stat-value">847</div>
+                    <div class="stat-label">Automations Run</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">99.2%</div>
+                    <div class="stat-label">Uptime</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-value">156</div>
-                    <div class="stat-label">Files Uploaded</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">99.9%</div>
-                    <div class="stat-label">Uptime</div>
+                    <div class="stat-label">Hours Saved</div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <script>
-        // Check authentication
-        function checkAuth() {
-            const isAuthenticated = sessionStorage.getItem('adminAuthenticated');
-            const authTime = sessionStorage.getItem('adminAuthTime');
-            
-            // Check if authenticated and session is less than 1 hour old
-            if (!isAuthenticated || !authTime || (Date.now() - parseInt(authTime) > 3600000)) {
-                window.location.href = 'admin-login.html';
-            }
-        }
-
-        // Check auth on page load
-        checkAuth();
-
-        // Open tool
-        function openTool(tool) {
-            switch(tool) {
-                case 'upload':
-                    window.open('http://192.168.1.107:8087/upload.html', '_blank');
-                    break;
-                case 'upwork':
-                    window.location.href = 'upwork-dashboard.html';
-                    break;
-                case 'proposals':
-                    window.open('http://192.168.1.107:3003', '_blank');
-                    break;
-                case 'club77':
-                    window.open('http://192.168.1.107:3005', '_blank');
-                    break;
-                case 'portfolio':
-                    window.open('http://192.168.1.107:5000/admin-dashboard/portfolio-generator.html','_blank');
-                    break;
-                case 'blueprint':
-                    window.open('http://192.168.1.107:3004', '_blank');
-                    break;
-                case 'monitor':
-                    alert('System Monitor coming soon!');
-                    break;
-            }
-        }
-
-        // Logout
-        function logout() {
-            sessionStorage.removeItem('adminAuthenticated');
-            sessionStorage.removeItem('adminAuthTime');
-            window.location.href = 'admin-login.html';
-        }
-
-        // Auto-logout after 1 hour
-        setTimeout(() => {
-            logout();
-        }, 3600000);
-    </script>
+        </section>
+    </main>
 </body>
 </html> 
