@@ -1,0 +1,96 @@
+{
+  "id": "reel-builder-automation",
+  "title": "Instagram Reel Builder Automation",
+  "subtitle": "Automated solution for creating engaging Instagram Reels from music recording sessions",
+  "category": "Social Media Automation",
+  "industry": "Music Production",
+  "description": "An automated system that transforms raw music recording session footage into engaging, branded Instagram Reels with minimal human intervention.",
+  "client_name": "Independent Music Producers",
+  "services": "Workflow Automation, Social Media Content",
+  "year": "2023",
+  "featured_image": "../assets/img/portfolio/reel-builder-automation-full.jpg",
+  "overview_text": "We developed a fully automated system that transforms raw footage from DJ and music recording sessions into polished, branded Instagram Reels with minimal human intervention. This system reduced content production time by 95% while maintaining consistent brand identity across all posts.",
+  "challenge": {
+    "text": "Music producers were struggling to maintain consistent social media presence due to the time-consuming nature of video editing. They needed a solution that could quickly transform raw recording session footage into engaging social media content.",
+    "points": [
+      "Time-consuming manual video editing process (3-4 hours per reel)",
+      "Inconsistent brand identity across posts",
+      "Difficulty keeping up with optimal posting frequency",
+      "Technical barriers for producers without video editing skills"
+    ]
+  },
+  "solution": {
+    "text": "We created an automated workflow that processes raw video footage, applies professional editing techniques, adds branded elements, and outputs Instagram-ready Reels - all without requiring video editing expertise.",
+    "points": [
+      "Custom automation workflow using FFmpeg and Python",
+      "AI-powered selection of engaging video segments",
+      "Dynamic text overlay and branded elements",
+      "Automated music waveform visualization",
+      "Format optimization for Instagram's algorithm"
+    ]
+  },
+  "process": {
+    "intro": "Our approach focused on creating a streamlined, automated process that would deliver consistent results while minimizing the need for human intervention.",
+    "steps": [
+      {
+        "title": "Video Analysis & Selection",
+        "text": "The system analyzes raw footage using computer vision to identify the most visually engaging segments, focusing on camera movement, lighting quality, and subject positioning."
+      },
+      {
+        "title": "Audio Processing & Enhancement",
+        "text": "The audio track is extracted, analyzed for optimal segments, and enhanced with professional-grade equalization and compression to ensure consistent sound quality."
+      },
+      {
+        "title": "Visual Enhancement & Branding",
+        "text": "Selected video clips undergo color grading, stabilization, and the addition of branded elements like logos, text overlays, and custom transitions."
+      },
+      {
+        "title": "Final Packaging & Optimization",
+        "text": "The system exports the final Reel optimized for Instagram's algorithm, ensuring proper resolution, aspect ratio, and metadata for maximum engagement."
+      }
+    ]
+  },
+  "video_info": {
+    "intro": "The automation system transforms raw, unedited footage into professional-looking Instagram Reels in minutes instead of hours.",
+    "source": "../assets/videos/automation-overview.mp4",
+    "poster": "../assets/img/portfolio/reel-builder-poster.jpg",
+    "caption": "Demonstration of the automation process from raw footage to finished Instagram Reel"
+  },
+  "results": {
+    "text": "The Reel Builder Automation system has drastically reduced content creation time while improving content quality and consistency across social media channels.",
+    "metrics": [
+      {
+        "value": "95%",
+        "label": "Reduction in production time"
+      },
+      {
+        "value": "<$0.50",
+        "label": "Cost per reel"
+      },
+      {
+        "value": "2min",
+        "label": "Average processing time"
+      }
+    ]
+  },
+  "related_projects": [
+    {
+      "id": "club77-content-pipeline",
+      "title": "Club77 Content Pipeline",
+      "image": "../assets/img/portfolio/club77-content-pipeline-card.png",
+      "url": "club77-content-pipeline.html"
+    },
+    {
+      "id": "dj-recording-manager",
+      "title": "DJ Recording Manager",
+      "image": "../assets/img/portfolio/dj-recording-manager-card.jpg",
+      "url": "dj-recording-manager.html"
+    },
+    {
+      "id": "manychat-guestlist",
+      "title": "Guestlist Automation",
+      "image": "../assets/img/portfolio/guestlist-automation-card.jpg",
+      "url": "manychat-guestlist.html"
+    }
+  ]
+} 
