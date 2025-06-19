@@ -51,6 +51,26 @@ git push origin main
 - **Case Studies:** Grid layout with project previews
 - **Contact:** Light gray background, centered content
 
+## 💼 BUSINESS MODEL & MESSAGING
+
+### Core Business Model
+- **Freelance automation services** targeting music industry clients
+- **3-tier subscription packages** for ongoing automation services
+- **Target clients:** Live music venues, event promoters, hospitality businesses
+- **Revenue model:** Recurring monthly subscriptions, not one-time projects
+
+### Key Messaging Focus
+- **Subscription-based automation** (not one-time builds)
+- **Music industry expertise** and cultural relevance
+- **Ongoing partnership** rather than project completion
+- **ROI through recurring value** delivery
+
+### Content Strategy
+- **Case studies** showcase automation capabilities
+- **Pricing tiers** should be prominently featured
+- **Testimonials** focus on ongoing value and ROI
+- **CTAs** should drive to subscription signup, not project inquiries
+
 ## 📁 PROJECT STRUCTURE
 
 ### Key Directories

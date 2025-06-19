@@ -470,6 +470,97 @@
             letter-spacing: 1px;
         }
         
+        /* PRICING SECTION */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            position: relative;
+            background: #fff;
+            border: 2px solid #eee;
+            padding: 40px 32px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: #1c1c1c;
+            transform: translateY(-4px);
+        }
+        
+        .pricing-card.featured {
+            border-color: #1c1c1c;
+            transform: translateY(-8px);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 32px;
+            background: #1c1c1c;
+            color: #f7f7f7;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-tier {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1c1c1c;
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1c1c1c;
+            line-height: 1;
+        }
+        
+        .pricing-price span {
+            font-size: 18px;
+            font-weight: 400;
+            color: #666;
+        }
+        
+        .pricing-features {
+            margin-bottom: 40px;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 16px 24px;
+            font-size: 16px;
+        }
+        
         /* CALL TO ACTION */
         .cta-section {
             padding: 150px 0;
@@ -530,8 +621,9 @@
         <div class="navbar-container">
             <a href="/" class="logo">Projekt AI®</a>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#services">About</a></li>
+                <li><a href="#work">Case Studies</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -544,10 +636,10 @@
             <!-- Background video placeholder - you can add actual video here -->
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Projekt AI <span style="font-weight: 400;">creates intelligent automation systems that help nightlife brands operate efficiently and grow faster.</span></h1>
-                <p>Our studio understands the importance of cultural relevancy, entertainment, and audience connection. We work with ambitious nightlife brands who want to become great digitally.</p>
-                <a href="#contact" class="btn">
-                    Contact us
+                <h1>Projekt AI <span style="font-weight: 400;">delivers ongoing automation services that help music venues, event promoters, and hospitality brands scale their content and marketing.</span></h1>
+                <p>I specialize in subscription-based automation systems for the music industry. From social media content creation to marketing workflows, I handle the technical complexity so you can focus on creating unforgettable experiences.</p>
+                <a href="#pricing" class="btn">
+                    View Subscription Plans
                     <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.0473 3.53136L15.6742 4.84458L23.5058 13.0334L1.79591 13.136L1.70495 14.9789L23.4148 14.8764L14.771 23.1431L16.0151 24.4439L27.0001 13.9382L17.0473 3.53136Z" fill="currentColor"/>
                     </svg>
@@ -564,17 +656,17 @@
                 
                 <div class="intro-grid">
                     <div class="intro-content">
-                        <h3 class="section-title">Our Studio</h3>
-                        <p class="intro-text">We are Projekt AI, an intelligent automation studio who love to problem solve, collaborate and create systems that work. Our capabilities include social media automation, marketing automation, lead generation, customer management, and full-stack development.</p>
+                        <h3 class="section-title">Subscription Automation Services</h3>
+                        <p class="intro-text">I'm a freelance automation specialist focused exclusively on the music industry. I offer three tiers of ongoing subscription services that handle your content creation, social media management, and marketing workflows automatically.</p>
                         
-                        <a href="#contact" class="btn btn-dark">
-                            Contact us
+                        <a href="#pricing" class="btn btn-dark">
+                            View Pricing Plans
                             <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.0473 3.53136L15.6742 4.84458L23.5058 13.0334L1.79591 13.136L1.70495 14.9789L23.4148 14.8764L14.771 23.1431L16.0151 24.4439L27.0001 13.9382L17.0473 3.53136Z" fill="currentColor"/>
                             </svg>
                         </a>
                         
-                        <p class="intro-description">We know life inside nightlife brands can be challenging, and - like you - we embrace it. At Projekt AI, we pair our refined automation process with strategy and technology to establish genuine partnerships. We work closely with our partners and act as an extension of your team.</p>
+                        <p class="intro-description">Running a music venue or event promotion business is demanding enough. Let me handle the repetitive marketing and content tasks with proven automation systems, so you can focus on what you do best - creating amazing experiences for your audience.</p>
                     </div>
                 </div>
                 
@@ -633,17 +725,82 @@
             </div>
         </section>
 
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="section section-light">
+            <div class="container">
+                <div class="divider">
+                    <h2 class="divider-heading dark">Subscription Plans</h2>
+                </div>
+                
+                <h3 class="section-title">Choose Your Automation Level</h3>
+                <p class="section-subtitle">Monthly subscription packages designed specifically for music industry professionals. Each tier builds on the previous with more advanced automation and higher content volume.</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4 class="pricing-tier">Starter</h4>
+                            <div class="pricing-price">$497<span>/month</span></div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Social media content automation</li>
+                                <li>Basic email marketing sequences</li>
+                                <li>Event promotion templates</li>
+                                <li>Monthly strategy review</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-dark pricing-btn">Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h4 class="pricing-tier">Professional</h4>
+                            <div class="pricing-price">$997<span>/month</span></div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Everything in Starter</li>
+                                <li>Advanced AI content generation</li>
+                                <li>Multi-platform automation</li>
+                                <li>Customer journey automation</li>
+                                <li>Weekly optimization calls</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-dark pricing-btn">Get Started</a>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4 class="pricing-tier">Enterprise</h4>
+                            <div class="pricing-price">$1,997<span>/month</span></div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Everything in Professional</li>
+                                <li>Custom AI agent development</li>
+                                <li>Full marketing automation suite</li>
+                                <li>Priority support & implementation</li>
+                                <li>Dedicated automation consultant</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-dark pricing-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CALL TO ACTION SECTION -->
         <section id="contact" class="section section-dark cta-section">
             <div class="container">
-                <h2 class="cta-heading">You've made it this far. Let's chat?</h2>
+                <h2 class="cta-heading">Ready to automate your music business?</h2>
                 <a href="mailto:hello@projekt-ai.net" class="btn">
-                    Contact us
+                    Start Your Subscription
                     <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.0473 3.53136L15.6742 4.84458L23.5058 13.0334L1.79591 13.136L1.70495 14.9789L23.4148 14.8764L14.771 23.1431L16.0151 24.4439L27.0001 13.9382L17.0473 3.53136Z" fill="currentColor"/>
                     </svg>
                 </a>
-                <p class="section-subtitle">Whether you know a little or a lot about your next automation project, want to collaborate, have questions about us or our services, or simply want to say hi - drop us a line.</p>
+                <p class="section-subtitle">Choose your automation tier and let's discuss how I can streamline your content creation and marketing workflows. Monthly subscriptions start at $497.</p>
             </div>
         </section>
     </main>
