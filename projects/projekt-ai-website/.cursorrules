@@ -1,0 +1,143 @@
+# PROJEKT AI WEBSITE - EXTRA MEDIUM STYLE ENFORCEMENT
+# These rules MUST be followed for all code changes to maintain design consistency
+
+## DESIGN SYSTEM ENFORCEMENT
+
+### FORBIDDEN STYLING PATTERNS
+- NO blue gradients or any gradients whatsoever
+- NO rounded corners (border-radius) except for circles (50% only)
+- NO box-shadows except for subtle ones (max 0 4px 10px rgba(0,0,0,0.1))
+- NO hover animations or transform effects
+- NO bright colors or vibrant accents
+- NO heavy borders (max 1px solid)
+- NO complex animations or transitions
+- NO background patterns or textures
+
+### REQUIRED COLOR PALETTE
+- Primary background: #ffffff (white)
+- Secondary background: #f8f9fa (light gray)
+- Dark sections: #1a1a1a (near black)
+- Text primary: #1a1a1a (dark)
+- Text secondary: #666666 (medium gray)
+- Borders: #e9ecef (light gray)
+- NEVER use: blue, bright colors, multiple accent colors
+
+### TYPOGRAPHY RULES
+- Font family: Inter ONLY (weights: 300, 400, 500, 600, 700, 800)
+- Headings: font-weight 700, letter-spacing -0.02em
+- Body text: font-weight 400, line-height 1.6
+- NO decorative fonts or script fonts
+- NO text shadows or effects
+
+### LAYOUT CONSTRAINTS
+- Container max-width: 1200px
+- Padding: 20px (sides), 100px (sections)
+- Grid gaps: 30px-60px maximum
+- NO complex nested grids
+- Simple flexbox or CSS Grid only
+
+### COMPONENT STYLING RULES
+- Buttons: Simple rectangles, solid colors, no gradients
+- Cards: White background, minimal shadow, clean edges
+- Forms: Clean inputs, no fancy styling
+- Navigation: Simple, horizontal, minimal
+- Logo sections: Grayscale, simple horizontal layout
+
+### CSS STANDARDS ENFORCEMENT
+- Use ONLY /assets/css/main.css and /assets/css/case-study.css
+- NO inline styles except for minor adjustments
+- NO external CSS frameworks (Bootstrap, Tailwind, etc.)
+- NO CSS-in-JS solutions
+
+### RESPONSIVE DESIGN
+- Mobile-first approach
+- Simple breakpoints: 768px, 1024px
+- NO complex responsive animations
+- Stack elements simply on mobile
+
+## CODE QUALITY RULES
+
+### HTML STRUCTURE
+- Semantic HTML5 elements required
+- Clean, readable structure
+- Proper heading hierarchy (h1, h2, h3)
+- Accessible alt text for images
+
+### PERFORMANCE REQUIREMENTS
+- Optimize all images before use
+- Minimize CSS and JS
+- NO unnecessary dependencies
+- Fast loading times priority
+
+### FILE ORGANIZATION
+- Images in /assets/img/ with proper naming
+- SVG logos in /assets/img/software-logos/
+- NO duplicate files or unused assets
+
+## CONTENT GUIDELINES
+
+### TONE AND MESSAGING
+- Personal expertise focus (20+ years experience)
+- Individual specialist, NOT agency language
+- Music industry specific terminology
+- Professional but approachable tone
+
+### SECTION STRUCTURE
+- Hero: Simple, centered, clean
+- Services: Grid layout, numbered items
+- About: Personal story, individual focus
+- FAQ: Sanny-style structure exactly
+- Technology: Simple horizontal logo row
+
+## DEPLOYMENT RULES
+
+### BUILD PROCESS
+- Always run npm run build:prod before deploy
+- Test on multiple devices
+- Validate HTML and CSS
+- Check loading performance
+
+### GIT WORKFLOW
+- Descriptive commit messages
+- Test changes locally first
+- Deploy via git push (auto-deploys to Netlify)
+
+## STRICT PROHIBITIONS
+
+### NEVER ALLOW
+- Blue color schemes or gradients
+- Complex animations or micro-interactions
+- Heavy visual effects or shadows
+- Rounded corners except for circles
+- Multiple accent colors
+- Decorative elements or patterns
+- Agency-style language or team references
+- Legacy CSS files (portfolio-dark.css, style.css, etc.)
+
+### ALWAYS REQUIRE
+- Extra Medium minimalist aesthetic
+- Clean, professional appearance
+- Fast loading and performance
+- Mobile responsiveness
+- Accessibility compliance
+- Personal branding consistency
+
+## EMERGENCY OVERRIDES
+Only in extreme cases where client specifically requests deviation:
+1. Document the reason in commit message
+2. Update this .cursorrules file
+3. Ensure change aligns with overall brand
+4. Test thoroughly before deployment
+
+## VALIDATION CHECKLIST
+Before any style change:
+- [ ] Follows Extra Medium aesthetic
+- [ ] No blue colors or gradients
+- [ ] Clean, minimal design
+- [ ] Uses approved color palette
+- [ ] Maintains personal branding
+- [ ] Mobile responsive
+- [ ] Fast loading
+- [ ] Accessible markup
+
+These rules are MANDATORY and must be followed for all changes to maintain brand consistency and design quality. 

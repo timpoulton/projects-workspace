@@ -41,7 +41,10 @@
     "lint": "npm run lint:css && npm run lint:js",
     "build:css": "postcss assets/css/main.css -o assets/css/main.css && postcss assets/css/case-study.css -o assets/css/case-study.css",
     "build:js": "esbuild assets/js/main.js --bundle --minify --outfile=assets/js/main.js --allow-overwrite",
-    "optimize:images": "imagemin assets/img/* --out-dir=assets/img"
+    "optimize:images": "imagemin assets/img/* --out-dir=assets/img",
+    "style:validate": "node scripts/style-validator.js",
+    "style:validate-strict": "node scripts/style-validator.js . && echo '✅ All Extra Medium style rules enforced!'",
+    "pre-commit": "npm run style:validate-strict && npm run build:prod"
   },
   "keywords": [
     "portfolio",
