@@ -3,180 +3,692 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt AI - Intelligent Automation Solutions</title>
-    <meta name="description" content="Intelligent automation solutions for music industry, hospitality, and content creators">
+    <title>Projekt AI - Automation Solutions</title>
+    <meta name="description" content="Intelligent automation solutions for nightlife and entertainment brands">
     <link rel="icon" href="assets/img/logos/favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/extramedium.css">
+    <style>
+        /* Extra Medium inspired styles - ACCURATE VERSION */
+        :root {
+            --text-color-dark: #000;
+            --text-color-light: #fff;
+            --bg-color-light: #fff;
+            --bg-color-dark: #000;
+            --border-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--bg-color-light);
+            color: var(--text-color-dark);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            background-color: var(--bg-color-light);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--text-color-dark);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        
+        .logo sup {
+            font-size: 14px;
+            top: -0.5em;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color-dark);
+            font-size: 16px;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-color-dark);
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero section - black background */
+        .hero {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+        }
+        
+        .hero-title {
+            font-size: 5rem;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        
+        .large-text {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            max-width: 700px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 32px;
+            border: 1px solid currentColor;
+            color: inherit;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--text-color-light);
+            color: var(--bg-color-dark);
+        }
+        
+        .btn svg {
+            margin-left: 12px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* White sections */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 60px;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        
+        /* Section with label */
+        .section-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+            display: block;
+            position: relative;
+        }
+        
+        .section-label::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: currentColor;
+            margin-top: 10px;
+        }
+        
+        /* Project grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background-color: #f5f5f5;
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .project-category {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Black section */
+        .black-section {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+        
+        /* Client logos */
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        
+        .client-logo {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            opacity: 1;
+        }
+        
+        /* About section */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .about-text {
+            max-width: 500px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        /* Contact section */
+        .contact-section {
+            padding: 120px 0;
+        }
+        
+        .contact-title {
+            font-size: 4rem;
+            margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        
+        .contact-text {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .footer-links a {
+            color: var(--text-color-dark);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column {
+            margin-right: 80px;
+        }
+        
+        .footer-column h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: var(--text-color-dark);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        .acknowledgment {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            max-width: 800px;
+            margin-top: 40px;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Slide menu */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--bg-color-dark);
+            z-index: 1002;
+            transition: right 0.4s ease;
+            padding: 80px 60px 60px;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-color-light);
+        }
+        
+        .slide-menu.active {
+            right: 0;
+        }
+        
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 80px;
+        }
+        
+        .menu-logo {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-color-light);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-color-light);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+        
+        .menu-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu-nav li {
+            margin-bottom: 24px;
+        }
+        
+        .menu-nav a {
+            color: var(--text-color-light);
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1.2;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .menu-nav a:hover {
+            transform: translateX(6px);
+        }
+        
+        .menu-footer {
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+        }
+        
+        .menu-footer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .large-text {
+                font-size: 1.25rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">Projekt<sup>AI</sup></a>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="services/index.html">Services</a>
-                    <a href="case-studies/index.html">Case Studies</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <button class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-        </div>
+        <nav class="container">
+            <a href="index.html" class="logo">Projekt<sup>AI</sup></a>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="menu-overlay"></div>
-    <div class="slide-menu">
-        <div class="menu-header">
-            <a href="index.html" class="menu-logo">Projekt<sup>AI</sup></a>
-            <button class="close-btn">&times;</button>
-        </div>
-        <nav class="menu-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services/index.html">Services</a></li>
-                <li><a href="case-studies/index.html">Case Studies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-footer">
-            <a href="mailto:hello@projekt-ai.net">hello@projekt-ai.net</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Intelligent Automation for Music & Content Creators</h1>
-                <p class="large-text">We build custom workflow automations that save time and increase output for music industry professionals and content creators.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Studio Section -->
-    <section class="section studio-section">
-        <div class="container">
-            <h2 class="section-title">Our approach</h2>
-            <p class="section-subtitle">We combine AI, no-code tools, and custom development to create practical automation solutions that solve real business problems.</p>
-            
-            <div class="studio-grid">
-                <div class="studio-image">
-                    <img src="assets/img/approach-1.jpg" alt="Strategic automation approach" />
-                </div>
-                <div class="studio-image">
-                    <img src="assets/img/approach-2.jpg" alt="Custom workflow solutions" />
-                </div>
-                <div class="studio-image">
-                    <img src="assets/img/approach-3.jpg" alt="AI implementation" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects-section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Our automation solutions deliver measurable results across hospitality, music production, and content creation.</p>
-            
-            <div class="projects-grid">
-                <a href="case-studies/reel-builder-automation.html" class="project-card featured">
-                    <img src="assets/img/portfolio/reel-builder-automation-card.jpg" alt="Reel Builder Automation">
-                    <div class="project-overlay">
-                        <h3 class="project-title">Reel Builder Automation</h3>
-                        <span class="view-case">View case study →</span>
-                    </div>
+                <h1 class="hero-title">Nightlife Brands</h1>
+                <p class="large-text">From dynamic content pipelines to guest-management bots, my systems slash operating costs by up to 70% and free your team to focus on unforgettable experiences.</p>
+                <a href="#contact" class="btn">
+                    Show me the transformation
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
-                
-                <a href="case-studies/club77-content-pipeline.html" class="project-card">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Who we are</span>
+            <div class="about-section">
+                <div class="about-text">
+                    <h2 class="section-title">We are Projekt AI, a digital automation studio who love to problem solve, collaborate and intelligently create.</h2>
+                    <p>We know life inside brands can be challenging, and - like you - we embrace it. At Projekt AI, we pair our refined creative process with strategy and technology to establish genuine partnerships.</p>
+                    <p>We work closely with our partners and act as an extension of your team. Through this, we give form to new ideas and creative ways to achieve clarity in projects.</p>
+                </div>
+                <div>
+                    <a href="#contact" class="btn" style="color: black; border-color: black;">
+                        Contact us
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section black-section">
+        <div class="container">
+            <span class="section-label">Recent work</span>
+            <h2 class="section-title">Here's what we've been up to lately</h2>
+            <p class="section-subtitle">We love working with passionate people and brands. We focus on building innovative digital experiences and exceptional creative outcomes.</p>
+            
+            <div class="project-grid">
+                <div class="project-card">
                     <img src="assets/img/portfolio/club77-content-pipeline-card.png" alt="Club77 Content Pipeline">
-                    <div class="project-overlay">
-                        <h3 class="project-title">Content Pipeline Automation</h3>
-                        <span class="view-case">View case study →</span>
+                    <div class="project-info">
+                        <h3 class="project-title">Club77 Content Pipeline</h3>
+                        <p class="project-category">Content Automation</p>
                     </div>
-                </a>
+                </div>
                 
-                <a href="case-studies/dj-recording-manager.html" class="project-card">
-                    <img src="assets/img/portfolio/dj-recording-manager-card.jpg" alt="DJ Recording Manager">
-                    <div class="project-overlay">
-                        <h3 class="project-title">DJ Recording Manager</h3>
-                        <span class="view-case">View case study →</span>
+                <div class="project-card">
+                    <img src="assets/img/portfolio/reel-builder-automation-card.jpg" alt="Reel Builder Automation">
+                    <div class="project-info">
+                        <h3 class="project-title">Reel Builder Automation</h3>
+                        <p class="project-category">Video Automation</p>
                     </div>
-                </a>
+                </div>
                 
-                <a href="case-studies/upwork-proposal-automation.html" class="project-card">
-                    <img src="assets/img/portfolio/client-proposals-card.jpg" alt="Proposal Automation">
-                    <div class="project-overlay">
-                        <h3 class="project-title">Proposal Automation</h3>
-                        <span class="view-case">View case study →</span>
+                <div class="project-card">
+                    <img src="assets/img/portfolio/manychat-guestlist-automation-card.jpg" alt="ManyChat Guestlist Automation">
+                    <div class="project-info">
+                        <h3 class="project-title">ManyChat Guestlist Automation</h3>
+                        <p class="project-category">Guest Management</p>
                     </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="case-studies/index.html" class="btn">
+                    View all work
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">Let's discuss how automation can transform your workflow.</p>
-            <a href="mailto:hello@projekt-ai.net" class="contact-button">hello@projekt-ai.net</a>
+            <span class="section-label">Featured clients</span>
+            <div class="client-logos" style="filter: none;">
+                <img src="assets/img/logos/club77-logo.png" alt="Club77" class="client-logo" style="filter: none;">
+                <img src="assets/img/logos/universal-logo.png" alt="Universal Music" class="client-logo" style="filter: none;">
+                <img src="assets/img/logos/sony-logo.png" alt="Sony Music" class="client-logo" style="filter: none;">
+                <img src="assets/img/logos/laneway-logo.png" alt="Laneway Festival" class="client-logo" style="filter: none;">
+                <img src="assets/img/logos/warner-logo.png" alt="Warner Music" class="client-logo" style="filter: none;">
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section id="contact" class="section black-section contact-section">
+        <div class="container">
+            <h2 class="contact-title">You've made it this far. Let's chat?</h2>
+            <p class="contact-text">Whether you know a little or a lot about your next project, want to collaborate, have questions about us or our services, or simply want to say hi - drop us a line.</p>
+            
+            <a href="mailto:hello@projekt-ai.net" class="btn">
+                Contact us
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <a href="index.html" class="footer-logo">Projekt<sup>AI</sup></a>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="services/index.html">Services</a>
-                    <a href="case-studies/index.html">Case Studies</a>
-                    <a href="#contact">Contact</a>
+                <div>
+                    <a href="index.html" class="logo">Projekt<sup>AI</sup></a>
+                </div>
+                <div class="footer-columns" style="display: flex;">
+                    <div class="footer-column">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services/index.html">Services</a></li>
+                            <li><a href="case-studies/index.html">Case Studies</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:hello@projekt-ai.net">Email</a></li>
+                            <li><a href="https://linkedin.com/in/timpoulton" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2023 Projekt AI</p>
+            
+            <div class="copyright">
+                <p>© 2025 Projekt AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <div class="menu-overlay">
+        <div class="slide-menu">
+            <div class="menu-header">
+                <a href="index.html" class="menu-logo">Projekt<sup>AI</sup></a>
+                <button class="close-btn">&times;</button>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services/index.html">Services</a></li>
+                    <li><a href="case-studies/index.html">Case Studies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-footer">
+                <a href="mailto:hello@projekt-ai.net">hello@projekt-ai.net</a>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Mobile menu toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const menuOverlay = document.querySelector('.menu-overlay');
         const slideMenu = document.querySelector('.slide-menu');
         const closeBtn = document.querySelector('.close-btn');
-        
+
         menuToggle.addEventListener('click', () => {
             menuOverlay.classList.add('active');
             slideMenu.classList.add('active');
-            menuToggle.classList.add('active');
         });
-        
+
         closeBtn.addEventListener('click', () => {
             menuOverlay.classList.remove('active');
             slideMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
         });
-        
+
         menuOverlay.addEventListener('click', (e) => {
             if (e.target === menuOverlay) {
                 menuOverlay.classList.remove('active');
                 slideMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
         });
     </script>

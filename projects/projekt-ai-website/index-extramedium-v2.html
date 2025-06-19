@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt AI® - AI Automation for Nightlife</title>
+    <meta name="description" content="We build intelligent automation systems that help music venues, nightclubs, and entertainment brands operate more efficiently and grow faster.">
+    <link rel="icon" href="assets/img/logos/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1c1c1c;
+            background: #fff;
+            overflow-x: hidden;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        
+        /* CONTAINER & LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .container-large {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* HEADER */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: transparent;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f7f7f7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar.scrolled .logo {
+            color: #1c1c1c;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        .nav-links a {
+            color: #f7f7f7;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled .nav-links a {
+            color: #1c1c1c;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+        
+        /* MAIN CONTENT */
+        main {
+            margin-top: 0;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1c1c1c;
+            color: #f7f7f7;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(28, 28, 28, 0.4);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 1000px;
+            padding: 0 40px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: rgba(247, 247, 247, 0.9);
+            max-width: 700px;
+            margin: 0 auto 48px;
+            line-height: 1.5;
+        }
+        
+        .hero .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: #f7f7f7;
+            color: #1c1c1c;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero .btn svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* SECTIONS */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-light {
+            background: #f6f6f6;
+        }
+        
+        .section-dark {
+            background: #1c1c1c;
+            color: #f7f7f7;
+        }
+        
+        .divider {
+            margin-bottom: 60px;
+        }
+        
+        .divider-heading {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .divider-heading.dark {
+            color: #666;
+        }
+        
+        .section-title {
+            font-size: clamp(32px, 6vw, 64px);
+            font-weight: 500;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        
+        .section-dark .section-subtitle {
+            color: rgba(247, 247, 247, 0.8);
+        }
+        
+        /* SERVICES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .service-card {
+            padding: 40px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .service-card:hover {
+            border-color: #ddd;
+            transform: translateY(-4px);
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* PROJECTS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        
+        .project-card:hover {
+            border-color: #ddd;
+            transform: translateY(-4px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .project-content {
+            padding: 24px;
+        }
+        
+        .project-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .project-content p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* CONTACT SECTION */
+        .contact {
+            background: #f8f8f8;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        
+        .contact p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .contact .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .contact .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* FOOTER */
+        .footer-main {
+            max-width: 600px;
+            margin-bottom: 80px;
+        }
+        
+        .footer-contact {
+            margin-top: 40px;
+        }
+        
+        .contact-email {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1c1c1c;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-email:hover {
+            opacity: 0.7;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #1c1c1c;
+        }
+        
+        .footer-credit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+        
+        .footer-credit span {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        /* INTRO GRID */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 80px;
+            margin-bottom: 80px;
+        }
+        
+        .intro-content {
+            max-width: 600px;
+        }
+        
+        .intro-text {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 40px;
+            color: #1c1c1c;
+        }
+        
+        .intro-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-top: 40px;
+        }
+        
+        .btn-dark {
+            background: #1c1c1c;
+            color: #f7f7f7;
+        }
+        
+        .btn-dark:hover {
+            background: #333;
+        }
+        
+        /* CLIENT LOGOS */
+        .featured-clients {
+            margin-top: 60px;
+        }
+        
+        .client-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .client-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            color: #999;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* CALL TO ACTION */
+        .cta-section {
+            padding: 150px 0;
+            text-align: center;
+        }
+        
+        .cta-heading {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 60px;
+            letter-spacing: -0.02em;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .navbar-container {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                padding: 0 20px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">Projekt AI®</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <!-- Background video placeholder - you can add actual video here -->
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Projekt AI <span style="font-weight: 400;">creates intelligent automation systems that help nightlife brands operate efficiently and grow faster.</span></h1>
+                <p>Our studio understands the importance of cultural relevancy, entertainment, and audience connection. We work with ambitious nightlife brands who want to become great digitally.</p>
+                <a href="#contact" class="btn">
+                    Contact us
+                    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.0473 3.53136L15.6742 4.84458L23.5058 13.0334L1.79591 13.136L1.70495 14.9789L23.4148 14.8764L14.771 23.1431L16.0151 24.4439L27.0001 13.9382L17.0473 3.53136Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE SECTION -->
+        <section id="services" class="section section-light">
+            <div class="container">
+                <div class="divider">
+                    <h2 class="divider-heading dark">Who We Are</h2>
+                </div>
+                
+                <div class="intro-grid">
+                    <div class="intro-content">
+                        <h3 class="section-title">Our Studio</h3>
+                        <p class="intro-text">We are Projekt AI, an intelligent automation studio who love to problem solve, collaborate and create systems that work. Our capabilities include social media automation, marketing automation, lead generation, customer management, and full-stack development.</p>
+                        
+                        <a href="#contact" class="btn btn-dark">
+                            Contact us
+                            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.0473 3.53136L15.6742 4.84458L23.5058 13.0334L1.79591 13.136L1.70495 14.9789L23.4148 14.8764L14.771 23.1431L16.0151 24.4439L27.0001 13.9382L17.0473 3.53136Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        
+                        <p class="intro-description">We know life inside nightlife brands can be challenging, and - like you - we embrace it. At Projekt AI, we pair our refined automation process with strategy and technology to establish genuine partnerships. We work closely with our partners and act as an extension of your team.</p>
+                    </div>
+                </div>
+                
+                <!-- CLIENT LOGOS -->
+                <div class="featured-clients">
+                    <h3 class="divider-heading dark">Featured clients</h3>
+                    <div class="client-logos">
+                        <div class="client-logo">Club77</div>
+                        <div class="client-logo">Muzeek</div>
+                        <div class="client-logo">Reel Builder</div>
+                        <div class="client-logo">ManyChat</div>
+                        <div class="client-logo">Upwork</div>
+                        <div class="client-logo">Automation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK SECTION -->
+        <section id="work" class="section">
+            <div class="container">
+                <h2 class="section-title">Case Studies</h2>
+                <p class="section-subtitle">Real automation systems we've built for music venues and entertainment brands.</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            Reel Builder Preview
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Reel Builder Automation</h3>
+                            <p>Turn simple text inputs into polished, social-ready video reels in under five minutes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            Club77 Pipeline Preview
+                        </div>
+                        <div class="project-content">
+                            <h3>Club77 Content Pipeline</h3>
+                            <p>Automated social content generation system that increased engagement by 340%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            Guestlist Preview
+                        </div>
+                        <div class="project-content">
+                            <h3>ManyChat Guestlist Automation</h3>
+                            <p>Streamlined guest management system that reduced manual work by 80%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION SECTION -->
+        <section id="contact" class="section section-dark cta-section">
+            <div class="container">
+                <h2 class="cta-heading">You've made it this far. Let's chat?</h2>
+                <a href="mailto:hello@projekt-ai.net" class="btn">
+                    Contact us
+                    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.0473 3.53136L15.6742 4.84458L23.5058 13.0334L1.79591 13.136L1.70495 14.9789L23.4148 14.8764L14.771 23.1431L16.0151 24.4439L27.0001 13.9382L17.0473 3.53136Z" fill="currentColor"/>
+                    </svg>
+                </a>
+                <p class="section-subtitle">Whether you know a little or a lot about your next automation project, want to collaborate, have questions about us or our services, or simply want to say hi - drop us a line.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="section section-light">
+        <div class="container">
+            <div class="divider">
+                <h2 class="divider-heading dark">We love working with passionate nightlife brands</h2>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3 class="section-title">Let's collaborate</h3>
+                    <p class="intro-description">Whether you know a little or a lot about your next automation project, want to collaborate, have questions about us or our services, or simply want to say hi - drop us a line.</p>
+                    
+                    <div class="footer-contact">
+                        <a href="mailto:hello@projekt-ai.net" class="contact-email">hello@projekt-ai.net</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#work">Work</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-credit">
+                    <span>Projekt AI® © 2024</span>
+                    <span>This site was designed and built by Projekt AI®</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html> 

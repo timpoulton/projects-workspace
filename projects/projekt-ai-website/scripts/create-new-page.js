@@ -54,7 +54,6 @@ function getStandardPageTemplate(relativePath) {
   <link rel="icon" href="${relativePath}assets/img/logos/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="${relativePath}assets/css/main.css">
-  <link rel="stylesheet" href="${relativePath}assets/css/extramedium.css">
 </head>
 <body>
   <header>
