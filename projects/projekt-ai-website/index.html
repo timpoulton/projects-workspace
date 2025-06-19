@@ -471,106 +471,6 @@
             filter: grayscale(100%) !important;
         }
 
-        /* Work Section - Enhanced Spacing */
-        .work-section {
-            background: #1a1a1a;
-            padding: 140px 0;
-        }
-
-        .work-header {
-            margin-bottom: 100px;
-        }
-
-        .work-header h2 {
-            font-size: clamp(36px, 4.5vw, 56px);
-            font-weight: 400;
-            color: #fff;
-            margin-bottom: 64px;
-            letter-spacing: -0.02em;
-            line-height: 1.15;
-        }
-
-        .work-intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 120px;
-        }
-
-        .work-intro p {
-            font-size: 17px;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* Project Cards - Refined Layout */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 100px;
-        }
-
-        .project-card {
-            aspect-ratio: 1/1; /* Square cards */
-            border-radius: 16px;
-            overflow: hidden;
-            position: relative;
-            background: #333;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .project-card.large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .project-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-            padding: 32px;
-            color: #fff;
-            pointer-events: none;
-        }
-
-        .project-overlay h3 {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .project-overlay p {
-            font-size: 14px;
-            opacity: 0.8;
-            font-weight: 400;
-        }
-
-        /* Stretched Link - Makes entire card clickable */
-        .stretched-link::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: auto;
-            content: "";
-            background-color: rgba(0,0,0,0);
-        }
-
-        .project-card {
-            position: relative;
-        }
-
         /* Contact Section - Perfect Spacing */
         .contact-section {
             background: #1a1a1a;
@@ -704,7 +604,6 @@
             }
             
             .about-content,
-            .work-intro,
             .footer-content {
                 gap: 80px;
             }
@@ -734,7 +633,6 @@
             }
 
             .about-section,
-            .work-section,
             .contact-section {
                 padding: 80px 0;
             }
@@ -744,7 +642,6 @@
             }
 
             .about-content,
-            .work-intro,
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 48px;
@@ -752,26 +649,6 @@
 
             .about-right {
                 padding-top: 0;
-            }
-
-            .work-header {
-                margin-bottom: 60px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-                margin-top: 60px;
-            }
-
-            .project-card.large {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-
-            .clients-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
             }
 
             .footer {
@@ -1272,51 +1149,6 @@
                 <img src="assets/img/uploads/openai.png" alt="OpenAI">
                 <div class="client-name">OpenAI</div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Work Section -->
-<section class="work-section" style="display:none;">
-    <div class="container">
-        <div class="work-header">
-            <h2>Transformations That Pay For Themselves</h2>
-            
-            <div class="work-intro">
-                <p><strong>Real clubs. Real problems. Real results.</strong> Every engagement starts with one question: "What would transform your night if it ran on autopilot?"</p>
-                <p>Below are three systems that turned nightlife chaos into competitive advantage—plus the exact automations that made it happen.</p>
-            </div>
-                </div>
-
-        <div class="projects-grid">
-            
-            <a href="/club77-content-pipeline.html" class="project-card large" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/assets/img/portfolio/club77-content-pipeline-card.png'); background-size: cover; background-position: center;">
-                <div class="project-overlay">
-                    <h3>Club77 Content Pipeline</h3>
-                    <p>AI Content Generation & Social Media Automation</p>
-                </div>
-            </a>
-            
-            <a href="/upwork-proposal-automation.html" class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/assets/img/portfolio/upwork-proposal-automation-card.png'); background-size: cover; background-position: center;">
-                <div class="project-overlay">
-                    <h3>Upwork Proposal Automation</h3>
-                    <p>AI-Powered Business Development</p>
-                </div>
-            </a>
-            
-            <a href="/projects/dj-recording-manager/index.html" class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/assets/img/portfolio/dj-recording-manager-card.png'); background-size: cover; background-position: center;">
-                <div class="project-overlay">
-                    <h3>DJ Recording Manager</h3>
-                    <p>Automated DJ set recording & management</p>
-                </div>
-            </a>
-            
-            <a href="/projects/manychat-guestlist-automation/index.html" class="project-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/assets/img/portfolio/manychat-guestlist-automation-card.png'); background-size: cover; background-position: center;">
-                <div class="project-overlay">
-                    <h3>ManyChat Guestlist Automation</h3>
-                    <p>Guestlist & Ticketing Automation</p>
-                </div>
-            </a>
         </div>
     </div>
 </section>
