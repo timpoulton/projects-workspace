@@ -10,169 +10,160 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { promisify } = require('util');
+const readdir = promisify(fs.readdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
+const stat = promisify(fs.stat);
 
-// List of directories to process
-const DIRECTORIES = [
-  './',                    // Root HTML files
-  './case-studies/',       // Case study pages
-  './services/',           // Service pages
-  './work/',               // Work pages
-  './admin-dashboard/',    // Admin pages
-  './projects/*/'          // Individual project pages
+// Configuration
+const rootDir = path.resolve(__dirname, '..');
+const standardCssLinks = `
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/extramedium.css">
+`;
+const fontLinks = '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">';
+
+// Files or directories to skip
+const skipPaths = [
+  'node_modules',
+  '.git',
+  'venv',
+  'archive',
+  'backups'
 ];
 
-// List of CSS files to KEEP
-const APPROVED_CSS = [
-  'main.css',
-  'case-study.css'
-];
-
-// List of CSS files to REMOVE (partial matches)
-const DEPRECATED_CSS = [
-  'portfolio-dark',
+// List of deprecated CSS files to remove references to
+const deprecatedCssFiles = [
+  'animations.css', 
+  'portfolio-dark-theme.css',
   'style.css',
-  'dark-theme',
-  'extramedium-inspired',
-  'animations',
+  'dark-theme.css',
   'portfolio.css',
-  'apple-dark-style'
+  'extramedium-inspired.css',
+  'admin.css',
+  'apple-dark-style.css'
 ];
 
-// Counter for statistics
-let stats = {
-  filesProcessed: 0,
-  filesUpdated: 0,
-  cssRemoved: 0,
-  errors: 0
-};
+async function findAllHtmlFiles(dir) {
+  const files = [];
+  
+  async function traverse(currentDir) {
+    const entries = await readdir(currentDir, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const fullPath = path.join(currentDir, entry.name);
+      const relativePath = path.relative(rootDir, fullPath);
+      
+      // Skip if path matches any in the skipPaths list
+      if (skipPaths.some(skipPath => relativePath.startsWith(skipPath))) {
+        continue;
+      }
+      
+      if (entry.isDirectory()) {
+        await traverse(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith('.html')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  await traverse(dir);
+  return files;
+}
 
-/**
- * Fix CSS references in an HTML file
- */
-function fixCssInFile(filePath) {
+async function fixHtmlFile(filePath) {
   try {
-    console.log(`Processing: ${filePath}`);
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let cssCount = 0;
+    console.log(`Processing ${path.relative(rootDir, filePath)}`);
+    const content = await readFile(filePath, 'utf8');
     
-    // Match all CSS link elements
-    const linkRegex = /<link[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi;
-    const links = [];
-    let match;
+    // Check if file needs updating
+    const hasCssReferences = deprecatedCssFiles.some(cssFile => content.includes(cssFile)) ||
+                            !content.includes('main.css') || 
+                            content.includes('assets/css/style.css');
     
-    // Collect all CSS links
-    while ((match = linkRegex.exec(content)) !== null) {
-      links.push({
-        full: match[0],
-        href: match[1]
-      });
+    if (!hasCssReferences) {
+      console.log('  No changes needed');
+      return false;
     }
     
-    // Process each link
-    links.forEach(link => {
-      const cssFileName = path.basename(link.href);
-      const cssPath = link.href;
-      
-      // Check if it's a deprecated CSS file
-      const isDeprecated = DEPRECATED_CSS.some(deprecated => 
-        cssFileName.includes(deprecated)
-      );
-      
-      if (isDeprecated) {
-        // Remove the link
-        content = content.replace(link.full, '<!-- CSS removed by fix-css-references.js -->');
-        cssCount++;
-        console.log(`  Removed: ${cssFileName}`);
-      }
+    // Calculate path prefix based on file location relative to project root
+    const relativePath = path.relative(rootDir, filePath);
+    const depth = relativePath.split(path.sep).length - 1;
+    const pathPrefix = depth > 0 ? '../'.repeat(depth) : '';
+    
+    // Replace deprecated CSS references with standardized version
+    let updatedContent = content;
+    
+    // Remove deprecated CSS references
+    deprecatedCssFiles.forEach(cssFile => {
+      const regex = new RegExp(`<link[^>]*href="[^"]*${cssFile}"[^>]*>`, 'g');
+      updatedContent = updatedContent.replace(regex, '');
     });
     
-    // Find </head> tag
-    const headEndIndex = content.indexOf('</head>');
-    if (headEndIndex === -1) {
-      console.error(`  Error: Could not find </head> tag in ${filePath}`);
-      stats.errors++;
-      return;
-    }
+    // Replace all CSS paths with the correct relative paths
+    const cssLinkRegex = /<link[^>]*rel="stylesheet"[^>]*href="[^"]*\/assets\/css\/([^"]+)"[^>]*>/g;
+    updatedContent = updatedContent.replace(cssLinkRegex, (match, cssFile) => {
+      return `<link rel="stylesheet" href="${pathPrefix}assets/css/${cssFile}">`;
+    });
     
-    // Determine relative path to assets
-    const relativePath = path.relative(path.dirname(filePath), './').replace(/\\/g, '/');
-    const assetsPath = relativePath ? `${relativePath}/assets` : 'assets';
-    
-    // Check if required CSS files are present, add if not
-    if (!content.includes('main.css')) {
-      // Insert main.css before </head>
-      const cssLink = `    <link rel="stylesheet" href="${assetsPath}/css/main.css">\n`;
-      content = content.slice(0, headEndIndex) + cssLink + content.slice(headEndIndex);
-      console.log(`  Added: main.css`);
-    }
-    
-    // For case study pages, add case-study.css if needed
-    if ((filePath.includes('case-stud') || filePath.includes('case_stud')) && 
-        !content.includes('case-study.css')) {
-      // Insert case-study.css before </head>
-      const cssLink = `    <link rel="stylesheet" href="${assetsPath}/css/case-study.css">\n`;
-      content = content.slice(0, headEndIndex) + cssLink + content.slice(headEndIndex);
-      console.log(`  Added: case-study.css for case study page`);
-    }
-    
-    // Save changes if content was modified
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      stats.filesUpdated++;
-      stats.cssRemoved += cssCount;
-      console.log(`  Updated file: ${filePath}`);
-    }
-    
-    stats.filesProcessed++;
-    
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    stats.errors++;
-  }
-}
-
-/**
- * Main function
- */
-async function main() {
-  console.log('\n🔍 CSS Reference Fixer\n');
-  console.log('Scanning directories for HTML files...');
-  
-  // Process each directory
-  for (const dir of DIRECTORIES) {
-    try {
-      // Get all HTML files in the directory
-      const files = glob.sync(`${dir}*.html`);
-      console.log(`\nFound ${files.length} HTML files in ${dir}`);
-      
-      // Process each file
-      for (const file of files) {
-        fixCssInFile(file);
+    // Add standard CSS if missing
+    if (!updatedContent.includes('main.css')) {
+      // Find head closing tag
+      const headClosePos = updatedContent.indexOf('</head>');
+      if (headClosePos !== -1) {
+        const standardizedCssWithPrefix = standardCssLinks
+          .replace(/\/assets\//g, `${pathPrefix}assets/`)
+          .trim();
+        
+        // Add standardized CSS links before head close
+        updatedContent = updatedContent.slice(0, headClosePos) + 
+                        `\n  ${standardizedCssWithPrefix}\n  ` + 
+                        updatedContent.slice(headClosePos);
       }
-    } catch (error) {
-      console.error(`Error processing directory ${dir}:`, error.message);
-      stats.errors++;
     }
-  }
-  
-  // Print summary
-  console.log('\n📊 Summary:');
-  console.log(`Files processed: ${stats.filesProcessed}`);
-  console.log(`Files updated: ${stats.filesUpdated}`);
-  console.log(`CSS references removed: ${stats.cssRemoved}`);
-  console.log(`Errors encountered: ${stats.errors}`);
-  
-  if (stats.errors > 0) {
-    console.log('\n⚠️ Some errors occurred. Please check the logs above.');
-  } else {
-    console.log('\n✅ CSS references have been fixed successfully!');
+    
+    // Ensure we have the font link
+    if (!updatedContent.includes('fonts.googleapis.com/css2?family=Inter')) {
+      const headClosePos = updatedContent.indexOf('</head>');
+      if (headClosePos !== -1) {
+        updatedContent = updatedContent.slice(0, headClosePos) + 
+                        `\n  ${fontLinks}\n  ` + 
+                        updatedContent.slice(headClosePos);
+      }
+    }
+    
+    // Write updated content back to file
+    if (content !== updatedContent) {
+      await writeFile(filePath, updatedContent, 'utf8');
+      console.log('  Updated CSS references');
+      return true;
+    } else {
+      console.log('  No changes needed');
+      return false;
+    }
+  } catch (err) {
+    console.error(`Error processing ${filePath}:`, err);
+    return false;
   }
 }
 
-// Execute main function
-main().catch(error => {
-  console.error('Fatal error:', error);
-  process.exit(1);
-}); 
+async function main() {
+  try {
+    console.log('Finding HTML files...');
+    const htmlFiles = await findAllHtmlFiles(rootDir);
+    console.log(`Found ${htmlFiles.length} HTML files`);
+    
+    let updatedCount = 0;
+    for (const filePath of htmlFiles) {
+      const updated = await fixHtmlFile(filePath);
+      if (updated) updatedCount++;
+    }
+    
+    console.log(`Finished! Updated ${updatedCount} files.`);
+  } catch (err) {
+    console.error('Error:', err);
+  }
+}
+
+main(); 

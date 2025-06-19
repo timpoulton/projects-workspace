@@ -1,0 +1,339 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Case Study Schema",
+  "description": "Schema for Projekt AI case studies",
+  "type": "object",
+  "required": [
+    "title",
+    "slug",
+    "meta",
+    "hero",
+    "challenge",
+    "solution",
+    "workflow",
+    "results"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the case study"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL slug for the case study"
+    },
+    "meta": {
+      "type": "object",
+      "description": "Meta information for SEO",
+      "required": ["description", "keywords"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Meta description for SEO"
+        },
+        "keywords": {
+          "type": "array",
+          "description": "Keywords for SEO",
+          "items": {
+            "type": "string"
+          }
+        },
+        "featuredImage": {
+          "type": "string",
+          "description": "Path to the featured image used for social sharing"
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "description": "Hero section content",
+      "required": ["subtitle", "client", "industry", "category", "stats"],
+      "properties": {
+        "subtitle": {
+          "type": "string",
+          "description": "Brief description shown below the title"
+        },
+        "client": {
+          "type": "string",
+          "description": "Client name"
+        },
+        "industry": {
+          "type": "string",
+          "description": "Client industry (Music, Hospitality, Content Creation, etc.)"
+        },
+        "category": {
+          "type": "string",
+          "description": "Type of project (Automation, Workflow, Integration, etc.)"
+        },
+        "stats": {
+          "type": "array",
+          "description": "Key statistics to highlight in the hero section",
+          "items": {
+            "type": "object",
+            "required": ["value", "label"],
+            "properties": {
+              "value": {
+                "type": "string",
+                "description": "The statistic value (e.g. '85%', '3x', '24/7')"
+              },
+              "label": {
+                "type": "string",
+                "description": "Label for the statistic (e.g. 'Time Saved', 'Output Increase')"
+              }
+            }
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "image": {
+          "type": "string",
+          "description": "Path to hero section image (workflow diagram, screenshot, etc.)"
+        },
+        "video": {
+          "type": "string",
+          "description": "Optional path to hero section video"
+        }
+      }
+    },
+    "challenge": {
+      "type": "object",
+      "description": "The challenge section content",
+      "required": ["overview", "points"],
+      "properties": {
+        "overview": {
+          "type": "string",
+          "description": "Overview of the challenges the client was facing"
+        },
+        "points": {
+          "type": "array",
+          "description": "Specific challenge points",
+          "items": {
+            "type": "object",
+            "required": ["title", "description"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the challenge point"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the challenge point"
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "solution": {
+      "type": "object",
+      "description": "The solution section content",
+      "required": ["overview", "points"],
+      "properties": {
+        "overview": {
+          "type": "string",
+          "description": "Overview of the solution provided"
+        },
+        "points": {
+          "type": "array",
+          "description": "Specific solution points",
+          "items": {
+            "type": "object",
+            "required": ["title", "description"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the solution point"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the solution point"
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "description": "The workflow section content",
+      "required": ["overview", "steps"],
+      "properties": {
+        "overview": {
+          "type": "string",
+          "description": "Overview of the workflow process"
+        },
+        "steps": {
+          "type": "array",
+          "description": "Steps in the workflow",
+          "items": {
+            "type": "object",
+            "required": ["title", "description"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the workflow step"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the workflow step"
+              },
+              "image": {
+                "type": "string",
+                "description": "Optional path to image for this step"
+              },
+              "details": {
+                "type": "array",
+                "description": "Technical details or tags for this step",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "description": "The results section content",
+      "required": ["overview", "metrics"],
+      "properties": {
+        "overview": {
+          "type": "string",
+          "description": "Overview of the results achieved"
+        },
+        "metrics": {
+          "type": "array",
+          "description": "Key result metrics",
+          "items": {
+            "type": "object",
+            "required": ["title", "value", "description"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the metric"
+              },
+              "value": {
+                "type": "string",
+                "description": "Value of the metric"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the metric"
+              },
+              "icon": {
+                "type": "string",
+                "description": "Optional FontAwesome icon class"
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "testimonial": {
+          "type": "object",
+          "description": "Optional client testimonial",
+          "properties": {
+            "quote": {
+              "type": "string",
+              "description": "Client quote"
+            },
+            "name": {
+              "type": "string",
+              "description": "Client name"
+            },
+            "position": {
+              "type": "string",
+              "description": "Client position"
+            }
+          }
+        }
+      }
+    },
+    "technical": {
+      "type": "object",
+      "description": "Optional technical details section",
+      "properties": {
+        "overview": {
+          "type": "string",
+          "description": "Overview of technical implementation"
+        },
+        "stack": {
+          "type": "array",
+          "description": "Technologies used in the project",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "description": "Category of technology (e.g. 'Backend', 'Automation', 'Integration')"
+              },
+              "tools": {
+                "type": "array",
+                "description": "Tools used in this category",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "Name of the tool"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "description": "Optional icon for the tool"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "related": {
+      "type": "array",
+      "description": "Related case studies",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of related case study"
+          },
+          "slug": {
+            "type": "string",
+            "description": "Slug of related case study"
+          },
+          "image": {
+            "type": "string",
+            "description": "Image for related case study card"
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "description": "Call to action section",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "CTA title"
+        },
+        "text": {
+          "type": "string",
+          "description": "CTA text"
+        },
+        "buttonText": {
+          "type": "string",
+          "description": "Text for CTA button"
+        },
+        "buttonUrl": {
+          "type": "string",
+          "description": "URL for CTA button"
+        }
+      }
+    }
+  }
+} 

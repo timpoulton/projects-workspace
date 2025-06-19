@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | Case Study - Projekt AI</title>
+
+    <!-- SEO -->
+    <meta name="description" content="{{meta.description}}">
+    <meta name="keywords" content="CASE_KEYWORDS">
+    <meta name="author" content="Projekt AI">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="{{title}} | Projekt AI">
+    <meta property="og:description" content="{{meta.description}}">
+    <meta property="og:image" content="https://projekt-ai.net{{meta.featuredImage}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://projekt-ai.net/case-studies/{{slug}}">
+
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/case-study.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad:true, theme:"dark" });</script>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav class="container">
+            <a href="/index.html" class="logo">Projekt<sup>AI</sup></a>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/services/index.html">Services</a>
+                <a href="/case-studies/index.html">Case Studies</a>
+                <a href="/index.html#contact">Contact</a>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="case-study-hero">
+        <div class="container">
+            <div class="back-link">
+                <a href="/case-studies/index.html">
+                    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 8H1m0 0l7 7M1 8l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Case Studies
+                </a>
+            </div>
+            <div class="case-study-content">
+                <div class="case-study-info">
+                    <div class="case-study-category">
+                        <span class="category-tag">{{hero.category}}</span>
+                        <span class="industry-tag">{{hero.industry}}</span>
+                    </div>
+                    <h1>{{title}}</h1>
+                    <p class="case-study-subtitle">{{hero.subtitle}}</p>
+
+                    <div class="results-preview">
+                        <!-- Key metrics - repeat as needed -->
+                        {{#each hero.stats}}
+                        <div class="result-stat">
+                            <span class="stat-number">{{this.value}}</span>
+                            <span class="stat-label">{{this.label}}</span>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="case-study-visual">
+                    <!-- Feature video or image -->
+                    <div class="workflow-preview-large">
+                        {{#if hero.video}}
+                        <video class="hero-workflow-image" controls poster="{{hero.image}}">
+                            <source src="{{hero.video}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        {{else}}
+                        <img src="{{hero.image}}" alt="Workflow Diagram" class="hero-workflow-image">
+                        {{/if}}
+                    </div>
+                    <!-- Alternative: Use an image if no video -->
+                    <!-- <img src="../assets/img/CASE_FEATURE_IMAGE" alt="CASE_TITLE" style="width:100%;border-radius:16px;box-shadow:var(--shadow-medium);"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STICKY NAVIGATION ===== -->
+    <nav class="section-tabs">
+        <a href="#overview" class="tab-link">Overview</a>
+        <a href="#challenge" class="tab-link">Challenge</a>
+        <a href="#solution" class="tab-link">Solution</a>
+        <a href="#process" class="tab-link">Process</a>
+        <a href="#results" class="tab-link">Results</a>
+    </nav>
+
+    <!-- ===== OVERVIEW SECTION ===== -->
+    <section id="overview" style="padding:6rem 0;">
+        <div class="container" style="max-width:900px;">
+            <h2>Overview</h2>
+            <p>OVERVIEW_TEXT</p>
+        </div>
+    </section>
+
+    <!-- ===== CHALLENGE SECTION ===== -->
+    <section id="challenge" style="padding:6rem 0; background:var(--bg-secondary);">
+        <div class="container" style="max-width:900px;">
+            <h2>Challenge</h2>
+            <p>CHALLENGE_TEXT</p>
+            
+            <!-- Challenge points (optional) -->
+            <div class="challenge-points">
+                <div class="challenge-point">
+                    <i class="fas fa-circle-exclamation"></i>
+                    <div>
+                        <h4>CHALLENGE_POINT_1_TITLE</h4>
+                        <p>CHALLENGE_POINT_1_TEXT</p>
+                    </div>
+                </div>
+                <!-- Repeat for additional challenge points -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLUTION SECTION ===== -->
+    <section id="solution" style="padding:6rem 0;">
+        <div class="container" style="max-width:900px;">
+            <h2>Solution</h2>
+            <p>SOLUTION_TEXT</p>
+            
+            <!-- Solution points (optional) -->
+            <div class="solution-points">
+                <div class="solution-point">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>SOLUTION_POINT_1_TITLE</h4>
+                        <p>SOLUTION_POINT_1_TEXT</p>
+                    </div>
+                </div>
+                <!-- Repeat for additional solution points -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WORKFLOW DIAGRAM ===== -->
+    <section id="process" style="padding:6rem 0; background:var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Process</h2>
+                <p class="section-subtitle">How it works</p>
+            </div>
+            
+            <!-- Mermaid diagram (customize as needed) -->
+            <div class="workflow-diagram">
+<pre class="mermaid">
+flowchart TD;
+    A["Start"] --> B["Process Step 1"];
+    B --> C["Process Step 2"];
+    C --> D["Process Step 3"];
+    D --> E["End Result"];
+    
+    classDef default fill:#ffffff11,stroke:#ffffff55,stroke-width:1px;
+    classDef decision fill:#ffffff22,stroke:#ffffff66,stroke-width:1px;
+</pre>
+            </div>
+            
+            <!-- Process steps - numbered sections -->
+            <div class="process-list" style="margin-top:4rem;">
+                <div class="process-row"><span>01</span><p>PROCESS_STEP_1</p></div>
+                <div class="process-row"><span>02</span><p>PROCESS_STEP_2</p></div>
+                <div class="process-row"><span>03</span><p>PROCESS_STEP_3</p></div>
+                <div class="process-row"><span>04</span><p>PROCESS_STEP_4</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS SHOWCASE ===== -->
+    <section id="results" style="padding:6rem 0;">
+        <div class="container" style="max-width:900px;text-align:center;">
+            <h2>Results</h2>
+            <p>RESULTS_OVERVIEW</p>
+            
+            <!-- Results visual - can be video, image, or chart -->
+            <div style="margin:3rem 0;">
+                <!-- Option 1: Video -->
+                <video src="../assets/videos/RESULTS_VIDEO" poster="../assets/img/RESULTS_POSTER" controls style="width:100%;border-radius:16px;box-shadow:var(--shadow-medium);"></video>
+                
+                <!-- Option 2: Image -->
+                <!-- <img src="../assets/img/RESULTS_IMAGE" alt="Results visualization" style="width:100%;border-radius:16px;box-shadow:var(--shadow-medium);"> -->
+                
+                <!-- Option 3: Chart/Mermaid diagram -->
+                <!-- <div class="mermaid">
+                  pie title "Impact Results"
+                    "Category 1" : 50
+                    "Category 2" : 30
+                    "Category 3" : 20
+                </div> -->
+            </div>
+            
+            <!-- Impact metrics grid (optional) -->
+            <div class="impact-metrics">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-clock"></i></div>
+                    <div class="metric-content">
+                        <h4>Time Saved</h4>
+                        <p>TIME_SAVED_DETAILS</p>
+                    </div>
+                    <div class="metric-improvement">IMPACT_PERCENTAGE</div>
+                </div>
+                <!-- Repeat for additional metrics -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TECHNICAL DETAILS (OPTIONAL) ===== -->
+    <section id="technical-details" style="padding:6rem 0; background:var(--bg-secondary);">
+        <div class="container" style="max-width:900px;">
+            <h2>Technical Details</h2>
+            
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tools">
+                        <div class="tech-tool">
+                            <i class="fa-brands fa-python"></i>
+                            <span>TECH_1</span>
+                        </div>
+                        <div class="tech-tool">
+                            <i class="fa-brands fa-js"></i>
+                            <span>TECH_2</span>
+                        </div>
+                        <!-- Repeat for additional technologies -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Automate Your INDUSTRY_FOCUS?</h2>
+                    <p>Get a customized blueprint for your business – we'll break down costs, integrations and ROI.</p>
+                </div>
+                <a href="mailto:hello@projekt-ai.net" class="btn btn-primary">Request Blueprint</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RELATED CASE STUDIES (OPTIONAL) ===== -->
+    <section id="related-automations" style="padding:6rem 0;">
+        <div class="container">
+            <h2>Related Case Studies</h2>
+            <div class="related-grid">
+                <!-- Related case study cards go here -->
+                <a href="RELATED_CASE_1_URL" class="related-card">
+                    <div class="related-preview" style="background-image:url('../assets/img/RELATED_CASE_1_IMAGE');"></div>
+                    <h3>RELATED_CASE_1_TITLE</h3>
+                    <p>RELATED_CASE_1_DESC</p>
+                    <div class="related-link">View Case Study <i class="fas fa-arrow-right"></i></div>
+                </a>
+                <!-- Repeat for additional related case studies -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2025 Projekt AI</p>
+            <div class="footer-links">
+                <a href="/index.html#about">About</a>
+                <a href="/index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Active tab highlight script -->
+    <script>
+      const links = document.querySelectorAll('.tab-link');
+      const sections = [...links].map(l => document.querySelector(l.getAttribute('href')));
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              const idx = sections.indexOf(entry.target);
+              if(idx > -1){ links[idx].classList.toggle('active', entry.isIntersecting); }
+          });
+      }, {threshold:0.3, rootMargin:'0px 0px -50% 0px'});
+      sections.forEach(sec => observer.observe(sec));
+    </script>
+
+    <!-- Mobile Menu -->
+    <div class="menu-overlay">
+        <div class="slide-menu">
+            <div class="menu-header">
+                <a href="/index.html" class="menu-logo">Projekt<sup>AI</sup></a>
+                <button class="close-btn">&times;</button>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services/index.html">Services</a></li>
+                    <li><a href="/case-studies/index.html">Case Studies</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-footer">
+                <a href="mailto:hello@projekt-ai.net">hello@projekt-ai.net</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const slideMenu = document.querySelector('.slide-menu');
+        const closeBtn = document.querySelector('.close-btn');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+            slideMenu.classList.add('active');
+            menuToggle.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+            slideMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuOverlay.classList.remove('active');
+                slideMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        // Render the template with data - In production, this would be handled by a templating engine
+        document.addEventListener('DOMContentLoaded', function() {
+            // This is a placeholder for the templating system
+            // The real implementation would replace Handlebars-style placeholders
+            console.log('Case study template loaded');
+        });
+    </script>
+</body>
+</html> 

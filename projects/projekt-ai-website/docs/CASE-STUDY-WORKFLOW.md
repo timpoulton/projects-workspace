@@ -1,187 +1,119 @@
-# Case Study Creation Workflow
+# Case Study Workflow Documentation
 
-This document outlines the process for creating new case studies for the Projekt AI website, following the Extra Medium-inspired design system.
+This document outlines the standardized approach for creating and managing case studies on the Projekt AI website.
 
 ## Overview
 
-The case study creation process follows these steps:
+The case study system uses a component-based approach with:
 
-1. Create JSON data file with case study content
-2. Generate HTML from the template using the JSON data
-3. Review and make any custom adjustments (if needed)
-4. Deploy to production
+1. **JSON Data Model** - Structured content in a consistent format
+2. **HTML Templates** - Dynamic templates using the Handlebars syntax
+3. **Standardized CSS** - Using approved stylesheets only
 
-## Directory Structure
+## File Structure
 
-- `/case-studies/` - Published case study HTML files
-- `/case-studies/data/` - JSON data files for case studies
-- `/case-studies/template-extramedium.html` - Main template file
-- `/scripts/generate-case-study.js` - Generator script
+```
+/case-studies/
+├── index.html                  # Case studies landing page
+├── template-ultimate.html      # Master template with Handlebars syntax
+├── case-study-schema.json      # JSON schema definition
+├── data/                       # Individual case study data files
+│   ├── reel-builder-automation.json
+│   └── [other-case-study].json
+└── [case-study-slug].html      # Generated case study pages
+```
 
 ## Creating a New Case Study
 
-### Step 1: Create JSON Data File
+### Step 1: Create the JSON data file
 
-Create a new JSON file in `/case-studies/data/` using the following format:
-
-```json
-{
-  "id": "unique-case-study-id",
-  "title": "Case Study Title",
-  "subtitle": "Brief description of the project",
-  "category": "Category (e.g., Social Media Automation)",
-  "industry": "Industry (e.g., Music Production)",
-  "description": "Meta description for SEO",
-  "client_name": "Client Name",
-  "services": "Services Provided (comma separated)",
-  "year": "Year Completed",
-  "featured_image": "../assets/img/portfolio/image-name.jpg",
-  "overview_text": "Detailed overview paragraph",
-  "challenge": {
-    "text": "Description of the challenge",
-    "points": [
-      "Challenge point 1",
-      "Challenge point 2",
-      "Challenge point 3"
-    ]
-  },
-  "solution": {
-    "text": "Description of the solution",
-    "points": [
-      "Solution point 1",
-      "Solution point 2",
-      "Solution point 3"
-    ]
-  },
-  "process": {
-    "intro": "Introduction to the process",
-    "steps": [
-      {
-        "title": "Step 1 Title",
-        "text": "Step 1 description"
-      },
-      {
-        "title": "Step 2 Title",
-        "text": "Step 2 description"
-      },
-      {
-        "title": "Step 3 Title",
-        "text": "Step 3 description"
-      },
-      {
-        "title": "Step 4 Title",
-        "text": "Step 4 description"
-      }
-    ]
-  },
-  "video_info": {
-    "intro": "Description of the video",
-    "source": "../assets/videos/video-name.mp4",
-    "poster": "../assets/img/portfolio/video-poster.jpg",
-    "caption": "Video caption text"
-  },
-  "results": {
-    "text": "Description of the results",
-    "metrics": [
-      {
-        "value": "95%",
-        "label": "Metric 1 label"
-      },
-      {
-        "value": "$1000",
-        "label": "Metric 2 label"
-      },
-      {
-        "value": "24hrs",
-        "label": "Metric 3 label"
-      }
-    ]
-  },
-  "related_projects": [
-    {
-      "id": "related-project-1",
-      "title": "Related Project 1",
-      "image": "../assets/img/portfolio/related-1-card.jpg",
-      "url": "related-project-1.html"
-    },
-    {
-      "id": "related-project-2",
-      "title": "Related Project 2",
-      "image": "../assets/img/portfolio/related-2-card.jpg",
-      "url": "related-project-2.html"
-    },
-    {
-      "id": "related-project-3",
-      "title": "Related Project 3",
-      "image": "../assets/img/portfolio/related-3-card.jpg",
-      "url": "related-project-3.html"
-    }
-  ]
-}
-```
-
-### Step 2: Generate HTML
-
-From the project root directory, run:
+Create a new JSON file in the `case-studies/data/` directory following the schema structure:
 
 ```bash
-node scripts/generate-case-study.js your-case-study-id
+# Example:
+touch case-studies/data/new-case-study.json
 ```
 
-Or to generate all case studies:
+Use `case-study-schema.json` as a reference for required fields and structure.
+
+### Step 2: Fill in the case study content
+
+Edit the JSON file with the case study content. Required sections:
+
+- title and slug
+- meta information
+- hero section
+- challenge and solution
+- workflow steps
+- results
+
+### Step 3: Create the HTML file
+
+Create a new HTML file for the case study using the correct stylesheet references:
 
 ```bash
-node scripts/generate-case-study.js
+node scripts/create-new-page.js case-studies/new-case-study.html --case-study
 ```
 
-This will create an HTML file in the `/case-studies/` directory based on your JSON data.
+### Step 4: Integrate the template
 
-### Step 3: Review & Customize
+Copy the content from `template-ultimate.html` into your new HTML file and adapt as needed for your specific case study.
 
-Open the generated HTML file and review it for any issues. Make any custom adjustments if needed. The generated file follows the Extra Medium design system with:
+## Templating System
 
-- Clean, minimalist design
-- Proper typography and spacing
-- Mobile-responsive layout
-- Consistent branding elements
+The case study system uses a pseudo-Handlebars template syntax:
 
-### Step 4: Add Images & Videos
+- `{{variable}}` - For simple variables
+- `{{#each array}}...{{/each}}` - For iterating over arrays
+- `{{#if condition}}...{{/if}}` - For conditional rendering
 
-Make sure all referenced images and videos exist in the proper directories:
+When generating production pages, these placeholders are replaced with actual content from the JSON data file.
 
-- Case study featured images: `/assets/img/portfolio/`
-- Video content: `/assets/videos/`
+## Case Study Schema
 
-### Step 5: Update Homepage
+The schema ensures consistency across all case studies and includes the following main sections:
 
-Add the new case study to the projects grid on the homepage `index-extramedium.html`.
+1. **Title and Meta** - Basic information and SEO details
+2. **Hero Section** - Introduction and key statistics
+3. **Challenge** - Problem statement and specific challenges
+4. **Solution** - Overview and solution points
+5. **Workflow** - Step-by-step breakdown of the implementation
+6. **Results** - Impact metrics and testimonials
+7. **Technical** - Implementation details and tech stack (optional)
+8. **Related** - Links to related case studies
+9. **CTA** - Call to action for visitors
 
-### Step 6: Deploy
+## CSS Standards
 
-Commit your changes and push to deploy the updated site to Netlify.
+Case study pages follow the Projekt AI CSS standards:
 
-## Design Guidelines
+- Always include `main.css` and `case-study.css`
+- Use the CSS variables defined in these stylesheets
+- Follow the Extra Medium inspired design language
 
-When creating case study content, follow these guidelines:
+## Media Guidelines
 
-1. **Headlines** - Keep titles under 60 characters
-2. **Paragraphs** - Keep paragraphs short and focused (2-4 sentences)
-3. **Metrics** - Use concrete, impressive numbers when possible
-4. **Images** - Use high-quality images with proper dimensions
-5. **Videos** - Keep videos short (1-2 minutes) and focused on results
+- Hero videos should be high quality, under 2 minutes
+- Images should be optimized for web (WebP format preferred)
+- Include poster images for all videos
+- Use a 16:9 aspect ratio for hero media
 
-## Custom HTML Elements
+## Adding New Case Studies to Navigation
 
-If you need to add custom elements not supported by the template, you can edit the generated HTML directly. Some common additions:
+After creating a new case study, update the case studies index page with a link to your new case study:
 
-- Custom diagrams or flowcharts
-- Interactive elements
-- Before/after comparisons
+```html
+<a href="new-case-study.html" class="case-study-card">
+  <img src="path/to/thumbnail.jpg" alt="Case Study Title">
+  <h3>Case Study Title</h3>
+  <p>Brief description</p>
+</a>
+```
 
-## Maintenance
+## Best Practices
 
-The case study system is designed to be maintainable and scalable:
-
-- To update the design system, edit the template files
-- To update content, edit the JSON files and regenerate
-- To add new sections to all case studies, update the template and generator script 
+1. **Visual Documentation** - Include screenshots, diagrams, or videos
+2. **Quantifiable Results** - Always include specific metrics
+3. **Clean, Consistent Structure** - Follow the established pattern
+4. **Technical Detail** - Include enough implementation details to provide value
+5. **Narrative Flow** - Ensure the case study tells a coherent story 

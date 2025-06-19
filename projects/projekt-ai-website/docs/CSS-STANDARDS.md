@@ -1,96 +1,148 @@
-# CSS Standards for Projekt-AI Website
+# CSS Standards and Guidelines for Projekt AI Website
 
-## Core Stylesheets
+## Core Principles
 
-The Projekt-AI website uses a streamlined CSS approach with **only two approved stylesheets**:
+1. **Consistency First**: Use approved stylesheets only
+2. **Performance**: Minimize the number of CSS files loaded
+3. **Maintainability**: Follow a modular approach
+4. **Compatibility**: Ensure cross-browser and cross-device compatibility
 
-1. **`/assets/css/main.css`** - Global design system
-   - Core layout and typography
-   - Color schemes and variables
-   - Responsive grid system
-   - Component styling (buttons, cards, etc.)
+## Approved Stylesheets
 
-2. **`/assets/css/case-study.css`** - Add-on rules specific to case study pages
-   - Special layouts for case studies
-   - Project showcase components
-   - Process visualization styles
-   - Results presentation
+Only use the following stylesheets in HTML files:
 
-## Implementation Rules
+1. **main.css** - Primary design system (required on all pages)
+2. **case-study.css** - Additional styling for case studies only
+3. **extramedium.css** - For pages using Extra Medium styling (optional)
 
-### For All Pages:
+## Deprecated Stylesheets
 
-```html
-<link rel="stylesheet" href="/assets/css/main.css">
+The following stylesheets should never be used in production:
+
+- animations.css
+- portfolio-dark-theme.css
+- style.css
+- dark-theme.css
+- portfolio.css
+- extramedium-inspired.css
+- admin.css
+- apple-dark-style.css
+
+## Color Scheme
+
+The color scheme is defined in CSS variables located in `main.css`:
+
+```css
+:root {
+  --bg-primary: #000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #1a1a1a;
+  --bg-card: #1c1c1e;
+  --bg-elevated: #2c2c2e;
+  --text-primary: #fff;
+  --text-secondary: #a1a1a6;
+  --text-tertiary: #8e8e93;
+  --accent-primary: #007aff;
+  --accent-secondary: #00d4aa;
+  --accent-gradient: linear-gradient(135deg, #007aff, #00d4aa);
+}
 ```
 
-### For Case Study Pages Only:
+## Typography
+
+- Use the Inter font family for all text
+- Include the following in the head section of all pages:
+
 ```html
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="/assets/css/case-study.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 ```
 
-## ⚠️ Legacy Files - DO NOT USE
+## Page Templates
 
-The following CSS files are deprecated and should **never** be included:
-
-- `portfolio-dark.css`
-- `portfolio-dark-theme.css` 
-- `style.css`
-- `dark-theme.css`
-- `extramedium-inspired.css`
-- `animations.css`
-- `portfolio.css`
-- `apple-dark-style.css`
-
-## Tools to Maintain CSS Standards
-
-### Fix CSS References
-
-To automatically fix incorrect CSS references across the site:
+Use the following command to create a new page with the correct stylesheet references:
 
 ```bash
-cd projects/projekt-ai-website
+node scripts/create-new-page.js path/to/new-page.html [--case-study]
+```
+
+Example:
+```bash
+node scripts/create-new-page.js services/new-service.html
+node scripts/create-new-page.js case-studies/new-case.html --case-study
+```
+
+## Standardizing Existing Pages
+
+To fix CSS references in existing pages, run:
+
+```bash
 node scripts/fix-css-references.js
 ```
 
-This script:
-- Removes references to deprecated CSS files
-- Ensures all pages include `main.css`
-- Adds `case-study.css` to case study pages if missing
+This will:
+1. Scan all HTML files
+2. Remove deprecated CSS references
+3. Add standard CSS references if missing
+4. Adjust relative paths based on file location
 
-### Create New Pages
+## The ExtraMedium-Inspired Design
 
-To create new pages with the correct CSS references:
+The ExtraMedium design follows these principles:
 
-```bash
-cd projects/projekt-ai-website
-node scripts/create-new-page.js ./path/to/new-page.html "Page Title" "Description" [is-case-study]
-```
-
-Example for standard page:
-```bash
-node scripts/create-new-page.js ./services/new-service.html "New Service" "Service description" false
-```
-
-Example for case study:
-```bash
-node scripts/create-new-page.js ./case-studies/new-case.html "New Case Study" "Case study description" true
-```
+1. Clean, minimalist aesthetic with ample white space
+2. Large, clear typography with strong visual hierarchy
+3. Reduced color palette focusing on text and subtle accents
+4. Grid-based layouts with consistent spacing
+5. Subtle animations and transitions for interactive elements
 
 ## Best Practices
 
-1. **Never manually edit the HTML head** to add your own CSS files
-2. **Use CSS variables** from `main.css` for consistency
-3. **Add custom styles inline** using `<style>` tags if needed for one-off pages
-4. **Run the fix-css-references.js script** before any deployment
-5. **Use the create-new-page.js script** to generate new pages
+1. Always use relative paths for CSS files (the scripts handle this automatically)
+2. Test pages on multiple devices and browsers
+3. Keep CSS selectors as simple as possible
+4. Use CSS variables for colors, spacing, and typography
+5. Avoid inline styles
+6. Use BEM naming convention for custom components
 
-## Testing
+## Text Gradient Effect
 
-Before deploying new pages:
+The blue gradient effect on headers is achieved using:
 
-1. Validate CSS references
-2. Check mobile responsiveness
-3. Verify dark mode compatibility
-4. Test page load performance 
+```css
+h1 {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+```
+
+To remove this effect, update the specific element to use regular text color:
+
+```css
+h1 {
+  color: var(--text-primary);
+  /* Remove gradient background, background-clip and -webkit-text-fill-color */
+}
+```
+
+## Component Styling
+
+Common components have standardized styling in the main.css file:
+
+- Buttons (.btn, .btn-primary, .btn-secondary)
+- Cards (.card, .card-elevated)
+- Sections (.section, .hero, etc.)
+- Navigation (header, nav, .nav-links)
+- Form elements (inputs, textareas, etc.)
+
+## Adding Custom CSS
+
+If you need to add custom CSS for a specific page:
+
+1. First, check if your styling needs can be met with existing CSS variables and classes
+2. If custom CSS is necessary, add it to the appropriate stylesheet:
+   - For global styles: main.css
+   - For case study specific styles: case-study.css
+   - For Extra Medium inspired pages: extramedium.css
+3. Document new additions in this file 
