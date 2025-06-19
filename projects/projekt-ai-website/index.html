@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt AI® - AI Automation for Music Industry</title>
-    <meta name="description" content="We'll pump your music business with AI. As a leading AI automation agency specializing in record labels, live venues, and event promotion, we deliver top results.">
+    <meta name="description" content="We'll pump your music business with AI. Leveraging 20+ years of music industry experience, I deliver top automation results for record labels, live venues, and event promotion.">
     <link rel="icon" href="assets/img/logos/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
@@ -202,44 +202,43 @@
             align-items: center;
         }
         
-        .logo-sanny {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-        
-        .nav-menu {
+        .nav-links {
             display: flex;
-            list-style: none;
             gap: 30px;
-            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
         
-        .nav-menu a {
+        .nav-links a {
+            text-decoration: none;
             color: #1a1a1a;
-            text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s ease;
+            transition: color 0.3s ease;
         }
         
-        .nav-menu a:hover {
-            opacity: 0.7;
+        .nav-links a:hover {
+            color: #666;
         }
         
-        .btn-buy {
-            background: #1a1a1a;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        .btn-buy:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -247,14 +246,14 @@
     <!-- Navigation -->
     <nav class="navbar-sanny">
         <div class="navbar-content">
-            <a href="#" class="logo-sanny">Projekt AI®</a>
-            <ul class="nav-menu">
+            <div style="font-weight: 700; font-size: 24px; color: #1a1a1a;">Projekt AI®</div>
+            <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#case-studies">Case studies</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#pricing" class="btn-buy">Subscribe now</a></li>
+                <li><a href="#contact" style="background: #1a1a1a; color: white; padding: 10px 20px; border-radius: 6px;">Get started</a></li>
             </ul>
         </div>
     </nav>
@@ -262,146 +261,140 @@
     <!-- Hero Section -->
     <section class="sanny-hero">
         <div class="container">
-            <h1>AI Automation<br>for your Music Business<br>Growth</h1>
-            <p class="subtitle">We'll pump your music company with AI. As a leading AI automation agency specializing in record labels, live venues, and event promotion with 5+ years of experience, we deliver top results.</p>
-            <a href="#pricing" class="btn-primary">Subscribe now</a>
+            <h1>AI Services<br>for your Music Business<br>Growth</h1>
+            <p class="subtitle">We'll pump your music business with AI. With 20+ years of music industry experience, I deliver top automation results for record labels, live venues, and event promotion.</p>
+            <a href="#services" class="btn-primary">Subscribe now</a>
+            <a href="#case-studies" style="color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 600;">Our services</a>
         </div>
     </section>
 
-    <!-- Trusted By Section -->
+    <!-- Trusted Section -->
     <section class="trusted-section">
         <div class="container">
-            <p style="margin-bottom: 30px; font-weight: 600; color: #666;">Loved by music industry leaders worldwide</p>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <div style="width: 60px; height: 60px; background: #ddd; border-radius: 50%;"></div>
-                <div style="width: 60px; height: 60px; background: #ddd; border-radius: 50%;"></div>
-                <div style="width: 60px; height: 60px; background: #ddd; border-radius: 50%;"></div>
-                <div style="width: 60px; height: 60px; background: #ddd; border-radius: 50%;"></div>
+            <p style="color: #666; margin-bottom: 40px; font-weight: 600;">Loved by music professionals<br>worldwide</p>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 40px;">
+                <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%;"></div>
+                <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%;"></div>
+                <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%;"></div>
+                <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%;"></div>
             </div>
-            <p style="margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto; color: #666;">Enhance your music workflows to maximize performance and take effective control of your time. Focus on what truly matters to your music business, while routine tasks run on autopilot with the help of our no-code and code-based solutions.</p>
-            <p style="margin-top: 20px; font-weight: 600;">Trusted by high-performing music companies</p>
+            <p style="max-width: 600px; margin: 0 auto; color: #666; line-height: 1.6;">Enhance your music business workflows to maximize performance and take effective control of your time. Focus on what truly matters to your music business, while routine tasks run on autopilot with the help of AI automation solutions.</p>
+            
+            <div style="margin-top: 60px;">
+                <p style="color: #666; margin-bottom: 30px; font-weight: 600;">Trusted by high-performing music companies</p>
+                <div class="trusted-logos">
+                    <div style="padding: 10px 20px; background: #f0f0f0; border-radius: 6px; color: #666;">Sony Music</div>
+                    <div style="padding: 10px 20px; background: #f0f0f0; border-radius: 6px; color: #666;">Live Nation</div>
+                    <div style="padding: 10px 20px; background: #f0f0f0; border-radius: 6px; color: #666;">Beatport</div>
+                    <div style="padding: 10px 20px; background: #f0f0f0; border-radius: 6px; color: #666;">Fabric London</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- How It Works -->
+    <!-- How it Works -->
     <section class="how-it-works">
         <div class="container">
-            <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">How it works?</h2>
+            <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 60px;">How it works?</h2>
+            
             <div class="steps-grid">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Subscribe</h3>
-                    <p>If our music automation services are a good fit, start your subscription. Access your project board, and we'll reach out the same day for an introductory discussion about your venue or label needs.</p>
+                    <h3 style="margin-bottom: 15px;">Subscribe</h3>
+                    <p style="color: #666; line-height: 1.6;">If my services are a good fit, start your subscription. Access your project board, and I'll reach out the same day for an introductory discussion.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Share your vision</h3>
-                    <p>Once we understand your music business vision, we'll analyze your goals, industry requirements and constraints, break the project into bite-sized tasks, and start implementing.</p>
+                    <h3 style="margin-bottom: 15px;">Share your vision</h3>
+                    <p style="color: #666; line-height: 1.6;">Once I have your vision, I'll analyze your goals, business requirements and constraints, break the project into bite-sized tasks, and start implementing.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Continuous results</h3>
-                    <p>Our team effectively solves your music industry tasks and implements AI as a strategic asset, ensuring it becomes an integral part of your venue or label's workflow.</p>
+                    <h3 style="margin-bottom: 15px;">Continuous results</h3>
+                    <p style="color: #666; line-height: 1.6;">I effectively solve your tasks and implement AI as a strategic asset, ensuring it becomes an integral part of your music business workflow.</p>
                 </div>
                 <div class="step">
-                    <div class="step-number">AI</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Enjoy the growth</h3>
-                    <p>Our results drive your music business growth, which is our main goal. We offer detailed instructions, training, and tech support as long as you need to maximize our work's value.</p>
+                    <div class="step-number">4</div>
+                    <h3 style="margin-bottom: 15px;">Enjoy the growth</h3>
+                    <p style="color: #666; line-height: 1.6;">My results drive your music business growth, which is my main goal. I offer detailed instructions, training, and tech support as long as you need.</p>
                 </div>
             </div>
+            
             <div style="text-align: center; margin-top: 60px;">
-                <p style="margin-bottom: 10px;">✓ Quick onboarding faster than new hires</p>
-                <p style="margin-bottom: 10px;">✓ Updates weekly after agreeing on tasks</p>
-                <p style="margin-bottom: 10px;">✓ Revisions to your full satisfaction</p>
-                <p>✓ 100% money-back guarantee</p>
+                <ul style="list-style: none; padding: 0; display: inline-block; text-align: left;">
+                    <li style="margin-bottom: 10px; color: #666;">✓ Quick onboarding faster than new hires</li>
+                    <li style="margin-bottom: 10px; color: #666;">✓ Updates weekly after agreeing on tasks</li>
+                    <li style="margin-bottom: 10px; color: #666;">✓ Revisions to your full satisfaction</li>
+                    <li style="color: #666;">✓ 100% money-back guarantee</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" style="background: #f8f9fa; padding: 100px 0;">
+    <section id="services" style="padding: 100px 0; background: #f8f9fa;">
         <div class="container">
             <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 60px;">Services</h2>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-number">1</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Music Business Process Automation</h3>
-                    <p>Let AI handle repetitive tasks in your venue or label operations. Improve efficiency, minimize errors, and free up time for creative work, ultimately driving cost savings for your music business.</p>
+                    <h3 style="margin-bottom: 15px;">Music Business Process Automation</h3>
+                    <p style="color: #666; line-height: 1.6;">Let AI handle repetitive tasks and workflows in your music business. Improve efficiency, minimize errors, and free up time for creative work, ultimately driving cost savings.</p>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-number">2</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Integrate AI into your Music Data</h3>
-                    <p>Our AI automation services empower music venues and labels to leverage data-driven automation, generate actionable insights about audiences and artists, and use predictive analytics for booking decisions.</p>
+                    <h3 style="margin-bottom: 15px;">Event Ticketing & Guest List Automation</h3>
+                    <p style="color: #666; line-height: 1.6;">Automated ticketing bots, guest list management, and check-in systems for promoters and venues. Streamline your event operations from booking to door management with AI-powered solutions.</p>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-number">3</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">AI-powered Music Apps Development</h3>
-                    <p>We develop apps that deliver personalized, real-time insights for music venues and labels, including AI chatbots for fan engagement, event recommendation systems, and predictive analytics for artist success.</p>
+                    <h3 style="margin-bottom: 15px;">AI-Powered Music Apps Development</h3>
+                    <p style="color: #666; line-height: 1.6;">I develop apps that deliver personalized, real-time insights for music businesses, including AI chatbots, artist recommendation systems, and predictive analytics for audience engagement.</p>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-number">4</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Music Industry AI Consulting</h3>
-                    <p>Looking to find the best AI solution for your venue or label? We offer tailored consultations to provide custom solutions that align with your specific music industry processes and requirements.</p>
+                    <h3 style="margin-bottom: 15px;">Hospitality & Venue AI Integration</h3>
+                    <p style="color: #666; line-height: 1.6;">Specialized automation for hospitality venues including smart inventory management, customer service chatbots, and dynamic pricing systems for bars, restaurants, and entertainment venues.</p>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-number">5</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Music Content Generation AI</h3>
-                    <p>No more wasting hours on promotional content creation − whether it's social media posts, event descriptions, artist bios, or promotional videos. We streamline the process, enabling you to produce content up to 27x faster.</p>
+                    <h3 style="margin-bottom: 15px;">Content Creation & Social Media Automation</h3>
+                    <p style="color: #666; line-height: 1.6;">No more wasting hours on content creation − whether it's copy, images, videos, or promotional materials. I streamline the process, enabling you to produce content up to 27x faster.</p>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-number">6</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Ongoing Maintenance and Support</h3>
-                    <p>We don't stop at project delivery. As your music industry partners, we provide continuous improvements, scalability options, and ongoing support to ensure your systems grow alongside your business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- We Are Suitable For -->
-    <section style="padding: 100px 0; background: white;">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">We are suitable for</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 60px;">Because we can solve the music industry challenges that other companies can't reach</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                <div style="text-align: center; padding: 40px 20px;">
-                    <h3 style="font-size: 28px; margin-bottom: 15px;">Record Labels</h3>
-                    <h4 style="color: #1a1a1a; margin-bottom: 20px;">AI automation for A&R and marketing</h4>
-                    <p>Looking to streamline artist discovery and enhance fan engagement? Our tailored AI solutions can help you optimize A&R processes, improve marketing decisions, and drive label growth.</p>
-                </div>
-                <div style="text-align: center; padding: 40px 20px;">
-                    <h3 style="font-size: 28px; margin-bottom: 15px;">Live Music Venues</h3>
-                    <h4 style="color: #1a1a1a; margin-bottom: 20px;">Add AI features to operations</h4>
-                    <p>Already have an impressive venue? Let's take it further. We'll add powerful AI features to automate booking, improve guest experience, and boost overall efficiency, making your venue more profitable.</p>
-                </div>
-                <div style="text-align: center; padding: 40px 20px;">
-                    <h3 style="font-size: 28px; margin-bottom: 15px;">Event Promoters</h3>
-                    <h4 style="color: #1a1a1a; margin-bottom: 20px;">AI promotion from scratch</h4>
-                    <p>Got a revolutionary event idea? With our expertise in helping promoters, we'll turn your concept into a scalable promotion system ready for future success. Together, we'll strike the perfect balance between innovation and profitability.</p>
+                    <h3 style="margin-bottom: 15px;">Ongoing Maintenance and Support</h3>
+                    <p style="color: #666; line-height: 1.6;">I don't stop at project delivery. As your partner, I provide continuous improvements, scalability options, and ongoing support to ensure your project grows alongside your music business.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials-section" style="background: #f8f9fa;">
+    <section class="testimonials-section">
         <div class="container">
             <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">Testimonials</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 60px;">Our services are loved by music industry leaders around the world. We are proud to work with emerging venues, innovative labels and established music companies.</p>
+            <p style="text-align: center; color: #666; margin-bottom: 60px;">My services are loved by music professionals around the world. I am proud to work with emerging talents, innovative venues and record labels.</p>
             
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p style="margin-bottom: 20px; font-style: italic;">"The Projekt AI team has transformed our venue operations for the better. We use automation for everything from guest management to artist booking coordination."</p>
+                    <p style="margin-bottom: 20px; font-style: italic;">"Tim has changed our internal productivity for the better. We use automation for everything from artist communications to social media scheduling."</p>
                     <div style="display: flex; align-items: center; gap: 15px;">
                         <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
                         <div>
-                            <p style="font-weight: 600; margin-bottom: 5px;">Sarah Chen</p>
-                            <p style="color: #666; font-size: 14px;">Owner of Midnight Lounge</p>
+                            <p style="font-weight: 600; margin-bottom: 5px;">Sarah Mitchell</p>
+                            <p style="color: #666; font-size: 14px;">CEO of Underground Records</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial">
-                    <p style="margin-bottom: 20px; font-style: italic;">"This is the 3rd AI automation agency we've worked with for our label operations. And this time, we were not mistaken in our choice."</p>
+                    <p style="margin-bottom: 20px; font-style: italic;">"This is the 3rd AI automation specialist we've worked with for our label operations. And this time, we were not mistaken in our choice."</p>
                     <div style="display: flex; align-items: center; gap: 15px;">
                         <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
                         <div>
@@ -411,7 +404,7 @@
                     </div>
                 </div>
                 <div class="testimonial">
-                    <p style="margin-bottom: 20px; font-style: italic;">"We came to Projekt AI with just an idea for automated event promotion. But now we have an incredible system that has exceeded all possible expectations."</p>
+                    <p style="margin-bottom: 20px; font-style: italic;">"We came to Tim with just an idea for automated event promotion. But now we have an incredible system that has exceeded all possible expectations."</p>
                     <div style="display: flex; align-items: center; gap: 15px;">
                         <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%;"></div>
                         <div>
@@ -438,7 +431,7 @@
                     <a href="#" style="background: #1a1a1a; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 30px;">Get started</a>
                     <ul style="list-style: none; text-align: left;">
                         <li style="margin-bottom: 10px;">○ Up to 2 automation projects at a time</li>
-                        <li style="margin-bottom: 10px;">○ 2-3 music industry experts</li>
+                        <li style="margin-bottom: 10px;">○ 20+ years of music industry expertise</li>
                         <li style="margin-bottom: 10px;">○ All services with limited code development</li>
                         <li style="margin-bottom: 10px;">○ Up to 45 min./week for calls</li>
                         <li style="margin-bottom: 10px;">○ Support on a first-come, first-served basis</li>
@@ -455,7 +448,7 @@
                     <a href="#" style="background: #1a1a1a; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 30px;">Get started</a>
                     <ul style="list-style: none; text-align: left;">
                         <li style="margin-bottom: 10px;">○ Up to 6 automation projects at a time</li>
-                        <li style="margin-bottom: 10px;">○ Entire music industry team</li>
+                        <li style="margin-bottom: 10px;">○ Full industry expertise and resources</li>
                         <li style="margin-bottom: 10px;">○ All services without limits</li>
                         <li style="margin-bottom: 10px;">○ Up to 120 min./week for calls</li>
                         <li style="margin-bottom: 10px;">○ Priority support in a way handy for you</li>
@@ -479,7 +472,7 @@
     <section id="case-studies" style="padding: 100px 0; background: white;">
         <div class="container">
             <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">Success stories</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 60px;">Some of our best success stories. We invest a lot of resources and effort in our music industry clients' projects because we want them to succeed.</p>
+            <p style="text-align: center; color: #666; margin-bottom: 60px;">Some of my best success stories. I invest a lot of resources and effort in my music industry clients' projects because I want them to succeed.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                 <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 12px;">
@@ -510,32 +503,27 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" style="padding: 100px 0; background: #f8f9fa;">
+    <!-- About Section -->
+    <section id="about" style="padding: 100px 0; background: #f8f9fa;">
         <div class="container">
-            <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">Team</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 60px;">Each member of our team has strong music industry and tech knowledge, with our principal focus on the triumph of our clients' music businesses</p>
+            <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">About</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 60px;">With over 20 years of deep music industry experience, I have strong technical knowledge and business understanding, with my principal focus on the triumph of my clients' music businesses</p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-                <div style="text-align: center;">
-                    <div style="width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 20px;"></div>
-                    <h3 style="margin-bottom: 5px;">Tim Poulton</h3>
-                    <p style="color: #666;">CEO & Music Industry Specialist</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 20px;"></div>
-                    <h3 style="margin-bottom: 5px;">Sarah Chen</h3>
-                    <p style="color: #666;">CTO & AI Systems Architect</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 20px;"></div>
-                    <h3 style="margin-bottom: 5px;">Marcus Rodriguez</h3>
-                    <p style="color: #666;">Head of Music Data Engineering</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 20px;"></div>
-                    <h3 style="margin-bottom: 5px;">Alex Kim</h3>
-                    <p style="color: #666;">Music Industry Business Developer</p>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div style="width: 200px; height: 200px; background: #ddd; border-radius: 50%; margin: 0 auto 40px;"></div>
+                <h3 style="font-size: 28px; margin-bottom: 15px;">Tim Poulton</h3>
+                <p style="color: #666; font-size: 18px; margin-bottom: 30px;">Music Industry AI Automation Specialist</p>
+                
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                        For over two decades, I've been immersed in the music industry, working across record labels, live venues, event promotion, and hospitality. This extensive experience gives me unique insights into the specific challenges and opportunities that music businesses face.
+                    </p>
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                        I've witnessed firsthand how the industry has evolved, from the digital transformation of music distribution to the rise of social media marketing and now the AI revolution. This perspective allows me to create automation solutions that are not just technically sound, but truly understand the nuances of music business operations.
+                    </p>
+                    <p style="color: #666; line-height: 1.8;">
+                        My approach combines deep industry knowledge with cutting-edge AI technology to solve real problems - whether that's automating guest list management for venues, streamlining A&R processes for labels, or creating intelligent content systems for promoters. Every solution is crafted with 20+ years of industry experience behind it.
+                    </p>
                 </div>
             </div>
         </div>
@@ -545,36 +533,48 @@
     <section id="faq" style="padding: 100px 0; background: white;">
         <div class="container">
             <h2 style="text-align: center; font-size: 42px; font-weight: 700; margin-bottom: 20px;">FAQ</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 60px;">Do you have more questions? We have prepared some answers for you. But if you need more, just Book a call or email us hello@projekt-ai.net</p>
+            <p style="text-align: center; color: #666; margin-bottom: 60px;">Do you have more questions? I have prepared some answers for you. But if you need more, just Book a call or email me hello@projekt-ai.net</p>
             
             <div style="max-width: 800px; margin: 0 auto;">
                 <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
-                    <h3 style="margin-bottom: 15px;">How does the monthly subscription model work for music businesses?</h3>
-                    <p style="color: #666;">Our subscription model is designed specifically for music industry needs. You pay a fixed monthly fee and get access to our full team of music industry AI specialists. We work on your automation projects continuously, with weekly updates and unlimited revisions until you're satisfied.</p>
+                    <h3 style="margin-bottom: 15px;">How does the monthly subscription model work?</h3>
+                    <p style="color: #666;">My subscription model is designed specifically for music industry needs. You pay a fixed monthly fee and get access to my expertise and automation solutions. I work on your projects continuously, with weekly updates and unlimited revisions until you're satisfied with the results.</p>
                 </div>
                 <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
-                    <h3 style="margin-bottom: 15px;">What is music business process automation, and how can it benefit my venue or label?</h3>
-                    <p style="color: #666;">Music business process automation uses AI to handle repetitive tasks like guest list management, artist communications, social media posting, and booking coordination. This frees up your team to focus on creative and strategic work while reducing operational costs by up to 70%.</p>
+                    <h3 style="margin-bottom: 15px;">How does the 100% money-back guarantee work?</h3>
+                    <p style="color: #666;">If you're not completely satisfied with my work within the first 30 days, I'll provide a full refund. I'm confident in the value I deliver, but I understand that every business has unique needs and want you to feel secure in your investment.</p>
                 </div>
                 <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
-                    <h3 style="margin-bottom: 15px;">Can Projekt AI develop custom AI-powered apps for my music business?</h3>
-                    <p style="color: #666;">Absolutely! We specialize in developing custom AI applications for music venues, labels, and promoters. This includes fan engagement chatbots, artist recommendation systems, automated booking platforms, and predictive analytics tools for audience insights.</p>
+                    <h3 style="margin-bottom: 15px;">What is business process automation, and how can it benefit my company?</h3>
+                    <p style="color: #666;">Business process automation uses AI to handle repetitive tasks like guest list management, artist communications, social media posting, and booking coordination. This frees up your team to focus on creative and strategic work while reducing operational costs and improving efficiency.</p>
+                </div>
+                <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
+                    <h3 style="margin-bottom: 15px;">How does Projekt AI integrate AI into my company's existing data systems?</h3>
+                    <p style="color: #666;">I work with your existing systems to create seamless integrations. Whether you use CRM software, booking platforms, or social media management tools, I can connect AI automation to leverage your existing data and workflows without disrupting your current operations.</p>
+                </div>
+                <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
+                    <h3 style="margin-bottom: 15px;">Can Projekt AI develop custom AI-powered apps for my business?</h3>
+                    <p style="color: #666;">Absolutely! I specialize in developing custom AI applications for music venues, labels, and promoters. This includes fan engagement chatbots, artist recommendation systems, automated booking platforms, and predictive analytics tools for audience insights.</p>
+                </div>
+                <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
+                    <h3 style="margin-bottom: 15px;">Do you offer consultations to identify the best AI solutions for my business?</h3>
+                    <p style="color: #666;">Yes, I provide comprehensive consultations to understand your specific needs and challenges. With my 20+ years of industry experience, I can quickly identify the most impactful automation opportunities for your particular type of music business.</p>
                 </div>
                 <div style="margin-bottom: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px;">
                     <h3 style="margin-bottom: 15px;">What kind of ongoing support does Projekt AI provide after project delivery?</h3>
-                    <p style="color: #666;">We provide comprehensive ongoing support including system monitoring, performance optimization, feature updates, staff training, and technical assistance. As your music business grows, we scale and adapt your AI systems accordingly.</p>
+                    <p style="color: #666;">I provide comprehensive ongoing support including system monitoring, performance optimization, feature updates, staff training, and technical assistance. As your music business grows, I scale and adapt your AI systems accordingly to ensure continued success.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section style="padding: 100px 0; background: #1a1a1a; color: white; text-align: center;">
+    <section id="contact" style="padding: 100px 0; background: #1a1a1a; color: white; text-align: center;">
         <div class="container">
             <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 20px;">Still not sure?</h2>
-            <p style="margin-bottom: 40px; color: rgba(255,255,255,0.8);">Contact us to learn more about Projekt AI Music Automation and figure out how your music business can transform with AI</p>
+            <p style="margin-bottom: 40px; color: rgba(255,255,255,0.8);">Contact me to learn more about Projekt AI Music Automation and figure out how your music business can transform with AI</p>
             <a href="#" style="background: white; color: #1a1a1a; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-right: 20px;">Book call</a>
-            <p style="margin-top: 20px; color: rgba(255,255,255,0.6);">or email us at hello@projekt-ai.net</p>
+            <p style="margin-top: 20px; color: rgba(255,255,255,0.6);">or email me at hello@projekt-ai.net</p>
         </div>
     </section>
 
