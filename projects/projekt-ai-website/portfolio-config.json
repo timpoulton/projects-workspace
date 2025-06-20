@@ -109,25 +109,25 @@
       "updated_at": "2025-05-31"
     },
     {
-      "id": "upwork_proposal_automation",
+      "id": "reel_builder_automation",
       "status": "live",
-      "title": "Upwork Proposal Automation",
-      "client": "Internal Project",
-      "category": "AI Sales Automation",
-      "description": "End-to-end system that generates, personalises, and dispatches Upwork proposals automatically, boosting win rate and saving hours of manual work.",
-      "short_description": "AI-Powered Business Development",
+      "title": "AI Reel Builder Automation",
+      "client": "Music Industry Creators",
+      "category": "Video Automation",
+      "description": "Turn simple text inputs into polished, social-ready video reels in under five minutes – no editing skills required.",
+      "short_description": "AI-Powered Video Content Creation",
       "services": [
-        "OpenAI GPT Personalisation",
-        "Chrome Automation",
-        "Job Scraping",
-        "Email / Chat Integrations"
+        "AI Content Generation",
+        "Video Automation",
+        "Template-Based Rendering",
+        "Multi-Channel Distribution"
       ],
       "live_url": "#",
-      "portfolio_url": "/upwork-proposal-automation.html",
+      "portfolio_url": "/reel-builder-automation.html",
       "featured": false,
       "card_size": "standard",
-      "header_image": "/assets/img/portfolio/upwork-proposal-automation-card.png",
-      "technologies": ["OpenAI GPT","Puppeteer","n8n","Zapier"],
+      "header_image": "/assets/img/portfolio/club77-content-pipeline-card.png",
+      "technologies": ["OpenAI GPT-4","FFmpeg","Make.com","Airtable"],
       "project_date": "2024"
     },
     {
