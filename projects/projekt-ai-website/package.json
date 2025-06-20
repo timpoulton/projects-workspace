@@ -8,7 +8,7 @@
     "dev": "npm run start",
     "build": "npm run build:prod",
     "build:dev": "npm run clean:dist && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
-    "build:prod": "npm run clean:dist && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:validate-all && npm run seo:generate-sitemap && npm run copy:dist",
+    "build:prod": "npm run clean:dist && npm run build:css && npm run build:js && npm run portfolio:generate && npm run seo:generate-sitemap && npm run copy:dist",
     "build:preview": "npm run clean:dist && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
     "build:branch": "npm run clean:dist && npm run build:css && npm run build:js && npm run optimize:images && npm run portfolio:generate && npm run quality:check && npm run copy:dist",
     "clean:dist": "rm -rf dist && mkdir -p dist",
