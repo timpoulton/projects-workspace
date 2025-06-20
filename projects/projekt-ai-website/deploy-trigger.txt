@@ -1,0 +1,2 @@
+Deployment trigger - Updated reel builder automation modal with video
+Timestamp: 2024-12-19 Video added to modal 

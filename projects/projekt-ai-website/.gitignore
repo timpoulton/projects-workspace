@@ -48,3 +48,5 @@ venv/
 node_modules/
 dist/
 assets/archives/**/*.zip
+*.zip
+deploy-*.zip
