@@ -1,0 +1,23 @@
+[
+  {"name":"_cq_suid","value":"1.1749958076.0CuSqMx5M5G6aYnx","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"_cq_duid","value":"1.1749958076.uAzRfq7Pj2041Xwb","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"_cfuvid","value":"3bzQhr2YpIl9sGBc2RJEE0SlqYA9hjBeAabHsuxp6oo-1749958075513-0.0.1.1-604800000","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"__podscribe_upwork_referrer","value":"_","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"__podscribe_upwork_landing_url","value":"https://www.upwork.com/ab/account-security/login","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"__podscribe_did","value":"pscrb_e81d707e-8524-472e-a202-a308e68fda79","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"__cflb","value":"02DiuEXPXZVk436fJfSVuuwDqLqkhavJbXPD4kaNqEzUT","domain":"auth.upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"__cf_bm","value":"UloZCeMEjTh2LWhfu92xAi2cV.1_TPS6N5h.iLRY8M0-1749958075-1.0.1.1-dm7zye2RFPcsPy837fSVVnnQyqA_KNys3inVrFK9VJe_MsTQuXoLEGOpmidyqIEt5arEyy7IW1JT5sPukA0z3F.Aq3X5WCqaMQZrTQk5JWA","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"XSRF-TOKEN","value":"7fdd0079d4a2dd8fc88595295cda95cb","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"SZ","value":"731edce7a8dc7756912aa317134679974223f7fd811e2c0252392256363016f9","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"OptanonConsent","value":"isGpcEnabled=0&datestamp=Sun+Jun+15+2025+13%3A28%3A16+GMT%2B1000+(Australian+Eastern+Standard+Time)&version=202305.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=8fcf20bc-6831-4e8e-a75b-7c7a61c3ff8b&interactionCount=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&geolocation=AU%3BNSW&AwaitingReconsent=false","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"OptanonAlertBoxClosed","value":"2025-06-15T03:28:02.105Z","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"IR_gbd","value":"upwork.com","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"IR_PI","value":"bc80a73c-4998-11f0-b063-d153b0163c48%7C1750044479262","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"IR_13634","value":"1749958097794%7C0%7C1749958097794%7C%7C","domain":".upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"AWSALBTGCORS","value":"AZxnyTgqFPMiHJbnCFxd0fxekOF8nuW9FR6Zbjttf95mru0zTWWGuwUuxPbgv6n0037zhiRWvtvaE8UJ/T0VyfAIFscF8fuk+iWr14dOYHXh8z01TcI7CC1fh51x6N7fZexiRBT1quiOTW1H4hVz2zRDyKNIP8M4dsM1zZv6Xdav","domain":"auth.upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"AWSALBTG","value":"AZxnyTgqFPMiHJbnCFxd0fxekOF8nuW9FR6Zbjttf95mru0zTWWGuwUuxPbgv6n0037zhiRWvtvaE8UJ/T0VyfAIFscF8fuk+iWr14dOYHXh8z01TcI7CC1fh51x6N7fZexiRBT1quiOTW1H4hVz2zRDyKNIP8M4dsM1zZv6Xdav","domain":"auth.upwork.com","path":"/","httpOnly":false,"secure":true},
+  {"name":"2226ff7dsb","value":"oauth2v2_a511d29601375d0c4a523499db957e3b","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"oauth2_global_js_token","value":"oauth2v2_334e2994118c5a98bb9af96237a3383a","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"master_access_token","value":"34eaa802.oauth2v2_ef77625bbd60d58d2d22bc152b8293ab","domain":".upwork.com","path":"/","httpOnly":true,"secure":true},
+  {"name":"cf_clearance","value":"K_sVLMESptjYOQbsijpgDH1HLZTj7wld.2xxhNlqebY-1749961038-1.2.1.1-3KAV1tHfwi87FGU0JSYmp56j75w8FMwO0Ht.jfCPX7ODlOhQvcSjihk_UiCLrN7vFVO43wP4YQxbCasDkTS5WWPuZa7U9ZKd9X_8PRlX_7am2Tgbr9KdwSrrWrU6AX47rmyXXxRLKFJTGK8ZmrclZ1ZMn2k5c8mbFREiEZzO_kGK6PlUurRqBAGLVDLi.Rvanfts9yhyXlwJXtKU15mXVKcbyXyRGWGgWXdmBCrndKqS0HDyAjYz9GwwpBoDnqnZ1S0q4HzNXhTyBt96n4ebqei6o8W6NhwAEVB96.va3Nh5SqgKQUBFHrUTra2L55izDylx_FRVNBjAN49978AUw_H0LAfcdEVtYmK6EtMSL.4pDnaYzmuw7uPX9_n8sY.1","domain":".upwork.com","path":"/","expires":"2026-06-15T04:17:18.451Z","httpOnly":false,"secure":true}
+] 
