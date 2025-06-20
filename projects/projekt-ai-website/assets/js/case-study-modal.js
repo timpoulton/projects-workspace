@@ -1,20 +1,24 @@
 // Case Study Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Case study modal script loaded');
-    
     const modal = document.getElementById('case-study-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalContent = document.getElementById('modal-content');
     const closeButton = document.querySelector('.modal-close');
     const portfolioCards = document.querySelectorAll('.portfolio-card');
     
-    console.log('Modal elements found:', {
-        modal: !!modal,
-        modalTitle: !!modalTitle,
-        modalContent: !!modalContent,
-        closeButton: !!closeButton,
-        portfolioCards: portfolioCards.length
-    });
+    // Force close any open modals and ensure modal starts hidden
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scrolling immediately
+    }
+    
+    // Emergency close function - can be called from console if needed
+    window.forceCloseModal = function() {
+        if (modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    };
 
     // Case study data with Lorem ipsum placeholder content
     const caseStudyData = {
@@ -218,21 +222,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const caseStudyId = this.getAttribute('data-case-study');
             const caseStudy = caseStudyData[caseStudyId];
             
-            console.log('Portfolio card clicked:', caseStudyId, !!caseStudy);
-            
             if (caseStudy && modal && modalTitle && modalContent) {
                 modalTitle.textContent = caseStudy.title;
                 modalContent.innerHTML = caseStudy.content;
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                console.log('Modal opened');
             }
         });
     });
 
     // Close modal functionality
     function closeModal() {
-        console.log('Closing modal');
         if (modal) {
             modal.classList.add('hidden');
             document.body.style.overflow = ''; // Restore scrolling
@@ -242,18 +242,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close button click
     if (closeButton) {
         closeButton.addEventListener('click', function(e) {
-            console.log('Close button clicked');
             e.preventDefault();
             e.stopPropagation();
             closeModal();
         });
     }
 
-    // Close on overlay click
+    // Close on overlay click (clicking outside the modal content)
     if (modal) {
         modal.addEventListener('click', function(e) {
-            console.log('Modal overlay clicked', e.target === modal);
-            if (e.target === modal) {
+            if (e.target === modal || e.target.classList.contains('modal-overlay')) {
                 closeModal();
             }
         });
@@ -262,7 +260,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
-            console.log('Escape key pressed');
             closeModal();
         }
     });
