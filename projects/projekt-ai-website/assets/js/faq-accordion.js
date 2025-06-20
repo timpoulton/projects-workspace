@@ -1,69 +1,92 @@
 /**
- * FAQ Accordion JavaScript
+ * FAQ Accordion JavaScript - Simplified & Reliable
  * Handles the accordion functionality for FAQ sections
  */
 
-class FAQAccordion {
-    constructor() {
-        this.init();
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('FAQ Accordion: DOM loaded, initializing...');
+    
+    // Find all FAQ items
+    const faqItems = document.querySelectorAll('.faq-item');
+    console.log('FAQ Accordion: Found', faqItems.length, 'FAQ items');
+    
+    if (faqItems.length === 0) {
+        console.warn('FAQ Accordion: No FAQ items found!');
+        return;
     }
-
-    init() {
-        // Find all FAQ items
-        this.faqItems = document.querySelectorAll('.faq-item');
-        
-        // Add click event listeners
-        this.faqItems.forEach(item => {
-            const header = item.querySelector('.faq-header');
-            if (header) {
-                header.addEventListener('click', () => this.toggleFAQ(item));
-            }
-        });
-
-        // Add keyboard navigation
-        this.setupKeyboardNavigation();
-    }
-
-    toggleFAQ(item) {
-        const isActive = item.classList.contains('active');
-        
-        // Close all other FAQ items (optional - remove if you want multiple open)
-        this.faqItems.forEach(otherItem => {
-            if (otherItem !== item && otherItem.classList.contains('active')) {
-                this.closeFAQ(otherItem);
-            }
-        });
-
-        // Toggle the clicked item
-        if (isActive) {
-            this.closeFAQ(item);
-        } else {
-            this.openFAQ(item);
-        }
-    }
-
-    openFAQ(item) {
+    
+    // Add click event listeners to each FAQ item
+    faqItems.forEach((item, index) => {
+        const header = item.querySelector('.faq-header');
         const content = item.querySelector('.faq-content');
         const answer = item.querySelector('.faq-answer');
+        
+        if (!header || !content || !answer) {
+            console.warn('FAQ Accordion: Missing elements in FAQ item', index);
+            return;
+        }
+        
+        // Make header focusable and add accessibility attributes
+        header.setAttribute('tabindex', '0');
+        header.setAttribute('role', 'button');
+        header.setAttribute('aria-expanded', 'false');
+        
+        // Add click event listener
+        header.addEventListener('click', function() {
+            console.log('FAQ Accordion: Clicked item', index);
+            toggleFAQ(item, content, answer, header);
+        });
+        
+        // Add keyboard event listener
+        header.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                console.log('FAQ Accordion: Keyboard activated item', index);
+                toggleFAQ(item, content, answer, header);
+            }
+        });
+        
+        console.log('FAQ Accordion: Initialized item', index);
+    });
+    
+    function toggleFAQ(item, content, answer, header) {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other FAQ items (accordion behavior)
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                closeFAQ(otherItem);
+            }
+        });
+        
+        // Toggle the clicked item
+        if (isActive) {
+            closeFAQ(item);
+        } else {
+            openFAQ(item, content, answer, header);
+        }
+    }
+    
+    function openFAQ(item, content, answer, header) {
+        console.log('FAQ Accordion: Opening FAQ');
         
         // Add active class
         item.classList.add('active');
         
         // Set proper max-height for smooth animation
-        if (content && answer) {
-            const contentHeight = answer.scrollHeight;
-            content.style.maxHeight = contentHeight + 'px';
-        }
-
-        // Update ARIA attributes for accessibility
-        const header = item.querySelector('.faq-header');
-        if (header) {
-            header.setAttribute('aria-expanded', 'true');
-        }
+        const contentHeight = answer.scrollHeight + 64; // Add padding
+        content.style.maxHeight = contentHeight + 'px';
+        
+        // Update ARIA attributes
+        header.setAttribute('aria-expanded', 'true');
     }
-
-    closeFAQ(item) {
+    
+    function closeFAQ(item) {
+        console.log('FAQ Accordion: Closing FAQ');
+        
         const content = item.querySelector('.faq-content');
+        const header = item.querySelector('.faq-header');
         
         // Remove active class
         item.classList.remove('active');
@@ -72,58 +95,14 @@ class FAQAccordion {
         if (content) {
             content.style.maxHeight = '0px';
         }
-
-        // Update ARIA attributes for accessibility
-        const header = item.querySelector('.faq-header');
+        
+        // Update ARIA attributes
         if (header) {
             header.setAttribute('aria-expanded', 'false');
         }
     }
-
-    setupKeyboardNavigation() {
-        this.faqItems.forEach(item => {
-            const header = item.querySelector('.faq-header');
-            if (header) {
-                // Make header focusable
-                header.setAttribute('tabindex', '0');
-                header.setAttribute('role', 'button');
-                header.setAttribute('aria-expanded', 'false');
-                
-                // Add keyboard event listener
-                header.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        this.toggleFAQ(item);
-                    }
-                });
-            }
-        });
-    }
-
-    // Method to open specific FAQ by ID
-    openFAQById(id) {
-        const item = document.querySelector(`[data-accordion="${id}"]`);
-        if (item) {
-            this.openFAQ(item);
-            // Scroll to the FAQ item
-            item.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-
-    // Method to close all FAQs
-    closeAllFAQs() {
-        this.faqItems.forEach(item => {
-            this.closeFAQ(item);
-        });
-    }
-}
-
-// Initialize FAQ accordion when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const faqAccordion = new FAQAccordion();
     
-    // Make it globally accessible for external use
-    window.faqAccordion = faqAccordion;
+    console.log('FAQ Accordion: Initialization complete!');
 });
 
 // Add smooth scroll behavior for FAQ links
